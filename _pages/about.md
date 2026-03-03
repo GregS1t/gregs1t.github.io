@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: >
   Research Engineer in Machine Learning &middot;
@@ -12,9 +12,8 @@ profile:
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>Observatoire de Paris</p>
-    <p>LUX &mdash; Laboratoire d&rsquo;&eacute;tude de l&rsquo;Univers</p>
-    <p>et des ph&eacute;nom&egrave;nes eXtr&ecirc;mes</p>
+    <p>Observatoire de Paris | PSL</p>
+    <p>LUX</p>
     <p>Paris, France</p>
 
 news: false
@@ -43,3 +42,4 @@ Previously, I was a Research Engineer at [IPGP](https://www.ipgp.fr)
 
 My research interests include unsupervised learning, signal processing for planetary science,
 and ML applied to astrophysics and Earth observation.
+
