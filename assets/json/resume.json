@@ -42,6 +42,7 @@
       "name": "Observatoire de Paris - LUX Team",
       "position": "Research Engineer in Machine Learning",
       "url": "https://www.observatoiredeparis.psl.eu",
+      "location": "Paris, France",
       "startDate": "2023",
       "endDate": "",
       "summary": "Machine learning research applied to astrophysics and Earth observation.",
@@ -54,6 +55,7 @@
       "name": "Institut de Physique du Globe de Paris (IPGP)",
       "position": "Research Engineer - Planetology and Space Sciences Lab",
       "url": "https://www.ipgp.fr",
+      "location": "Paris, France",
       "startDate": "2018",
       "endDate": "2023",
       "summary": "Research engineering for planetary science missions.",
@@ -61,6 +63,19 @@
         "NASA InSight mission - tools for analysing data from the Martian seismometer SEIS",
         "AIT of the Lunar seismometer FSS (Farside Seismic Suite), NASA CLPS programme",
         "Development of IoT devices for a homemade turbidimeter"
+      ]
+    },
+    {
+      "name": "Ministere de l'Education Nationale",
+      "position": "Primary school teacher for deaf and impaired hearing children",
+      "location": "Creteil, France",
+      "startDate": "2010",
+      "endDate": "2018",
+      "summary": "Primary school teacher for deaf and impaired hearing children.",
+      "highlights": [
+        "Taught a wide range of subjects to children with hearing impairments",
+        "Adapted teaching methods and materials to meet the needs of students",
+        "Collaborated with parents, specialists, and other educators to support student learning"
       ]
     }
   ],
@@ -101,6 +116,7 @@
         "Advisor: Pr. Helene Courtois"
       ]
     }
+
   ],
   "skills": [
     {
