@@ -47,7 +47,6 @@ schedule:
     topic: Assigment 
     description: Lab in group in 4h
 
-
 ---
 
 ## Course Overview
