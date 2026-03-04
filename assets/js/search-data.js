@@ -44,7 +44,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "projects-mars-time-converter",
+        },{id: "projects-seisdeglitch",
+          title: 'SeisDeglitch',
+          description: "MATLAB tools for automated detection and removal of glitches in seismic data from the SEIS instrument onboard NASA InSight.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/03_seisdeglitch/";
+            },},{id: "projects-mars-time-converter",
           title: 'Mars Time Converter',
           description: "A Python library and CLI tool for converting Earth UTC time to Martian time systems, supporting multiple Mars missions.",
           section: "Projects",handler: () => {
