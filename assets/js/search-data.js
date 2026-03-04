@@ -59,6 +59,11 @@ ninja.data = [{
           description: "A Python/Jupyter tool for visualising and processing seismic MiniSEED data from the NASA InSight mission on Mars.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_aspic/";
+            },},{id: "projects-cianna-on-the-fly",
+          title: 'CIANNA On-The-Fly',
+          description: "A client–server system for asynchronous, batched deep-learning inference on astronomical FITS images, built on the CIANNA framework and IVOA standards.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cianna_otf/";
             },},{id: "teachings-git-crash-course",
           title: 'Git Crash course',
           description: "This course covers the foundational aspects of Git, from create a repository, push/pull your codes and work with collaborators",
