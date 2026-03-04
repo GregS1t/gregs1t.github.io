@@ -44,7 +44,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "projects-seisdeglitch",
+        },{id: "post-snow-on-observatoire-de-paris",
+        
+          title: "Snow on Observatoire de Paris",
+        
+        description: "Une courte description affichée dans la liste des posts.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/neige-obs/";
+          
+        },
+      },{id: "projects-seisdeglitch",
           title: 'SeisDeglitch',
           description: "MATLAB tools for automated detection and removal of glitches in seismic data from the SEIS instrument onboard NASA InSight.",
           section: "Projects",handler: () => {
