@@ -3,10 +3,10 @@ layout: course
 title: Earth Data Science
 description: This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets oriented on earth data (seismic data, Lidar data, satellite images...)
 instructor: Antoine Lucas & Alexandre Fournier, Nobuaki Fuji, Grégory Sainton 
-year: 2022
+year: 2021
 
 term: Fall
-location: IPGP, 1 place Jussieu
+location: IPGP, 1 place Jussieu - Paris - Salle Océane - Salle TP 1er étage
 course_id: earth-data-science
 schedule:
   - week: 1
