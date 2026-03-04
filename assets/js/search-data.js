@@ -64,6 +64,11 @@ ninja.data = [{
           description: "A client–server system for asynchronous, batched deep-learning inference on astronomical FITS images, built on the CIANNA framework and IVOA standards.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cianna_otf/";
+            },},{id: "projects-twinity",
+          title: 'Twinity',
+          description: "A digital twin for trail running — analysing FIT files from GPS watches to model fitness, fatigue, and performance readiness using the Banister system model.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/twinity/";
             },},{id: "teachings-git-crash-course",
           title: 'Git Crash course',
           description: "This course covers the foundational aspects of Git, from create a repository, push/pull your codes and work with collaborators",
