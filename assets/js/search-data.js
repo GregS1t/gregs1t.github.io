@@ -44,7 +44,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "teachings-git-crash-course",
+        },{id: "projects-mars-time-converter",
+          title: 'Mars Time Converter',
+          description: "A Python library and CLI tool for converting Earth UTC time to Martian time systems, supporting multiple Mars missions.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "teachings-git-crash-course",
           title: 'Git Crash course',
           description: "This course covers the foundational aspects of Git, from create a repository, push/pull your codes and work with collaborators",
           section: "Teachings",handler: () => {
