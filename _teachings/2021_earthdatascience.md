@@ -5,9 +5,8 @@ description: This course covers the foundational aspects of data science, includ
 instructor: Antoine Lucas & Alexandre Fournier, Nobuaki Fuji, Grégory Sainton 
 year: 2021
 
-term: Fall
 location: IPGP, 1 place Jussieu
-course_id: earth-data-science
+course_id: earth-data-science-2
 schedule:
   - week: 1
     topic: Data for Earth science 1/2
