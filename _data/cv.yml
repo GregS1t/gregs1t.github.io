@@ -1,10 +1,13 @@
 cv:
   name: Gregory Sainton
   label: Research Engineer in Machine Learning
-  email: ""
-  location: Paris, France
+  email: firstname.lastname '@' obspm.com
+
   image: ""
-  summary: Research Engineer in Machine Learning at Observatoire de Paris (LUX Team). PhD in Astrophysics. Working on SKA radioastronomy source detection.
+  summary: >
+    Research Engineer in Machine Learning at Observatoire de Paris (LUX Team).
+    PhD in Astrophysics. Working on SKA radioastronomy source detection. 
+    Former planetary science engineer on NASA InSight and FSS lunar missions at IPGP.
 
   social_networks:
     - network: GitHub
@@ -22,6 +25,7 @@ cv:
         highlights:
           - SKA (Square Kilometre Array) — ML algorithms for automated source detection in radio data
           - Peatland cartography using machine learning and remote sensing
+          - Development of CIANNA_OTF, a client-server system for asynchronous batched inference on FITS images
 
       - company: Institut de Physique du Globe de Paris (IPGP)
         position: Research Engineer — Planetology and Space Sciences Lab
@@ -29,18 +33,45 @@ cv:
         start_date: 2018
         end_date: 2023
         highlights:
-          - NASA InSight mission — tools for analysing data from the Martian seismometer SEIS
-          - AIT of the Lunar seismometer FSS (Farside Seismic Suite), NASA CLPS programme
-          - Development of IoT devices for a homemade turbidimeter
+          - "NASA InSight mission: development of ML algorithms for seismic signal analysis (LSTM, Deep Scattering Networks, CNNs)"
+          - "Automated detection of craters and avalanches on HiRise images (YOLOv4)"
+          - Development of the SEIS data processing, visualisation and reporting pipeline
+          - Instrument control software (interferometer, motor, power supply) for optical seismometer test bench (Horizons 2020 / PIONEERS)
+          - "NASA FSS mission: AIT of the Lunar seismometer (vibration tests, flight and qualification models)"
+          - Administration of CPU/GPU computing servers and GitLab platform for the team
+          - Selection and administration of the document management system for IPGP (IN2P3/ATRIUM)
 
-      - company: "Ministere de l'Education Nationale"
+      - company: "Ministere de l'Education Nationale — Academie de Creteil"
         position: Primary School Teacher for deaf and hearing-impaired children
         location: "Creteil, France"
-        start_date: 2010
+        start_date: 2009
         end_date: 2018
         highlights:
           - Adapted teaching methods and materials to individual student needs
           - Collaborated with parents, specialists, and educators to support student learning
+          - "On secondment (mise en disponibilite) from July 2018 to August 2023"
+
+      - company: Groupama Asset Management
+        position: Project Director / Senior Consultant
+        location: Paris, France
+        start_date: 2008
+        end_date: 2009
+        highlights:
+          - Management of tender processes and supplier selection
+          - Project team management (15 people) and project oversight (3M euros budget)
+          - System reliability control including security and business continuity planning
+
+      - company: BNP Paribas Asset Management
+        position: IT Consultant
+        location: Paris, France
+        start_date: 2005
+        end_date: 2008
+        highlights:
+          - Specifications and functional design for risk calculation software projects
+          - Management of development teams (10 people)
+          - Development of order routing modules for derivatives and portfolio management (Java/Oracle)
+          - Development of portfolio performance attribution modules (Java/Oracle)
+          - User training (20 people) and compliance software deployment
 
     Education:
       - institution: "Universite Pierre et Marie Curie, Paris"
@@ -53,14 +84,16 @@ cv:
         highlights:
           - "Thesis: Spectroscopie des supernovae a grand decalage vers le rouge"
           - "Director: Dr. Reynald Pain"
+          - "Collaborations: Supernovae Cosmology Project (SCP) and Supernovae Legacy Survey (SNLS)"
+          - "Observations: Keck (10m), VLT (8m), WHT (3.6m), CFHT"
 
       - institution: Universite Claude Bernard Lyon I
         location: "Villeurbanne, France"
         url: https://www.ip2i.in2p3.fr/
         area: "Particules, Noyaux, Atomes et Photons — IP2I"
         studyType: "DEA (Master 2)"
-        start_date: 1999
-        end_date: 2000
+        start_date: 2000
+        end_date: 2001
         highlights:
           - "Internship: Spectroscopy of type Ia supernovae with VLT/FORS1"
           - "Advisor: Dr. Pierre Antilogus"
@@ -70,47 +103,64 @@ cv:
         url: https://cral.univ-lyon1.fr/
         area: "Physics, option Astrophysics — CRAL"
         studyType: "Maitrise (Master 1)"
-        start_date: 1998
-        end_date: 1999
+        start_date: 1999
+        end_date: 2000
         highlights:
           - "Internship: Calibration of the Faber-Jackson relation using Cepheids"
           - "Advisor: Pr. Helene Courtois"
+
+    Certificates:
+      - name: "Techniques et technologies de vehicules spatiaux (70h)"
+        date: 2021-10
+        issuer: CNES
+        icon: fa-solid fa-rocket
+      - name: TensorFlow Developer Certificate
+        date: 2021-06
+        issuer: DeepLearning.AI / Coursera
+        icon: fa-solid fa-brain
+      - name: "Administration Linux (50h)"
+        date: 2021-06
+        issuer: CNRS Formation
+        icon: fa-solid fa-terminal
+      - name: "Acquisition et visualisation en Python (80h)"
+        date: 2021-04
+        issuer: CNRS Formation
+        icon: fa-brands fa-python
+      - name: "FORTRAN (30h)"
+        date: 2019-11
+        issuer: IDRIS
+        icon: fa-solid fa-code
 
     Projects:
       - name: SKA — Square Kilometre Array
         start_date: 2023
         end_date: present
-        summary: ML algorithms for automated source detection in radio astronomy data, applied to SKAO SDC1 benchmark.
-        highlights:
-          - YOLO-inspired detection pipeline (YOLO-CIANNA)
-          - A&A 690, A211 (2024)
-
+        summary: ML algorithms for automated source detection in radio astronomy data. YOLO-CIANNA pipeline applied to SKAO SDC1 benchmark (A&A 690, A211, 2024).
+      - name: CIANNA On-The-Fly
+        start_date: 2023
+        end_date: present
+        summary: Client-server system for asynchronous batched deep-learning inference on FITS images, following IVOA UWS standards.
       - name: NASA InSight — Mars Seismology
         start_date: 2018
         end_date: 2023
-        summary: Tools for analysing data from SEIS, the first seismometer deployed on Mars.
-        highlights:
-          - Unsupervised learning for seismic source separation (ICML 2023)
-          - Analysis of S1222a, the largest marsquake detected by InSight
-
+        summary: Signal processing tools, ML-based glitch detection and marsquake analysis for the SEIS instrument. Multiple peer-reviewed publications.
       - name: FSS — Farside Seismic Suite
         start_date: 2020
         end_date: 2023
-        summary: AIT of the Lunar seismometer for the far side of the Moon, NASA CLPS programme.
-
-      - name: Peatland Cartography
-        start_date: 2023
-        end_date: 2024
-        summary: Machine learning applied to remote sensing data for automated peatland mapping.
+        summary: AIT of the Lunar seismometer for NASA CLPS programme. Vibration testing of flight and qualification models.
+      - name: Rattlesnake
+        start_date: 2020
+        end_date: 2023
+        summary: PyQt GUI for controlling an optical seismometer test bench (ATTOCUBE interferometer, Newport PicoMotor, Agilent power supply).
 
     Skills:
       - name: Machine Learning
         icon: fa-solid fa-brain
-        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning, Unsupervised Learning"
+        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning, Unsupervised Learning, LSTM, CNN, YOLO"
 
       - name: Programming
         icon: fa-solid fa-code
-        keywords: "Python, C, C++, Fortran, Matlab, Bash, SQL, R"
+        keywords: "Python, C, C++, Fortran, Java, Matlab, Bash, SQL, R"
 
       - name: Signal Processing
         icon: fa-solid fa-wave-square
@@ -118,14 +168,25 @@ cv:
 
       - name: Tools & Platforms
         icon: fa-solid fa-screwdriver-wrench
-        keywords: "Git, Docker, Jupyter, Linux"
+        keywords: "Git, GitLab, Docker, Jupyter, Linux, PyQt, PyVISA, HPC/SLURM"
 
     Languages:
       - name: French
         summary: Native
-
       - name: English
-        summary: Professional
-
+        summary: "Professional (B2)"
       - name: German
-        summary: Basic
+        summary: "Basic (A1)"
+      - name: LSF (French Sign Language)
+        summary: "Basic (A2)"
+
+    Interests:
+      - name: UltraTrail Running
+        icon: fa-solid fa-person-running
+        keywords: "Regular practice"
+      - name: Aikido
+        icon: fa-solid fa-hand-fist
+        keywords: "10 years of practice"
+      - name: Astronomy
+        icon: fa-solid fa-star
+        keywords: "Member of SAF (Societe Astronomique de France), currently building a 250mm Dobson telescope (including mirror polishing)"
