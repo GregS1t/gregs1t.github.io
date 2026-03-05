@@ -110,6 +110,10 @@ cv:
           - "Advisor: Pr. Helene Courtois"
 
     Certificates:
+      - name: "Docker"
+        date: 2025-01
+        issuer: CNRS Formation
+        icon: fa-solid fa-docker
       - name: "Techniques et technologies de vehicules spatiaux (70h)"
         date: 2021-10
         issuer: CNES
@@ -126,10 +130,6 @@ cv:
         date: 2021-04
         issuer: CNRS Formation
         icon: fa-brands fa-python
-      - name: "FORTRAN (30h)"
-        date: 2019-11
-        issuer: IDRIS
-        icon: fa-solid fa-code
 
     Projects:
       - name: SKA — Square Kilometre Array
@@ -176,7 +176,7 @@ cv:
       - name: English
         summary: "Professional (B2)"
       - name: German
-        summary: "Basic (A1)"
+        summary: "Basic (A2)"
       - name: LSF (French Sign Language)
         summary: "Basic (A2)"
 
