@@ -156,7 +156,7 @@ cv:
     Skills:
       - name: Machine Learning
         icon: fa-solid fa-brain
-        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning, Unsupervised Learning, LSTM, CNN, YOLO"
+        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning (Computer Vision, LSTM, Deep Scattering Networks)"
 
       - name: Programming
         icon: fa-solid fa-code
