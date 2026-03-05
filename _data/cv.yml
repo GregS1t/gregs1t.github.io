@@ -131,7 +131,7 @@ cv:
         issuer: CNRS Formation
         icon: fa-brands fa-python
 
-    Projects:
+    Few Projects:
       - name: SKA — Square Kilometre Array
         start_date: 2023
         end_date: present
