@@ -113,7 +113,7 @@ cv:
       - name: "Docker"
         date: 2025-01
         issuer: CNRS Formation
-        icon: fa-solid fa-docker
+        icon: fa-solid fa-ship
       - name: "Techniques et technologies de vehicules spatiaux (70h)"
         date: 2021-10
         issuer: CNES
