@@ -135,15 +135,15 @@ cv:
       - name: SKA — Square Kilometre Array
         start_date: 2023
         end_date: present
-        summary: ML algorithms for automated source detection in radio astronomy data. YOLO-CIANNA pipeline applied to SKAO SDC1 benchmark (A&A 690, A211, 2024).
+        summary: 🟢 Active | ML algorithms for automated source detection in radio astronomy data. YOLO-CIANNA pipeline applied to SKAO SDC1 benchmark (A&A 690, A211, 2024).
       - name: CIANNA On-The-Fly
         start_date: 2023
         end_date: present
-        summary: Client-server system for asynchronous batched deep-learning inference on FITS images, following IVOA UWS standards.
+        summary: 🟢 Active | Client-server system for asynchronous batched deep-learning inference on FITS images, following IVOA UWS standards.
       - name: NASA InSight — Mars Seismology
         start_date: 2018
         end_date: 2023
-        summary: Signal processing tools, ML-based glitch detection and marsquake analysis for the SEIS instrument. Multiple peer-reviewed publications.
+        summary: ✅ Completed | Signal processing tools, ML-based glitch detection and marsquake analysis for the SEIS instrument. Multiple peer-reviewed publications.
       - name: FSS — Farside Seismic Suite
         start_date: 2020
         end_date: 2023
@@ -151,7 +151,7 @@ cv:
       - name: Rattlesnake
         start_date: 2020
         end_date: 2023
-        summary: PyQt GUI for controlling an optical seismometer test bench (ATTOCUBE interferometer, Newport PicoMotor, Agilent power supply).
+        summary: ✅ Completed | PyQt GUI for controlling an optical seismometer test bench (ATTOCUBE interferometer, Newport PicoMotor, Agilent power supply).
 
     Skills:
       - name: Machine Learning
