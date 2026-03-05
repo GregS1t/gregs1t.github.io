@@ -185,8 +185,8 @@ cv:
         icon: fa-solid fa-person-running
         keywords: "Regular practice"
       - name: Aikido
-        icon: fa-solid fa-circle-dot
+        icon: fa-solid fa-hand-fist
         keywords: "10 years of practice"
       - name: Astronomy
-        icon: fa-solid fa-hand-back-fist
+        icon: fa-solid fa-star
         keywords: "Member of SAF (Societe Astronomique de France), currently building a 250mm Dobson telescope (including mirror polishing)"
