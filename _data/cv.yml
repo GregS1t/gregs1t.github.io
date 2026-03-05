@@ -1,7 +1,7 @@
 cv:
   name: Gregory Sainton
   label: Research Engineer in Machine Learning
-  email: firstname.lastname '@' obspm.com
+  email: firstname.lastname '@' obspm.fr
 
   image: ""
   summary: >
@@ -51,8 +51,8 @@ cv:
           - Collaborated with parents, specialists, and educators to support student learning
           - "On secondment (mise en disponibilite) from July 2018 to August 2023"
 
-      - company: Groupama Asset Management
-        position: Project Director / Senior Consultant
+      - company: Investance Consulting
+        position: Groupama Asset Management - Project Director / Senior Consultant 
         location: Paris, France
         start_date: 2008
         end_date: 2009
@@ -61,8 +61,8 @@ cv:
           - Project team management (15 people) and project oversight (3M euros budget)
           - System reliability control including security and business continuity planning
 
-      - company: BNP Paribas Asset Management
-        position: IT Consultant
+      - company: 3S Consulting
+        position: BNP Paribas Asset Management - IT Consultant 
         location: Paris, France
         start_date: 2005
         end_date: 2008
@@ -163,7 +163,7 @@ cv:
         keywords: "Python, C, C++, Fortran, Java, Matlab, Bash, SQL, R"
 
       - name: Signal Processing
-        icon: fa-solid fa-wave-square
+        icon: fa-solid fa-chart-line
         keywords: "Seismology, Radio Astronomy, Spectroscopy, Remote Sensing"
 
       - name: Tools & Platforms
@@ -185,7 +185,7 @@ cv:
         icon: fa-solid fa-person-running
         keywords: "Regular practice"
       - name: Aikido
-        icon: fa-solid fa-hand-fist
+        icon: fa-solid fa-circle-dot
         keywords: "10 years of practice"
       - name: Astronomy
         icon: fa-solid fa-star
