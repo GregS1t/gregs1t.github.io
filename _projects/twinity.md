@@ -4,7 +4,7 @@ title: Twinity
 description: A digital twin for trail running — fitness, fatigue, and performance readiness modelling.
 img: assets/img/twinity_preview.png
 importance: 1
-category: work
+category: fun
 ---
 
 # Twinity
