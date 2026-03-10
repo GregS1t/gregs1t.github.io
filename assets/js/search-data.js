@@ -82,7 +82,7 @@ ninja.data = [{
               window.location.href = "/projects/rattlesnake/";
             },},{id: "projects-twinity",
           title: 'Twinity',
-          description: "A digital twin for trail running — analysing FIT files from GPS watches to model fitness, fatigue, and performance readiness using the Banister system model.",
+          description: "A digital twin for trail running — fitness, fatigue, and performance readiness modelling.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/twinity/";
             },},{id: "teachings-git-crash-course",
