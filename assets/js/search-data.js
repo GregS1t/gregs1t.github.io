@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
+      },{id: "post-formalisme-ddpm-du-bruit-à-l-39-image-ddpm-3",
+        
+          title: "Formalisme DDPM — du bruit à l&#39;image - DDPM 3",
+        
+        description: "Dérivation complète du DDPM : processus forward, ELBO, simplification de la loss, processus inverse et algorithmes d&#39;entraînement et d&#39;échantillonnage de Ho et al. (2020).",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ddpm-formalism/";
+          
+        },
       },{id: "post-les-embeddings-sinusoïdaux-conditionner-un-réseau-sur-le-temps-ddpm-2",
         
           title: "Les embeddings sinusoïdaux, conditionner un réseau sur le temps - DDPM 2",
