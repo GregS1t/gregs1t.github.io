@@ -55,6 +55,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
+      },{id: "post-architectures-convolutives-pour-l-39-astronomie-resnet-et-u-net",
+        
+          title: "Architectures convolutives pour l&#39;astronomie — ResNet et U-Net",
+        
+        description: "Du problème du gradient vanishing aux connexions résiduelles, en passant par l&#39;architecture U-Net avec skip connections : les briques fondamentales du réseau de prédiction de bruit utilisé dans notre DDPM appliqué à Galaxy Zoo 2.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/resnet-unet/";
+          
+        },
       },{id: "projects-seisdeglitch",
           title: 'SeisDeglitch',
           description: "MATLAB tools for automated detection and removal of glitches in seismic data from the SEIS instrument onboard NASA InSight.",
