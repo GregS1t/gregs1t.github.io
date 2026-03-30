@@ -55,11 +55,11 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
-      },{id: "post-architectures-convolutives-pour-l-39-astronomie-resnet-et-u-net",
+      },{id: "post-architectures-convolutives-pour-l-39-astronomie-ddpm-1",
         
-          title: "Architectures convolutives pour l&#39;astronomie — ResNet et U-Net",
+          title: "Architectures convolutives pour l&#39;astronomie — DDPM 1",
         
-        description: "Du problème du gradient vanishing aux connexions résiduelles, en passant par l&#39;architecture U-Net avec skip connections : les briques fondamentales du réseau de prédiction de bruit utilisé dans notre DDPM appliqué à Galaxy Zoo 2.",
+        description: "Dans ce premier billet, j&#39;aborde les briques fondamentales du réseau de diffusion DDPM appliqué au dataset Galaxy Zoo 2.",
         section: "Posts",
         handler: () => {
           
