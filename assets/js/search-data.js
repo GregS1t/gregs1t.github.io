@@ -55,11 +55,11 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
-      },{id: "post-les-embeddings-sinusoïdaux-conditionner-un-réseau-sur-le-temps",
+      },{id: "post-les-embeddings-sinusoïdaux-conditionner-un-réseau-sur-le-temps-ddpm-2",
         
-          title: "Les embeddings sinusoïdaux — conditionner un réseau sur le temps",
+          title: "Les embeddings sinusoïdaux, conditionner un réseau sur le temps - DDPM 2",
         
-        description: "Comment encoder un entier t en un vecteur de dimension d ?  Le mécanisme d&#39;embedding sinusoïdal, emprunté aux Transformers, et son rôle dans le conditionnement temporel du DDPM.",
+        description: "Comment encoder un entier t en un vecteur de dimension d ? Le mécanisme d&#39;embedding sinusoïdal, emprunté aux Transformers, et son rôle dans le conditionnement temporel du DDPM.",
         section: "Posts",
         handler: () => {
           
