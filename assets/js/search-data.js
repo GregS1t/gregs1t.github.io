@@ -44,15 +44,15 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-",
+        },{id: "post-observatoire-de-paris-sous-la-neige",
         
-          title: "",
+          title: "Observatoire de Paris sous la neige",
         
         description: "",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2026/2026-01-06-neige-obs/";
+            window.location.href = "/blog/2026/neige-obs/";
           
         },
       },{id: "post-formalisme-ddpm-du-bruit-à-l-39-image-ddpm-3",
