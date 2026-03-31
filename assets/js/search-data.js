@@ -66,17 +66,6 @@ ninja.data = [{
             window.location.href = "/blog/2025/ddpm-formalism/";
           
         },
-      },{id: "post-quand-les-maths-rencontrent-les-zombies",
-        
-          title: "Quand les maths rencontrent les zombies !",
-        
-        description: "Un week-end pluvieux, une série à regarder, et une question qui s&#39;impose : et si on modélisait ça ?.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/zombie-epidemic-model/";
-          
-        },
       },{id: "post-les-embeddings-sinusoïdaux-conditionner-un-réseau-sur-le-temps-ddpm-2",
         
           title: "Les embeddings sinusoïdaux, conditionner un réseau sur le temps - DDPM 2",
@@ -97,6 +86,17 @@ ninja.data = [{
         handler: () => {
           
             window.location.href = "/blog/2025/resnet-unet/";
+          
+        },
+      },{id: "post-quand-les-maths-rencontrent-les-zombies",
+        
+          title: "Quand les maths rencontrent les zombies !",
+        
+        description: "Un week-end pluvieux, une série à regarder, et une question qui s&#39;impose : et si on modélisait ça ?.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
       },{id: "projects-seisdeglitch",
