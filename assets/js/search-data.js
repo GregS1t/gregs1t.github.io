@@ -99,6 +99,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
+      },{id: "post-git-aide-mémoire-en-questions",
+        
+          title: "Git : aide-mémoire en questions",
+        
+        description: "Un aide-mémoire pratique pour maîtriser Git — des premiers pas aux usages avancés, organisé par problèmes concrets.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/git-aide-memoire/";
+          
+        },
       },{id: "post-quelle-heure-est-il-sur-mars",
         
           title: "Quelle heure est-il sur Mars ?",
