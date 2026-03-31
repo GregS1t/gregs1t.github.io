@@ -99,6 +99,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
+      },{id: "post-quelle-heure-est-il-sur-mars",
+        
+          title: "Quelle heure est-il sur Mars ?",
+        
+        description: "Comment convertir une date terrestre en heure martienne ? De la longitude julienne au LMST, en passant par l&#39;anomalie moyenne et l&#39;équation du temps.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/mars-time-converter/";
+          
+        },
       },{id: "projects-seisdeglitch",
           title: 'SeisDeglitch',
           description: "MATLAB tools for automated detection and removal of glitches in seismic data from the SEIS instrument onboard NASA InSight.",
