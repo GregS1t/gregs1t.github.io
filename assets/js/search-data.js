@@ -88,6 +88,17 @@ ninja.data = [{
             window.location.href = "/blog/2025/resnet-unet/";
           
         },
+      },{id: "post-slurm-aide-mémoire-en-questions",
+        
+          title: "SLURM : aide-mémoire en questions",
+        
+        description: "Un aide-mémoire pour soumettre et gérer des jobs SLURM — des premiers pas aux usages avancés, organisé par problèmes concrets.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/slurm-aide-memoire/";
+          
+        },
       },{id: "post-quand-les-maths-rencontrent-les-zombies",
         
           title: "Quand les maths rencontrent les zombies !",
