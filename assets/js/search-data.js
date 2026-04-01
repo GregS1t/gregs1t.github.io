@@ -189,6 +189,16 @@ ninja.data = [{
           description: "Hands-on course on efficient and low-cost AI, covering computational optimization of matrix operations (Python, C, GPU) and neural network compression techniques. Part of the PSL Week programme.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025_frugal_ai/";
+            },},{id: "trail-analyser-ses-données-trail-comment-lire-les-données-de-sa-montre",
+          title: 'Analyser ses données trail — Comment lire les données de sa montre',
+          description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser...",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2025-12-14-lire-donnees/";
+            },},{id: "trail-analyser-ses-données-trail-comprendre-le-terrain",
+          title: 'Analyser ses données trail — Comprendre le terrain',
+          description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2025-12-21-terrain/";
             },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
           title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
