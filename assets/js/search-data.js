@@ -189,8 +189,8 @@ ninja.data = [{
           description: "Hands-on course on efficient and low-cost AI, covering computational optimization of matrix operations (Python, C, GPU) and neural network compression techniques. Part of the PSL Week programme.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025_frugal_ai/";
-            },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-de-la-course-en-pente",
-          title: 'Le modèle de Minetti — Quel coût énergétique de la course en pente...',
+            },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
+          title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-01-minetti-2002/";
