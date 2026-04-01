@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-projects",
-          title: "projects",
+        },{id: "nav-few-projects",
+          title: "few projects",
           description: "Some projects I have worked on in recent years",
           section: "Navigation",
           handler: () => {
@@ -43,6 +43,13 @@ ninja.data = [{
           section: "Navigation",
           handler: () => {
             window.location.href = "/blog/";
+          },
+        },{id: "nav-trail",
+          title: "trail",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/trail/index.html";
           },
         },{id: "post-observatoire-de-paris-sous-la-neige",
         
