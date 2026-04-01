@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/trail/index.html";
           },
-        },{id: "post-observatoire-de-paris-sous-la-neige",
+        },{id: "post-l-39-algorithme-de-minetti-2002-coût-énergétique-de-la-course-en-pente",
+        
+          title: "L&#39;algorithme de Minetti (2002) — coût énergétique de la course en pente",
+        
+        description: "Présentation critique du modèle polynomial de Minetti et al. (2002) : protocole, résultats, qualités, limites, évolutions depuis 2002, et fiabilité en trail running ultra-long.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/minetti-2002/";
+          
+        },
+      },{id: "post-observatoire-de-paris-sous-la-neige",
         
           title: "Observatoire de Paris sous la neige",
         
