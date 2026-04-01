@@ -199,6 +199,11 @@ ninja.data = [{
           description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-21-terrain/";
+            },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
+          title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
+          description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-04-01-minetti-2002/";
             },},{
         id: 'social-cv',
         title: 'CV',
