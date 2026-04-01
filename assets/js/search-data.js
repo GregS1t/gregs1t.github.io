@@ -51,11 +51,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/trail/index.html";
           },
-        },{id: "post-l-39-algorithme-de-minetti-2002-coût-énergétique-de-la-course-en-pente",
+        },{id: "post-le-modèle-de-minetti-quel-coût-énergétique-de-la-course-en-pente",
         
-          title: "L&#39;algorithme de Minetti (2002) — coût énergétique de la course en pente",
+          title: "Le modèle de Minetti — Quel coût énergétique de la course en pente...",
         
-        description: "Présentation critique du modèle polynomial de Minetti et al. (2002) : protocole, résultats, qualités, limites, évolutions depuis 2002, et fiabilité en trail running ultra-long.",
+        description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
         section: "Posts",
         handler: () => {
           
