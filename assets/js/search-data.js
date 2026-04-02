@@ -204,6 +204,11 @@ ninja.data = [{
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-02-25-minetti-2002/";
+            },},{id: "trail-trimp-de-banister-quantifier-la-charge-d-39-entraînement",
+          title: 'TRIMP de Banister — quantifier la charge d&amp;#39;entraînement',
+          description: "Analyse critique du TRIMP de Banister (1975), du modèle fitness-fatigue de Morton et al. (1990), et de la déclinaison CTL/ATL/TSB de Coggan. Limites de ces approches et piste data-driven.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-03-28-trimp-bannister/";
             },},{
         id: 'social-cv',
         title: 'CV',
