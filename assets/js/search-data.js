@@ -203,7 +203,7 @@ ninja.data = [{
           title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
           section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-04-01-minetti-2002/";
+              window.location.href = "/trail/2026-02-25-minetti-2002/";
             },},{
         id: 'social-cv',
         title: 'CV',
