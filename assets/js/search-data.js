@@ -209,11 +209,6 @@ ninja.data = [{
           description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-28-trimp-bannister/";
-            },},{id: "trail-analyser-ses-données-trail-3-3-lire-sa-physiologie",
-          title: 'Analyser ses données trail (3/3) — Lire sa physiologie',
-          description: "Dérive cardiaque, TRIMP, analyse croisée pente × FC, dégradation d&#39;allure GAP-normalisée et heatmap. Ce que Garmin Connect ne calcule pas.",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-03-9-physiologie/";
             },},{
         id: 'social-cv',
         title: 'CV',
