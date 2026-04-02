@@ -1,0 +1,264 @@
+{
+  "basics": {
+    "name": "Gregory Sainton",
+    "label": "Research Engineer in Machine Learning",
+    "email": "fistname.lastname '@' obspm.com",
+
+    "url": "https://gregs1t.github.io",
+    "summary": "Research Engineer in Machine Learning at Observatoire de Paris (LUX Team). PhD in Astrophysics. Working on SKA radioastronomy source detection and peatland cartography. Former planetary science engineer on NASA InSight and FSS missions at IPGP.",
+
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "Gregory Sainton",
+        "url": "https://scholar.google.fr/citations?user=Wa12bFcAAAAJ&hl=fr&oi=ao"
+      },
+      {
+        "network": "ORCID",
+        "username": "0000-0002-9375-4877",
+        "url": "https://orcid.org/0000-0002-9375-4877"
+      },
+      {
+        "network": "ResearchGate",
+        "username": "Gregory-Sainton",
+        "url": "https://www.researchgate.net/profile/Gregory-Sainton"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "gregory-sainton",
+        "url": "https://www.linkedin.com/in/gregory-sainton/"
+      },
+      {
+        "network": "GitHub",
+        "username": "GregS1t",
+        "url": "https://github.com/GregS1t"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Observatoire de Paris - LUX Team",
+      "position": "Research Engineer in Machine Learning",
+      "url": "https://www.observatoiredeparis.psl.eu",
+      "location": "Paris, France",
+      "startDate": "2023",
+      "endDate": "",
+      "summary": "Machine learning research applied to astrophysics and Earth observation.",
+      "highlights": [
+        "SKA (Square Kilometre Array) - ML algorithms for automated source detection in radio data",
+        "Development of CIANNA_OTF, a client-server system for asynchronous batched inference on FITS images (IVOA UWS)"
+      ]
+    },
+    {
+      "name": "Institut de Physique du Globe de Paris (IPGP)",
+      "position": "Research Engineer - Planetology and Space Sciences Lab",
+      "url": "https://www.ipgp.fr",
+      "location": "Paris, France",
+      "startDate": "2018",
+      "endDate": "2023",
+      "summary": "Research engineering for planetary science missions.",
+      "highlights": [
+        "NASA InSight mission - ML algorithms for seismic signal analysis (LSTM, Deep Scattering Networks, CNNs/YOLOv4)",
+        "Development of the SEIS data processing, visualisation and reporting pipeline",
+        "Instrument control software for optical seismometer test bench (PIONEERS / Horizons 2020)",
+        "NASA FSS mission - AIT of the Lunar seismometer, vibration tests of flight and qualification models",
+        "Administration of CPU/GPU computing servers and GitLab platform for the team",
+        "Selection and administration of document management system for IPGP (IN2P3/ATRIUM)"
+      ]
+    },
+    {
+      "name": "Ministere de l'Education Nationale - Academie de Creteil",
+      "position": "Primary school teacher for deaf and hearing-impaired children",
+      "location": "Creteil, France",
+      "startDate": "2010",
+      "endDate": "2018",
+      "summary": "Primary school teacher specialised in deaf and hearing-impaired children.",
+      "highlights": [
+        "Adapted teaching methods and materials to individual student needs",
+        "Collaborated with parents, specialists, and educators to support student learning",
+        "On secondment (mise en disponibilite) from July 2018 to August 2023"
+      ]
+    },
+    {
+      "name": "Groupama Asset Management",
+      "position": "Project Director / Senior Consultant",
+      "location": "Paris, France",
+      "startDate": "2008",
+      "endDate": "2009",
+      "summary": "Project management and IT consulting in asset management.",
+      "highlights": [
+        "Management of tender processes and supplier selection",
+        "Project team management (15 people), project oversight (3M euros budget)",
+        "System reliability control including security and business continuity planning"
+      ]
+    },
+    {
+      "name": "BNP Paribas Asset Management",
+      "position": "IT Consultant",
+      "location": "Paris, France",
+      "startDate": "2005",
+      "endDate": "2008",
+      "summary": "IT consulting and software development in asset management.",
+      "highlights": [
+        "Functional and technical specifications for risk calculation software",
+        "Management of development teams (10 people)",
+        "Development of order routing modules for derivatives and portfolio management (Java/Oracle)",
+        "Development of portfolio performance attribution modules (Java/Oracle)",
+        "User training (20 people) and compliance software deployment"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universite Pierre et Marie Curie, Paris",
+      "url": "https://lpnhe.in2p3.fr/",
+      "area": "Astrophysics - LPNHE | CNRS",
+      "studyType": "PhD",
+      "startDate": "2001",
+      "endDate": "2004",
+      "courses": [
+        "Spectroscopie des supernovae a grand decalage vers le rouge",
+        "Director: Dr. Reynald Pain",
+        "Collaborations: Supernovae Cosmology Project (SCP) and Supernovae Legacy Survey (SNLS)",
+        "Observations: Keck (10m), VLT (8m), WHT (3.6m), CFHT"
+      ]
+    },
+    {
+      "institution": "Universite Claude Bernard Lyon I",
+      "url": "https://www.ip2i.in2p3.fr/",
+      "area": "Particules, Noyaux, Atomes et Photons - IP2I",
+      "studyType": "DEA (Master 2)",
+      "startDate": "2000",
+      "endDate": "2001",
+      "courses": [
+        "Internship: Spectroscopy of type Ia supernovae with VLT/FORS1",
+        "Advisor: Dr. Pierre Antilogus"
+      ]
+    },
+    {
+      "institution": "Universite Claude Bernard Lyon I",
+      "url": "https://cral.univ-lyon1.fr/",
+      "area": "Physics, option Astrophysics - CRAL",
+      "studyType": "Maitrise (Master 1)",
+      "startDate": "1999",
+      "endDate": "2000",
+      "courses": [
+        "Internship: Calibration of the Faber-Jackson relation using Cepheids",
+        "Advisor: Pr. Helene Courtois"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "TensorFlow Developer Certificate",
+      "date": "2021-06",
+      "issuer": "DeepLearning.AI / Coursera",
+      "url": "https://www.coursera.org/professional-certificates/tensorflow-in-practice"
+    },
+    {
+      "name": "Administration Linux (50h)",
+      "date": "2021-06",
+      "issuer": "CNRS Formation"
+    },
+    {
+      "name": "Acquisition et visualisation en Python (80h)",
+      "date": "2021-04",
+      "issuer": "CNRS Formation"
+    },
+    {
+      "name": "Techniques et technologies de vehicules spatiaux (70h)",
+      "date": "2021-10",
+      "issuer": "CNES"
+    },
+    {
+      "name": "FORTRAN (30h)",
+      "date": "2019-11",
+      "issuer": "IDRIS"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "CIANNA",
+        "Deep Learning",
+        "LSTM",
+        "CNN",
+        "YOLO",
+        "Unsupervised Learning"
+      ]
+    },
+    {
+      "name": "Programming",
+      "keywords": [
+        "Python",
+        "C",
+        "C++",
+        "Java",
+        "Fortran",
+        "Matlab",
+        "Bash",
+        "SQL",
+        "R"
+      ]
+    },
+    {
+      "name": "Signal Processing",
+      "keywords": [
+        "Seismology",
+        "Radio Astronomy",
+        "Spectroscopy",
+        "Remote Sensing"
+      ]
+    },
+    {
+      "name": "Tools & Platforms",
+      "keywords": [
+        "Git",
+        "GitLab",
+        "Docker",
+        "Jupyter",
+        "Linux",
+        "PyQt",
+        "PyVISA"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional (B2)"
+    },
+    {
+      "language": "German",
+      "fluency": "Basic (A1)"
+    },
+    {
+      "language": "LSF (French Sign Language)",
+      "fluency": "Basic (A2)"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Astronomy",
+      "keywords": [
+        "Member of SAF (Societe Astronomique de France)",
+        "Currently building a 250mm Dobson telescope including mirror polishing"
+      ]
+    },
+    {
+      "name": "UltraTrail Running",
+      "keywords": [
+        "Regular practice"
+      ]
+    }
+
+  ]
+}
