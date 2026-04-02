@@ -399,3 +399,11 @@ Tu peux aller beaucoup plus loin bien sûr. Là, on ne fait pas mieux que les ap
 
 
 Le notebook complet associé à ce billet est disponible sur [GitHub](https://github.com/gregs1t).
+
+## Petit warning 
+
+> Avertissement : je suis data cientist, pas spécialiste 
+> de physiologie de l'exercice. Ce que tu lis ici, c'est 
+> le carnet de bord d'un trailer curieux qui aime comprendre 
+> ses données — pas un cours magistral. Les sources sont là 
+> pour que tu puisses vérifier.

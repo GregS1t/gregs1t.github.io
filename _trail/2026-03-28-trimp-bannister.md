@@ -254,7 +254,7 @@ Les modèles précédents ont des **paramètres fixés** *a priori*. Comme je l'
 
 ## Petit warning 
 
-> Avertissement : je suis datas cientist, pas spécialiste 
+> Avertissement : je suis data cientist, pas spécialiste 
 > de physiologie de l'exercice. Ce que tu lis ici, c'est 
 > le carnet de bord d'un trailer curieux qui aime comprendre 
 > ses données — pas un cours magistral. Les sources sont là 
