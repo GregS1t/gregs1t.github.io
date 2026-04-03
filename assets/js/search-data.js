@@ -117,9 +117,9 @@ ninja.data = [{
             window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
-      },{id: "post-un-séisme-sur-mars-et-du-déglitch-dans-l-39-histoire",
+      },{id: "post-entendre-un-séisme-de-magnitude-5-sur-mars",
         
-          title: "Un séisme sur Mars — et du déglitch dans l&#39;histoire",
+          title: "Entendre un séisme de magnitude 5 sur Mars",
         
         description: "Dans la nuit du 4 au 5 mai 2022, Mars a tremblé pour la première fois à magnitude 5. Ecoutez le séisme.",
         section: "Posts",
