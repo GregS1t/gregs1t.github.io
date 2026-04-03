@@ -117,6 +117,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
+      },{id: "post-un-séisme-sur-mars-et-du-déglitch-dans-l-39-histoire",
+        
+          title: "Un séisme sur Mars — et du déglitch dans l&#39;histoire",
+        
+        description: "Dans la nuit du 4 au 5 mai 2022, Mars a tremblé pour la première fois à magnitude 5. Ecoutez le séisme.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/seisme-mars-insight/";
+          
+        },
       },{id: "post-git-aide-mémoire-en-questions",
         
           title: "Git : aide-mémoire en questions",
