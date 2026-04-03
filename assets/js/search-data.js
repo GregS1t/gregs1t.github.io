@@ -225,6 +225,11 @@ ninja.data = [{
           description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-28-trimp-bannister/";
+            },},{id: "trail-mental-association-vs-dissociation-où-mettre-ton-attention-pendant-un-effort",
+          title: '[mental] Association vs dissociation — où mettre ton attention pendant un effort ?...',
+          description: "Tu regardes le paysage ou tu surveilles tes jambes ? T&#39;écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ?",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-04-03-association-dissociation/";
             },},{
         id: 'social-cv',
         title: 'CV',
