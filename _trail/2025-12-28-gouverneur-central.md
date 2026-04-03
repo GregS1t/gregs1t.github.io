@@ -116,7 +116,7 @@ Cela montre que la fatigue ne peut pas être réduite à une simple question de 
 
 <figure style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/img/blog/2025-12-28_noakes_central_governor/centra_governor_theory.jpg"
-       width="40%"
+       width="80%"
        alt="T. Noakes (from https://thenoakesfoundation.org)">
   <figcaption>
     T. Noakes (from https://thenoakesfoundation.org).
