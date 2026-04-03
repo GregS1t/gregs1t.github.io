@@ -6,7 +6,7 @@ description: >
   Quand la tête dit stop, est-ce que le corps est vraiment à sec ? On va parler du gouverneur central de Noakes, de ce qu'il explique, de ses limites, et de ce que la perception de l'effort nous apprend vraiment sur la fatigue en endurance.
 tags: [trail, endurance, fatigue, mental, physiologie, Noakes, RPE, perception]
 categories: [trail, science]
-related_posts: true
+related_posts: false
 toc:
   sidebar: left
 math: false

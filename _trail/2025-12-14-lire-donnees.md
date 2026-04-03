@@ -5,7 +5,7 @@ date: 2025-12-14
 description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser..."
 tags: [trail données python analyse FIT montre GPS visualisation]
 categories: [tutoriels, trail, data]
-related_posts: true,
+related_posts: false,
 toc:
   sidebar: left
 math: true
