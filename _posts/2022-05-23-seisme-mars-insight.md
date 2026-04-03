@@ -39,14 +39,15 @@ La même approche est utilisée dans d'autres domaines : les ondes gravitationne
 
 Dernière subtilité propre à SEIS : En mixant leurs signaux sur deux canaux, l'équipe a obtenu un léger effet stéréo, les deux pistes ne sont pas tout à fait identiques, et ça s'entend.
 
-## Mettez votre casque, augmentez un peu le son... 
-
-<div style="display: flex; justify-content: center;">
-  <figure style="width: 100%;">
-    {% include video.liquid path="https://assets.science.nasa.gov/content/dam/science/psd/mars/downloadable_items/4/7/47251_PIA25281.mp4" controls=true width="40%" %}
-    <figcaption style="text-align: center;">Sonification du séisme de magnitude 5 enregistré par SEIS dans la nuit du 4 au 5 mai 2022. Processing du signal : G. Sainton (IPGP) — Sonification : R. Lapeyre (CNES). © CNES/NASA/JPL-Caltech</figcaption>
-  </figure>
-</div>
+## Mettez 🎧,  ↗️ un peu le son 🎚️ 
+<center>
+  <div style="display: flex; justify-content: center;">
+    <figure style="width: 100%;">
+      {% include video.liquid path="https://assets.science.nasa.gov/content/dam/science/psd/mars/downloadable_items/4/7/47251_PIA25281.mp4" controls=true width="60%" %}
+      <figcaption style="text-align: center;">Sonification du séisme de magnitude 5 enregistré par SEIS dans la nuit du 4 au 5 mai 2022. Processing du signal : G. Sainton (IPGP) — Sonification : R. Lapeyre (CNES). © CNES/NASA/JPL-Caltech</figcaption>
+    </figure>
+  </div>
+</center>
 
 ## Références
 
