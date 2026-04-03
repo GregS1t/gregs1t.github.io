@@ -210,6 +210,11 @@ ninja.data = [{
           description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-21-terrain/";
+            },},{id: "trail-mental-le-gouverneur-central-le-cerveau-arbitre-t-il-la-fatigue",
+          title: '[mental] Le gouverneur central — Le cerveau arbitre-t-il la fatigue ?',
+          description: "Quand la tête dit stop, est-ce que le corps est vraiment à sec ? On va parler du gouverneur central de Noakes, de ce qu&#39;il explique, de ses limites, et de ce que la perception de l&#39;effort nous apprend vraiment sur la fatigue en endurance.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2025-12-28-gouverneur-central/";
             },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
           title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
