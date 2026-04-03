@@ -43,6 +43,15 @@ C'est à partir de ce type d'observations qu'un autre regard sur la fatigue a co
 Entre 1997 et 2000, le physiologiste de l'exercice Timothy Noakes propose ce qu'il appelle la théorie du *central governor*, à partir d'un constat simple : dans de nombreuses situations d'endurance, l'arrêt de l'effort ne correspond pas à une défaillance physiologique totale.
 
 
+<figure style="text-align: center;">
+  <img src="{{ site.baseurl }}/assets/img/blog/2025-12-28_noakes_central_governor/portrait_Noakes.jpg"
+       width="40%"
+       alt="T. Noakes (from https://thenoakesfoundation.org)">
+  <figcaption>
+    T. Noakes (from https://thenoakesfoundation.org).
+  </figcaption>
+</figure>
+
 Dans un article de synthèse publié en 2000, Noakes suggère que la fatigue ne serait pas uniquement la conséquence d'un épuisement périphérique, mais aussi un mécanisme de régulation centrale visant à protéger l'organisme.
 
 Dans ce cadre, le cerveau intégrerait en permanence :
@@ -104,6 +113,16 @@ Ce qui est frappant, c'est que les réponses physiologiques classiquement mesur�
 Ces résultats ont depuis été confirmés et synthétisés dans plusieurs revues, qui convergent vers la même interprétation : la fatigue mentale n'altère pas directement la capacité physiologique périphérique, mais augmente le coût perçu de l'effort, réduisant la tolérance à celui-ci (Pageaux & Lepers, 2016 ; Van Cutsem et al., 2017).
 
 Cela montre que la fatigue ne peut pas être réduite à une simple question de muscles ou de réserves énergétiques. Elle dépend aussi de la perception de l'effort, de la tolérance au coût ressenti et des mécanismes de régulation associés.
+
+<figure style="text-align: center;">
+  <img src="{{ site.baseurl }}/assets/img/blog/2025-12-28_noakes_central_governor/centra_governor_theory.jpg"
+       width="40%"
+       alt="T. Noakes (from https://thenoakesfoundation.org)">
+  <figcaption>
+    T. Noakes (from https://thenoakesfoundation.org).
+  </figcaption>
+</figure>
+
 
 ## Ce que j'en retiens pour l'endurance
 
