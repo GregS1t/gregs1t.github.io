@@ -30,13 +30,14 @@ Une fois le signal nettoyé, Rémi Lapeyre (responsable des opérations InSight/
 
 ## Comment on transforme un séisme en son ?
 
-> **Un signal sismique, c'est quoi à la base ?** Les capteurs VBB (Very Broad Band) de SEIS couvrent la plage 0,01–10 Hz ([Lognonné et al., 2019, *Space Sci. Rev.*](https://link.springer.com/article/10.1007/s11214-018-0574-6)). C'est largement en dessous du seuil d'audibilité humain, qui démarre autour de 20 Hz. > Autrement dit, même posé directement sur Mars, votre oreille n'entendrait rien.
->
-> Pour rendre le signal audible, le principe est simple : accélérer la lecture d'un enregistrement revient à multiplier toutes ses fréquences par le même facteur, les faisant glisser mécaniquement dans le domaine audible. C'est une technique bien établie en sismologie terrestre ([USGS](https://www.usgs.gov/programs/earthquake-hazards/science/earthquake-sounds)).
-> Ici, le signal a été accéléré ×44, puis amplifié pour atteindre un niveau d'écoute confortable. Ce n'est pas une reconstruction artistique : c'est le signal physique brut transposé dans une gamme que nos oreilles peuvent percevoir.
->
-> La même approche est utilisée dans d'autres domaines : les ondes gravitationnelles détectées par LIGO sont ainsi converties en son en les jouant à des fréquences plus élevées que celles du signal original ([LIGO Lab, Caltech](https://www.ligo.caltech.edu/video/ligo20160211v2)).
-> Dernière subtilité propre à SEIS : En mixant leurs signaux sur deux canaux, l'équipe a obtenu un léger effet stéréo — les deux pistes ne sont pas tout à fait identiques, et ça s'entend.
+**Un signal sismique, c'est quoi à la base ?** Les capteurs VBB (Very Broad Band) de SEIS couvrent la plage 0,01–10 Hz ([Lognonné et al., 2019, *Space Sci. Rev.*](https://link.springer.com/article/10.1007/s11214-018-0574-6)). C'est largement en dessous du seuil d'audibilité humain, qui démarre autour de 20 Hz. > Autrement dit, même posé directement sur Mars, votre oreille n'entendrait rien.
+
+Pour rendre le signal audible, le principe est simple : accélérer la lecture d'un enregistrement revient à multiplier toutes ses fréquences par le même facteur, les faisant glisser mécaniquement dans le domaine audible. C'est une technique bien établie en sismologie terrestre ([USGS](https://www.usgs.gov/programs/earthquake-hazards/science/earthquake-sounds)).
+Ici, le signal a été accéléré ×44, puis amplifié pour atteindre un niveau d'écoute confortable. Ce n'est pas une reconstruction artistique : c'est le signal physique brut transposé dans une gamme que nos oreilles peuvent percevoir.
+
+La même approche est utilisée dans d'autres domaines : les ondes gravitationnelles détectées par LIGO sont ainsi converties en son en les jouant à des fréquences plus élevées que celles du signal original ([LIGO Lab, Caltech](https://www.ligo.caltech.edu/video/ligo20160211v2)).
+
+Dernière subtilité propre à SEIS : En mixant leurs signaux sur deux canaux, l'équipe a obtenu un léger effet stéréo, les deux pistes ne sont pas tout à fait identiques, et ça s'entend.
 
 ## Mettez votre casque, augmentez un peu le son... 
 
