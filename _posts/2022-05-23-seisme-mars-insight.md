@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Un séisme sur Mars — et du déglitch dans l'histoire
+title: Entendre un séisme de magnitude 5 sur Mars  
 date: 2022-05-23
 description: Dans la nuit du 4 au 5 mai 2022, Mars a tremblé pour la première fois à magnitude 5. Ecoutez le séisme.
 tags: [sismologie, Mars, InSight, SEIS, IPGP, traitement du signal]
@@ -38,10 +38,14 @@ Une fois le signal nettoyé, Rémi Lapeyre (responsable des opérations InSight/
 > La même approche est utilisée dans d'autres domaines : les ondes gravitationnelles détectées par LIGO sont ainsi converties en son en les jouant à des fréquences plus élevées que celles du signal original ([LIGO Lab, Caltech](https://www.ligo.caltech.edu/video/ligo20160211v2)).
 > Dernière subtilité propre à SEIS : En mixant leurs signaux sur deux canaux, l'équipe a obtenu un léger effet stéréo — les deux pistes ne sont pas tout à fait identiques, et ça s'entend.
 
-## Mettez vore casque ! 
+## Mettez votre casque ! 
 
-{% include video.liquid path="https://assets.science.nasa.gov/content/dam/science/psd/mars/downloadable_items/4/7/47251_PIA25281.mp4" controls=true %}
-
+<div style="display: flex; justify-content: center;">
+  <figure style="width: 60%;">
+    {% include video.liquid path="https://assets.science.nasa.gov/content/dam/science/psd/mars/downloadable_items/4/7/47251_PIA25281.mp4" controls=true width="100%" %}
+    <figcaption style="text-align: center;">Sonification du séisme de magnitude 5 enregistré par SEIS dans la nuit du 4 au 5 mai 2022. Processing du signal : G. Sainton (IPGP) — Sonification : R. Lapeyre (CNES). © CNES/NASA/JPL-Caltech</figcaption>
+  </figure>
+</div>
 
 ## Références
 
