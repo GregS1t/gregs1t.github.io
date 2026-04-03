@@ -5,8 +5,8 @@ date: 2026-03-28
 description: >
   Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al.,
   et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?
-tags: trail entraînement charge modélisation fréquence-cardiaque
-categories: trail
+tags: trail entraînement charge modélisation fréquence-cardiaque FFM 
+categories: [trail, data, science]
 related_posts: true
 toc:
   sidebar: left
@@ -254,7 +254,7 @@ Les modèles précédents ont des **paramètres fixés** *a priori*. Comme je l'
 
 ## Petit warning 
 
-> Avertissement : je suis data cientist, pas spécialiste 
+> Avertissement : je suis data scientist, pas spécialiste 
 > de physiologie de l'exercice. Ce que tu lis ici, c'est 
 > le carnet de bord d'un trailer curieux qui aime comprendre 
 > ses données — pas un cours magistral. Les sources sont là 

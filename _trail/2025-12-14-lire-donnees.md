@@ -3,9 +3,9 @@ layout: post
 title: "Analyser ses données trail — Comment lire les données de sa montre"
 date: 2025-12-14
 description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser..."
-tags: trail données python analyse FIT montre GPS visualisation
-ccategories: trail
-related_posts: true
+tags: [trail données python analyse FIT montre GPS visualisation]
+categories: [tutoriels, trail, data]
+related_posts: true,
 toc:
   sidebar: left
 math: true
@@ -402,7 +402,7 @@ Le notebook complet associé à ce billet est disponible sur [GitHub](https://gi
 
 ## Petit warning 
 
-> Avertissement : je suis data cientist, pas spécialiste 
+> Avertissement : je suis data scientist, pas spécialiste 
 > de physiologie de l'exercice. Ce que tu lis ici, c'est 
 > le carnet de bord d'un trailer curieux qui aime comprendre 
 > ses données — pas un cours magistral. Les sources sont là 
