@@ -230,6 +230,11 @@ ninja.data = [{
           description: "Tu regardes le paysage ou tu surveilles tes jambes ? T&#39;écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-03-association-dissociation/";
+            },},{id: "trail-cartographier-sa-trace-gps-du-fichier-fit-à-la-carte-interactive",
+          title: 'Cartographier sa trace GPS — du fichier FIT à la carte interactive',
+          description: "Ton fichier .fit contient des coordonnées GPS. Comment représenter la trace sur une carte ?",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-04-05-carte-interactive-fit/";
             },},{
         id: 'social-cv',
         title: 'CV',
