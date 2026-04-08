@@ -200,8 +200,8 @@ ninja.data = [{
           description: "Hands-on course on efficient and low-cost AI, covering computational optimization of matrix operations (Python, C, GPU) and neural network compression techniques. Part of the PSL Week programme.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025_frugal_ai/";
-            },},{id: "trail-analyser-ses-données-trail-comment-lire-les-données-de-sa-montre",
-          title: 'Analyser ses données trail — Comment lire les données de sa montre',
+            },},{id: "trail-data-analyser-ses-données-trail-comment-lire-les-données-de-sa-montre",
+          title: '[data] Analyser ses données trail — Comment lire les données de sa montre...',
           description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser...",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-14-lire-donnees/";
