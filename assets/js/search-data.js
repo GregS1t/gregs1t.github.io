@@ -205,8 +205,8 @@ ninja.data = [{
           description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser...",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-14-lire-donnees/";
-            },},{id: "trail-analyser-ses-données-trail-comprendre-le-terrain",
-          title: 'Analyser ses données trail — Comprendre le terrain',
+            },},{id: "trail-data-analyser-ses-données-trail-comprendre-le-terrain",
+          title: '[data] Analyser ses données trail — Comprendre le terrain',
           description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-21-terrain/";
