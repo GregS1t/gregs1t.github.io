@@ -117,6 +117,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/zombie-epidemic-model/";
           
         },
+      },{id: "post-fonctions-d-39-activation-pourquoi-tant-de-choix",
+        
+          title: "Fonctions d&#39;activation : pourquoi tant de choix ?",
+        
+        description: "Tour d&#39;horizon des fonctions d&#39;activation des réseaux de neurones : propriétés mathématiques, avantages, défauts, et guide de sélection pratique.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/zoologie-activation-functions/";
+          
+        },
       },{id: "post-entendre-un-séisme-de-magnitude-5-sur-mars",
         
           title: "Entendre un séisme de magnitude 5 sur Mars",
