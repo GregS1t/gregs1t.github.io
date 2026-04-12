@@ -241,6 +241,11 @@ ninja.data = [{
           description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-28-trimp-bannister/";
+            },},{id: "trail-analyser-ses-données-trail-3-3-lire-sa-physiologie",
+          title: 'Analyser ses données trail (3/3) — Lire sa physiologie',
+          description: "Dérive cardiaque, TRIMP, analyse croisée pente × FC, dégradation d&#39;allure GAP-normalisée et heatmap. Ce que Garmin Connect ne calcule pas.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-03-9-physiologie/";
             },},{id: "trail-mental-association-vs-dissociation-où-mettre-ton-attention-pendant-un-effort",
           title: '[mental] Association vs dissociation — où mettre ton attention pendant un effort ?...',
           description: "Tu regardes le paysage ou tu surveilles tes jambes ? T&#39;écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ?",
@@ -251,6 +256,11 @@ ninja.data = [{
           description: "Ta montre enregistre la température, mais ce qu&#39;elle mesure c&#39;est en partie la chaleur de ton poignet. Comment récupérer la météo réelle de ta course ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-05-meteo-course-trail/";
+            },},{id: "trail-prédire-son-temps-en-trail-un-problème-vraiment-difficile",
+          title: 'Prédire son temps en trail — Un problème (vraiment) difficile',
+          description: "Du polynôme de Minetti aux réseaux LSTM, en passant par l&#39;ITRA et Strava GAP : tour d&#39;horizon honnête des modèles de prédiction de performance en trail, de leurs apports, et surtout de leurs limites communes.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-04-12-trail-predictors/";
             },},{
         id: 'social-cv',
         title: 'CV',
