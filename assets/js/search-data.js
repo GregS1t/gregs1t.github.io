@@ -62,6 +62,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
+      },{id: "post-convolutions-et-gradient-vanishing-ddpm-2",
+        
+          title: "Convolutions et gradient vanishing — DDPM 2",
+        
+        description: "Les briques fondamentales d&#39;un réseau convolutif : pourquoi les convolutions, le problème du gradient vanishing, et la solution des connexions résiduelles.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/convolutions-gradient-vanishing/";
+          
+        },
       },{id: "post-pourquoi-des-modèles-génératifs-pour-les-galaxies-ddpm-1",
         
           title: "Pourquoi des modèles génératifs pour les galaxies ? — DDPM 1",
