@@ -62,37 +62,15 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
-      },{id: "post-formalisme-ddpm-du-bruit-à-l-39-image-ddpm-3",
+      },{id: "post-pourquoi-des-modèles-génératifs-pour-les-galaxies-ddpm-1",
         
-          title: "Formalisme DDPM — du bruit à l&#39;image - DDPM 3",
+          title: "Pourquoi des modèles génératifs pour les galaxies ? — DDPM 1",
         
-        description: "Dérivation complète du DDPM : processus forward, ELBO, simplification de la loss, processus inverse et algorithmes d&#39;entraînement et d&#39;échantillonnage de Ho et al. (2020).",
+        description: "Motivation, état de l&#39;art, spécificités des images astronomiques et choix d&#39;implémentation pour Galaxy Zoo 2.",
         section: "Posts",
         handler: () => {
           
-            window.location.href = "/blog/2025/ddpm-formalism/";
-          
-        },
-      },{id: "post-les-embeddings-sinusoïdaux-conditionner-un-réseau-sur-le-temps-ddpm-2",
-        
-          title: "Les embeddings sinusoïdaux, conditionner un réseau sur le temps - DDPM 2",
-        
-        description: "Comment encoder un entier t en un vecteur de dimension d ? Le mécanisme d&#39;embedding sinusoïdal, emprunté aux Transformers, et son rôle dans le conditionnement temporel du DDPM.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/sinusoidal-embedding/";
-          
-        },
-      },{id: "post-architectures-convolutives-pour-l-39-astronomie-ddpm-1",
-        
-          title: "Architectures convolutives pour l&#39;astronomie — DDPM 1",
-        
-        description: "Dans ce premier billet, j&#39;aborde les briques fondamentales du réseau de diffusion DDPM appliqué au dataset Galaxy Zoo 2.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/resnet-unet/";
+            window.location.href = "/blog/2025/ddpm-motivation/";
           
         },
       },{id: "post-slurm-aide-mémoire-en-questions",
