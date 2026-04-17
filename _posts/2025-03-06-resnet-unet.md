@@ -8,6 +8,7 @@ description: >
 tags: [deep-learning, convolution, resnet, unet, astrophysique, DDPM]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+published: false
 series_order: 1
 related_posts: true
 toc:

@@ -7,6 +7,7 @@ description: >
 tags: [deep-learning, diffusion, embeddings, positional-encoding, DDPM]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+published: false
 series_order: 2
 related_posts: true
 toc:
