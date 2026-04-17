@@ -38,7 +38,7 @@ Le résultat est un catalogue de ~240 000 galaxies (images RGB, 64² pixels) et 
 Un modèle génératif apprend la distribution statistique $p(\mathbf{x})$ des images d'entraînement, de façon à pouvoir en fabriquer de nouvelles. Dans le contexte de la morphologie galactique, plusieurs applications sont motivantes :
 
 <figure style="text-align: center;">
-  <img src="{{ site.baseurl }}assets/img/blog/DDPM_Article_1/GenerativeProcess.png"
+  <img src="{{ site.baseurl }}/assets/img/blog/DDPM_Article_1/GenerativeProcess.png"
        width="80%"
        alt="Schéma d'un processus génératif">
   <figcaption>
@@ -82,7 +82,7 @@ La PSF (*Point Spread Function* ou "fonction d'étalement du point") décrit la 
 
 
 <figure style="text-align: center;">
-  <img src="{{ site.baseurl }}assets/img/blog/DDPM_Article_1/Exemple_PSF.png"
+  <img src="{{ site.baseurl }}/assets/img/blog/DDPM_Article_1/Exemple_PSF.png"
        width="100%"
        alt="Exemple de PSF">
   <figcaption>
