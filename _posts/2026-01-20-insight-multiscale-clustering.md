@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Démêler les sources sismiques de Mars : clustering multi-échelle et séparation de sources sur les données InSight"
-date: 2026-01-20
+date: 2026-02-15
 description: >
   Comment séparer automatiquement des glitches, des rafales de vent et des interactions atmosphériques dans un signal sismique martien,
   sans aucune étiquette, grâce aux spectres de scattering par ondelettes et à un fVAE ?
