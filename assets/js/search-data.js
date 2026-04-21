@@ -62,6 +62,17 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
+      },{id: "post-le-formalisme-ddpm-du-bruit-à-l-39-image-ddpm-5",
+        
+          title: "Le formalisme DDPM — du bruit à l&#39;image — DDPM 5",
+        
+        description: "Processus forward, processus reverse, objectif d&#39;entraînement simplifié et algorithmes d&#39;échantillonnage de Ho et al. (2020).",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/ddpm-formalism/";
+          
+        },
       },{id: "post-convolutions-et-gradient-vanishing-ddpm-2",
         
           title: "Convolutions et gradient vanishing — DDPM 2",
@@ -230,11 +241,6 @@ ninja.data = [{
           description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-28-trimp-bannister/";
-            },},{id: "trail-analyser-ses-données-trail-3-3-lire-sa-physiologie",
-          title: 'Analyser ses données trail (3/3) — Lire sa physiologie',
-          description: "Dérive cardiaque, TRIMP, analyse croisée pente × FC, dégradation d&#39;allure GAP-normalisée et heatmap. Ce que Garmin Connect ne calcule pas.",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-03-9-physiologie/";
             },},{id: "trail-mental-association-vs-dissociation-où-mettre-ton-attention-pendant-un-effort",
           title: '[mental] Association vs dissociation — où mettre ton attention pendant un effort ?...',
           description: "Tu regardes le paysage ou tu surveilles tes jambes ? T&#39;écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ?",
