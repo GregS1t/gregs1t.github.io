@@ -53,9 +53,9 @@ Un spectre de puissance classique (FFT) échoue sur ce dernier point : deux sign
 
 Un tel réseau est un CNN à filtres prédéfinis (par des ondelettes) organisé en deux couches :
 - **Couche 1** : la transformée en ondelettes du signal, $Wx$, qui extrait les variations de $x$ à chaque échelle $2^j$ — analogue à un spectrogramme multi-résolution.
-- **Couche 2** : la transformée en ondelettes appliquée aux *enveloppes* de la couche 1, $W|Wx|$, qui capture comment les échelles *interagissent* entre elles — ce qu'on ne voit pas avec une FFT.
+- **Couche 2** : la transformée en ondelettes appliquée aux *enveloppes* de la couche 1, $W\vert Wx \vert$, qui capture comment les échelles *interagissent* entre elles — ce qu'on ne voit pas avec une FFT.
 
-Le **spectre de scattering** $\Psi(x)$ est alors la matrice de covariance diagonale de $S(x) = (Wx, W|Wx|)^\top$ : il résume en un vecteur de faible dimension les propriétés statistiques non-gaussiennes du signal (intermittence, asymétrie temporelle, modulation d'enveloppe).
+Le **spectre de scattering** $\Psi(x)$ est alors la matrice de covariance diagonale de $S(x) = (Wx, W \vert Wx \vert)^\top$ : il résume en un vecteur de faible dimension les propriétés statistiques non-gaussiennes du signal (intermittence, asymétrie temporelle, modulation d'enveloppe).
 
 ### Pourquoi l'extension pyramidale ?
 
