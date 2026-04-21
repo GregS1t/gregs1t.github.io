@@ -5,7 +5,7 @@ date: 2024-05-29
 description: "Un aide-mémoire pour soumettre et gérer des jobs SLURM — des premiers pas aux usages avancés, organisé par problèmes concrets."
 tags: [slurm, hpc, cluster, gpu, calcul-intensif]
 categories: [tutoriels]
-giscus_comments: true
+giscus_comments: false
 related_posts: false
 toc:
   sidebar: left

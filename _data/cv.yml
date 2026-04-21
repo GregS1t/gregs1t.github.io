@@ -20,7 +20,7 @@ cv:
           - SKA (Square Kilometre Array) — ML algorithms for automated source detection in radio data
           - Peatland cartography using machine learning and remote sensing
           - Development of CIANNA_OTF, a client-server system for asynchronous batched inference on FITS images
-          - "Tech: Python, PyTorch, CIANNA, CUDA, Docker, Git, SLURM, FITS"
+          - "Tech: Python, PyTorch, CIANNA, CUDA, Docker, Git, SLURM"
 
       - company: Institut de Physique du Globe de Paris (IPGP)
         position: Research Engineer — Planetology and Space Sciences Lab
@@ -37,7 +37,7 @@ cv:
           - Selection and administration of the document management system for IPGP (IN2P3/ATRIUM)
           - "Tech: Python, Matlab, C, TensorFlow, ObsPy, PyQt, PyVISA, Git, Linux, Arduino, Raspberry Pi"
 
-      - company: "Ministere de l'Education Nationale — Academie de Creteil"
+      - company: "Ministère de l'Education Nationale — Academie de Créteil"
         position: Primary School Teacher for deaf and hearing-impaired children
         location: "Creteil, France"
         start_date: 2009
@@ -91,10 +91,10 @@ cv:
         start_date: 2005
         end_date: 2005
         highlights:
-          - Finance de marché: gestion de portefeuille, gestion des risques, produits dérivés
-          - Méthodes de simulation: Monte-Carlo, méthodes de copules, mathématiques financières 
-          - Tech: C, C++
-          - Internship: Simulation of financial portfolio and risk management using Copule methods
+          - "Finance de marché: gestion de portefeuille, gestion des risques, produits dérivés"
+          - "Méthodes de simulation: Monte-Carlo, méthodes de copules, mathématiques financières"
+          - "Tech: C, C++"
+          - "Internship: Simulation of financial portfolio and risk management using Copule methods"
 
       - institution: Universite Claude Bernard Lyon I
         location: "Villeurbanne, France"
@@ -117,7 +117,7 @@ cv:
         end_date: 2000
         highlights:
           - "Internship: Calibration of the Faber-Jackson relation using Cepheids using LEDA database"
-          - "Advisor: Pr. Helene Courtois"
+          - "Advisor: Pr. Hélène Courtois"
 
     Certificates:
       - name: "Docker"
@@ -142,6 +142,10 @@ cv:
         icon: fa-brands fa-python
 
     Projects:
+      - name: Diffusion model for Radio astronomy
+        start_date: 2024
+        end_date: present
+        summary: 🟢 Active | Development and benchmarking of diffusion models for radio astronomy applications.
       - name: DL for SKA Radio Astronomy 
         start_date: 2023
         end_date: present
@@ -166,7 +170,7 @@ cv:
     Skills:
       - name: Machine Learning
         icon: fa-solid fa-brain
-        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning (Computer Vision, LSTM, Deep Scattering Networks)"
+        keywords: "PyTorch, TensorFlow, Scikit-learn, CIANNA, Deep Learning (Computer Vision, LSTM, Deep Scattering Networks, Diffusion Models)..."
 
       - name: Programming
         icon: fa-solid fa-code

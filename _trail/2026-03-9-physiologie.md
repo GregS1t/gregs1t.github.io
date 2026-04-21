@@ -5,6 +5,7 @@ date: 2026-04-01
 description: "Dérive cardiaque, TRIMP, analyse croisée pente × FC, dégradation d'allure GAP-normalisée et heatmap. Ce que Garmin Connect ne calcule pas."
 tags: trail données python analyse FC dérive TRIMP physiologie fatigue Minetti
 categories: trail
+published: false
 ---
 
 *"Tu peux voir ta fréquence cardiaque sur Garmin Connect. Ce que tu ne peux pas y faire, c'est croiser ta dérive cardiaque avec le profil, calculer ta charge en TRIMP, ou comparer ta courbe pente/allure avec le modèle de Minetti. C'est ce qu'on fait ici."*

@@ -5,47 +5,43 @@ description: A client–server system for asynchronous, batched deep-learning in
 #img: assets/img/projects/cianna_otf.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
 ---
+
+
+*CIANNA_OTF is developed at **Observatoire de Paris — LUX Team** in the framework of the **SKA (Square Kilometre Array)** project. The system is designed to serve inference from the YOLO-CIANNA source detection pipeline on radio astronomy data, where processing volumes make manual, sequential inference impractical.*
+
 
 ## Overview
 
-**CIANNA On-The-Fly (CIANNA\_OTF)** is a client–server system designed to run
-asynchronous, batched inference on astronomical FITS images using the
-[CIANNA deep-learning framework](https://github.com/Deyht/CIANNA).
+**CIANNA On-The-Fly (CIANNA\_OTF)** is a spin-off of the CIANNA framework, recently developed and still in the testing phase.
 
-The system addresses a concrete operational challenge in scientific ML pipelines:
-deep-learning models used for radio source detection are expensive to load and
-initialise. Running inference naïvely — one request triggering one model load —
-leads to poor GPU utilisation, long response times, and fragile workflows.
 
-CIANNA\_OTF solves this by introducing an intermediate execution layer that
-**groups compatible requests into batches**, loads the model once, and processes
-multiple jobs together, while exposing a clean, job-oriented API to users.
+It is a client-server system designed to perform asynchronous and batch inferences on astronomical images in FITS format using CIANNA.
 
-The architecture is designed for **Virtual Observatory interoperability**, following
-the IVOA Universal Worker Service (UWS) pattern for asynchronous execution and
-returning results in the IVOA VOTable format.
+The system addresses a concrete operational challenge in scientific machine learning pipelines:
+deep learning models used for radio source detection are computationally expensive to load and initialize. Performing inference naively (one image -> one query) can lead to inefficient GPU utilization, long response times, and fragile workflows. 
+
+CIANNA\_OTF attempts to solve this problem by introducing an intermediate execution layer that **groups compatible queries into batches**. This allows the model to be loaded only once and multiple tasks to be processed simultaneously, while exposing a clear, task-oriented API to users.
+
+The architecture is designed for **interoperability with virtual observatories**, following the IVOA Universal Worker Service (UWS) model for asynchronous execution and returning results in IVOA VOTable format. Ongoing development also places a strong emphasis on provenance, another IVOA standard intended to ensure the reproducibility of runs. 
+
 
 ## Key Concepts
 
-**Job** — a single inference request consisting of an XML description
-(parameters, model choice, region of interest) and a FITS image file.
-Each job is assigned a unique identifier and progresses through well-defined
-execution phases.
+**Task** — a single inference request consisting of an XML description (parameters, model selection, region of interest, etc.) and a FITS image file. Each task is assigned a unique identifier and progresses through clearly defined execution phases.
 
-**Batch** — a group of jobs sharing the same model identifier and quantization
-mode, created automatically by the server according to configurable rules
-(minimum size, maximum size, waiting time).
+**Batch** — a group of tasks sharing the same model identifier and quantification mode (these criteria may be subject to change), created automatically by the server according to configurable rules (minimum size, maximum size, waiting time).
+
 
 ## Features
 
-- Asynchronous job submission and polling following **IVOA UWS** semantics
-- Automatic **request batching** for efficient GPU utilisation
-- Results returned as **IVOA VOTable** files
-- Server-side **provenance tracking** for scientific traceability
-- Three client interfaces: CLI (headless), TTY dashboard (interactive), GUI (PyQt)
-- Conda-based environment, compatible with CPU and GPU servers
+- Asynchronous job submission and polling following **IVOA UWS** semantics ;
+- Automatic **request batching** for efficient GPU utilisation ;
+- Results returned as **IVOA VOTable** files ;
+- Server-side **provenance tracking** for scientific traceability ;
+- Three client interfaces: CLI (headless), TTY dashboard (interactive), GUI (PyQt) ;
+- Conda-based environment, compatible with CPU and GPU servers.
 
 ## Technical Details
 
@@ -55,22 +51,18 @@ mode, created automatically by the server according to configurable rules
 - **IVOA compliance:** UWS (partial), VOTable (full), PROV (initial)
 - **Dependency:** [CIANNA framework](https://github.com/Deyht/CIANNA)
 
-## Context
+## Status
 
-Developed at **Observatoire de Paris — LUX Team** in the framework of the
-**SKA (Square Kilometre Array)** project. The system is designed to serve
-inference from the YOLO-CIANNA source detection pipeline on radio astronomy
-data, where processing volumes make manual, sequential inference impractical.
+CIANNA OTF is currently undergoing intensive testing. Following a series of successful local tests, the server stack has been successfully deployed on a dedicated machine. After a development phase using a Flask server, an NGINX server has been set up to handle HTTPS connections and forward requests to Flask. 
+
 
 ## Related Publication
 
-- Cornu, D., Salomé, P., Semelin, B., ..., **Sainton, G.**, et al. (2024).
-  **YOLO-CIANNA: Galaxy detection with deep learning in radio data.**
-  *Astronomy & Astrophysics*, 690, A211.
-  [https://doi.org/10.1051/0004-6361/202449548](https://doi.org/10.1051/0004-6361/202449548)
+- Cornu, D., Salomé, P., Semelin, B., ..., **Sainton, G.**, et al. (2024). **YOLO-CIANNA: Galaxy detection with deep learning in radio data.** *Astronomy & Astrophysics*, 690, A211. [https://doi.org/10.1051/0004-6361/202449548](https://doi.org/10.1051/0004-6361/202449548)
 
 ## Links
 
-- [GitHub repository](https://github.com/GregS1t/CIANNA_OTF)
+- [CIANNA OTF repository](https://github.com/GregS1t/CIANNA_OTF)
 - [CIANNA framework](https://github.com/Deyht/CIANNA)
+- [CIANNA Website](https://cianna.obspm.fr/index.html) 
 - [SKA Observatory](https://www.skao.int/en)
