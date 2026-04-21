@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Le formalisme DDPM — du bruit à l'image — DDPM 5"
+title: "Le formalisme DDPM — du bruit à l'image — DDPM 3"
 date: 2025-11-13
 description: >
   Processus forward, processus reverse, objectif d'entraînement simplifié
@@ -25,7 +25,7 @@ Jusqu'ici, j'ai décrit l'architecture du réseau de débruitage — le U-Net. D
 
 Un DDPM repose sur deux processus Markoviens opposés :
 
-- Le **processus forward** $q$ — fixé, sans paramètres apprenables — corrompt progressivement une image $\mathbf{x}_0$ en y ajoutant du bruit gaussien, jusqu'à obtenir $\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$.
+- Le **processus forward** $q$ — fixé, sans paramètres apprenables — "corrompt" progressivement une image $\mathbf{x}_0$ en y ajoutant du "bruit gaussien", jusqu'à obtenir $\mathbf{x}_T \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$.
 - Le **processus reverse** $p_\theta$ — appris — reconstruit l'image propre en débruitant pas à pas depuis $\mathbf{x}_T$.
 
 L'idée centrale est simple : si on sait débruiter une image légèrement bruitée, on peut enchaîner $T$ étapes de débruitage pour reconstruire une image propre depuis du bruit pur. Le U-Net apprend à réaliser chacune de ces étapes.
@@ -183,17 +183,10 @@ for t in reversed(range(self.n_steps)):
     if t > 0:
         x_t = x_t + self.betas[t].sqrt() * torch.randn_like(x_t)
 ```
-
 ---
 
-## 6. Résumé des équations clés
 
-| Équation | Formule | Référence |
-|---|---|---|
-| Transition forward | $q(\mathbf{x}_t \mid \mathbf{x}_{t-1}) = \mathcal{N}(\sqrt{1-\beta_t}\,\mathbf{x}_{t-1},\, \beta_t \mathbf{I})$ | Ho, Eq. 2 |
-| Marginal forward | $\mathbf{x}_t = \sqrt{\bar{\alpha}_t}\,\mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t}\,\boldsymbol{\epsilon}$ | Ho, Eq. 4 |
-| Moyenne reverse | $\boldsymbol{\mu}_\theta = \frac{1}{\sqrt{\alpha_t}}\!\left(\mathbf{x}_t - \frac{\beta_t}{\sqrt{1-\bar{\alpha}_t}}\boldsymbol{\epsilon}_\theta\right)$ | Ho, Eq. 11 |
-| Objectif simplifié | $L_\text{simple} = \mathbb{E}\!\left[\|\boldsymbol{\epsilon} - \boldsymbol{\epsilon}_\theta(\mathbf{x}_t, t)\|^2\right]$ | Ho, Eq. 14 |
+
 
 ---
 
