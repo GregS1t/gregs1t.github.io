@@ -150,7 +150,7 @@ famille Runge-Kutta, estime l'erreur à chaque pas de temps en comparant deux ap
 
 <figure style="text-align: center;">
   <img src="{{ site.baseurl }}/assets/img/blog/Zombie_article/sizrq_quarantine.png"
-       width="80%"
+       width="100%"
        alt="Impact de la quarantaine sur le pic de zombies.">
   <figcaption>
     Figure 1 - Impact de la quarantaine sur le pic de zombies.
