@@ -143,7 +143,7 @@ ninja.data = [{
         
           title: "Quand les maths rencontrent les zombies !",
         
-        description: "Un week-end pluvieux, une série à regarder, et une question qui s&#39;impose : et si on modélisait ça ?.",
+        description: "Un week-end pluvieux, une série à regarder, et une question qui s&#39;impose : et si on modélisait ça ?",
         section: "Posts",
         handler: () => {
           
