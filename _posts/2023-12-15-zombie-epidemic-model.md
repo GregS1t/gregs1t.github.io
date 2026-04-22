@@ -177,9 +177,10 @@ susceptible se raréfie structurellement.
 Les zombies, finalement, ne sont qu'un prétexte commode — mais remarquablement efficace — pour comprendre pourquoi le COVID n'a pas été maîtrisé par les antiviraux seuls, et pourquoi la vaccination de masse était la seule issue mathématiquement robuste.
 
 ---
+**Matériel**
 
 *Le notebook complet, avec une interface interactive pour explorer les paramètres, est
-disponible sur [un repo GitHub](#).*
+disponible sur [GitHub](https://github.com/GregS1t/zombies_attack).*
 
 **Références**
 
