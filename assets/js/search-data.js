@@ -73,39 +73,6 @@ ninja.data = [{
             window.location.href = "/blog/2026/neige-obs/";
           
         },
-      },{id: "post-le-formalisme-ddpm-du-bruit-à-l-39-image-ddpm-3",
-        
-          title: "Le formalisme DDPM — du bruit à l&#39;image — DDPM 3",
-        
-        description: "Processus forward, processus reverse, objectif d&#39;entraînement simplifié et algorithmes d&#39;échantillonnage de Ho et al. (2020).",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/ddpm-formalism/";
-          
-        },
-      },{id: "post-la-self-attention-dans-le-u-net-ddpm-4",
-        
-          title: "La self-attention dans le U-Net — DDPM 4",
-        
-        description: "Mécanisme de la self-attention, implémentation dans le U-Net du DDPM, et justification du choix des résolutions 8×8 et 16×16.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/self-attention-unet/";
-          
-        },
-      },{id: "post-le-u-net-comme-prédicteur-de-bruit-ddpm-3",
-        
-          title: "Le U-Net comme prédicteur de bruit — DDPM 3",
-        
-        description: "Architecture du U-Net adapté au DDPM : encodeur, bottleneck, décodeur, skip connections, conditionnement temporel.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2025/unet-noise-predictor/";
-          
-        },
       },{id: "post-convolutions-et-gradient-vanishing-ddpm-2",
         
           title: "Convolutions et gradient vanishing — DDPM 2",
