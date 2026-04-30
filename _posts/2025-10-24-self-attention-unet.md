@@ -8,6 +8,7 @@ description: >
 tags: [deep-learning, attention, transformer, unet, DDPM]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+published: false
 series_order: 4
 related_posts: false
 toc:

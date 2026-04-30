@@ -8,6 +8,7 @@ description: >
 tags: [deep-learning, unet, architecture, DDPM, astrophysique]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+published: false
 series_order: 3
 related_posts: false
 toc:
