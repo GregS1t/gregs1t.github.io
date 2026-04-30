@@ -5,14 +5,14 @@ date: 2021-06-13
 description: "Un aide-mémoire pratique pour maîtriser Git — des premiers pas aux usages avancés, organisé par problèmes concrets."
 tags: [git, développement, workflow, outils]
 categories: [tutoriels]
-giscus_comments: true
+giscus_comments: false
 related_posts: false
 toc:
   sidebar: left
 ---
 Il y a quelques années, j'ai donné des formations Git/Gitlab/GitHub a des collègues. J'ai décidé de reprendre le contenu des slides qui avait un peu vieilli et de le formuler sous une autre forme.
 J'ai organisé le billet en deux parties. D'abord les **problèmes courants** — formulés comme tu les rencontres, du plus simple au plus avancé. Ensuite les **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
-Ca me sert aussi d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Donc ce contenu est régulièrement enrichi de mes trouvailles.
+Ca me sert aussi d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Donc ce contenu est régulièrement enrichi de mes trouvailles, voire corrigé.
 
 ---
 
