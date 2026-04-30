@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "Démêler les sources sismiques de Mars : clustering multi-échelle et séparation de sources sur les données InSight"
+title: "Clustering multi-échelle et séparation de sources sur les données InSight"
 date: 2026-02-15
 description: >
-  Comment séparer automatiquement des glitches, des rafales de vent et des interactions atmosphériques dans un signal sismique martien,
-  sans aucune étiquette, grâce aux spectres de scattering par ondelettes et à un fVAE ?
+  Comment séparer automatiquement des glitches, des rafales de vent et des interactions atmosphériques dans un signal sismique martien, sans aucune étiquette, grâce aux spectres de scattering par ondelettes et à un fVAE ?
 tags: [machine-learning, geophysics, unsupervised-learning, seismology, mars, source-separation, fVAE]
 categories: research
 published: true
@@ -19,12 +18,10 @@ Petit billet de blog sur un article paru début 2026 intitulé *Multiscale Clust
 
 ## Le problème : un cocktail de signaux à toutes les échelles
 
-Commençons par une petite métaphore : imaginez-vous avec un micro, casque sur les oreilles, enregistrant l'ambiance sonore d'une ville depuis un même point fixe : le souffle du vent, les vibrations du trafic routier, les bruits de pas des passants, peut-être des coups de tonnerre lointains...
-Toutes ces sources se superposent, et vous n'avez aucune "étiquette" pour les distinguer. À la fin, vous n'avez qu'un seul signal qui contient tout cela. Comment séparer chaque composante ? C'est exactement le défi auquel a fait face le sismomètre **SEIS** de la mission **InSight** sur Mars.
+Commençons par une petite métaphore : vous avez un micro, un casque sur les oreilles et vous enregistrez l'ambiance sonore d'une ville depuis un même point fixe : le souffle du vent, les vibrations du trafic routier, les bruits de pas des passants, peut-être des coups de tonnerre lointains...
+Toutes ces sources se superposent, et vous n'avez aucune "étiquette" pour les distinguer. À la fin, vous n'avez qu'un seul signal qui contient tout cela. Comment séparer chaque composante ? Les scientifiques qui ont analysés les données du sismomètre [SEIS](www.seis-insight.eu) de la mission [InSight](https://science.nasa.gov/mission/insight/) sur Mars ont fait face au même défi. 
 
-Depuis son atterrissage en novembre 2018 et jusqu'en décembre 2022, SEIS a enregistré en continu trois composantes d'accélération du sol grâce à ses trois sismomètres à large bande (VBB) (et 2 sismomètres courtes périodes (SP)).
-
-Le signal résultant est un mélange hétérogène de :
+Le signal est un mélange "hétérogène" (pour rester poli) de :
 
 - **Glitches** : impulsions transitoires de quelques dizaines de secondes, probablement dues à des craquements thermiques de l'instrument, du tether...
 - **Dust devils** : tourbillons de poussière.
@@ -47,13 +44,13 @@ On va essayer de démêler l'architecture utilisée en la décomposant en élém
 Avant de chercher à séparer des sources, il faut se donner une **représentation du signal** qui soit à la fois :
 - **compacte** : pas question de travailler directement sur des millions d'échantillons bruts,
 - **discriminante** : deux types de sources différents doivent avoir des représentations différentes,
-- **sensible aux structures non-gaussiennes** : les glitches, les rafales de vent, les dust devils ne sont pas du bruit gaussien — ils ont des formes caractéristiques que la variance seule ne capture pas.
+- **sensible aux structures non-gaussiennes** : les glitches, les rafales de vent, les dust devils ne sont pas du bruit gaussien, ils ont des formes caractéristiques que la variance seule ne capture pas.
 
 Un spectre de puissance classique (FFT) échoue sur ce dernier point : deux signaux très différents peuvent avoir le même spectre de puissance. C'est ici qu'interviennent les **réseaux de scattering par ondelettes** (Bruna & Mallat, 2013).
 
 Un tel réseau est un CNN à filtres prédéfinis (par des ondelettes) organisé en deux couches :
 - **Couche 1** : la transformée en ondelettes du signal, $Wx$, qui extrait les variations de $x$ à chaque échelle $2^j$ — analogue à un spectrogramme multi-résolution.
-- **Couche 2** : la transformée en ondelettes appliquée aux *enveloppes* de la couche 1, $W\vert Wx \vert$, qui capture comment les échelles *interagissent* entre elles — ce qu'on ne voit pas avec une FFT.
+- **Couche 2** : la transformée en ondelettes appliquée aux *enveloppes* de la couche 1, $W\vert Wx \vert$, qui capture comment les échelles *interagissent* entre elles, ce qu'on ne voit pas avec une FFT.
 
 Le **spectre de scattering** $\Psi(x)$ est alors la matrice de covariance diagonale de $S(x) = (Wx, W \vert Wx \vert)^\top$ : il résume en un vecteur de faible dimension les propriétés statistiques non-gaussiennes du signal (intermittence, asymétrie temporelle, modulation d'enveloppe).
 
@@ -61,7 +58,7 @@ Le **spectre de scattering** $\Psi(x)$ est alors la matrice de covariance diagon
 
 Le spectre de scattering $\Psi(x)$ qu'on a défini au dessus calcule une moyenne sur **une seule fenêtre temporelle**. C'est là que le problème se pose : si la fenêtre est trop grande, un glitch de 50 s est perdu dans la moyenne et disparaît de la représentation. Si elle est trop petite, une interaction atmosphérique de 54 min n'est pas capturée du tout.
 
-Je ne crois pas qu'il existe pas de "bonne" fenêtre unique — les sources ont des durées propres, qui s'étalent sur **trois ordres de grandeur**.
+Je ne crois pas qu'il existe pas de "bonne" fenêtre unique : les sources ont des durées propres, qui s'étalent sur **trois ordres de grandeur**.
 
 La solution serait donc de calculer **K spectres en parallèle**, chacun avec une fenêtre de taille différente, toutes ancrées au même instant (pyramide causale) :
 
@@ -71,7 +68,7 @@ $$
 
 avec $w_{k+1}$ quatre fois plus long que $w_k$. Dans l'article, quatre échelles sont utilisées : **51,2 s**, **3,4 min**, **13,6 min** et **54,6 min**.
 
-> **L'idée clé** : une source n'est visible dans $\Psi_k(x)$ que si sa durée est comparable à $w_k$. En empilant quatre fenêtres, on garantit qu'aucune source ne sera invisibilisée par un mauvais choix d'échelle — et chaque $\Psi_k$ alimentera son propre espace de clustering dans l'étage suivant.
+> **L'idée clé** : une source n'est visible dans $\Psi_k(x)$ que si sa durée est comparable à $w_k$. En empilant quatre fenêtres, on garantit qu'aucune source ne sera invisibilisée par un mauvais choix d'échelle et chaque $\Psi_k$ alimentera son propre espace de clustering dans l'étage suivant.
 
 > **Analogie** : c'est comme observer une forêt avec un drone à quatre altitudes différentes : de près, on distingue les branches individuelles (glitches) ; de loin, on ne voit que la canopée globale (tendances atmosphériques de fond).
 
@@ -81,7 +78,7 @@ avec $w_{k+1}$ quatre fois plus long que $w_k$. Dans l'article, quatre échelles
 
 ### Pourquoi un Gaussian-mixture VAE ?
 
-On dispose maintenant de quatre représentations $\Psi_1(x), \ldots, \Psi_4(x)$ pour chaque fenêtre du signal. L'étape suivante est de **regrouper automatiquement les fenêtres qui se ressemblent** — c'est-à-dire de faire du *clustering* — sans aucune étiquette.
+On dispose maintenant de quatre représentations $\Psi_1(x), \ldots, \Psi_4(x)$ pour chaque fenêtre du signal. L'étape suivante est de **regrouper automatiquement les fenêtres qui se ressemblent**, c'est-à-dire de faire du *clustering* ... sans aucune étiquette. On appelle ça de l'apprentissage non supervisé.
 
 Mais on veut plus que juste des clusters : on veut aussi pouvoir **générer des exemples synthétiques** de chaque type de source. Pourquoi ? Parce que ces exemples serviront de *prior* dans l'étape de séparation (étage 3) : pour extraire un *glitch* d'un signal mélangé... il faut savoir à quoi ressemble statistiquement un *glitch*.
 
@@ -103,7 +100,7 @@ où $u_i = \Psi_i(x)$ est la représentation scattering à l'échelle $i$, $y_i$
 
 Concrètement : le fVAE a **un encodeur partagé** (qui voit toutes les échelles à la fois) suivi de **quatre paires encodeur/décodeur indépendantes**, une par échelle. Les décodeurs étant indépendants, on peut échantillonner la distribution d'une source à l'échelle 1 (glitch) sans interférer avec ce qu'on observe à l'échelle 4 (vent soutenu).
 
-L'entraînement maximise l'ELBO — la borne inférieure de la vraisemblance des données — sur l'intégralité des données InSight (environ 51 h sur une Tesla V100, 9 composantes de Gaussian mixture par échelle, dimension latente 32).
+L'entraînement maximise l'ELBO, la borne inférieure de la vraisemblance des données — sur l'intégralité des données InSight (environ 51 h sur une Tesla V100, 9 composantes de Gaussian mixture par échelle, dimension latente 32).
 
 ---
 
@@ -128,7 +125,7 @@ Ces trois contraintes se traduisent en trois termes de loss, tous définis **dan
 
 Pourquoi optimiser dans l'espace de scattering plutôt que directement dans le domaine temporel ? Parce que c'est là que les sources sont **discriminables** : deux types de sources peuvent se ressembler dans le domaine temporel tout en ayant des spectres de scattering très différents.
 
-Chaque terme est normalisé par la variance empirique des coefficients de scattering — ce qui évite d'avoir à régler des poids relatifs à la main. L'optimisation est résolue par L-BFGS (1000 itérations, parallélisé sur 4 GPU).
+Chaque terme est normalisé par la variance empirique des coefficients de scattering, ce qui évite d'avoir à régler des poids relatifs à la main. L'optimisation est résolue par L-BFGS (1000 itérations, parallélisé sur 4 GPU).
 
 
 <figure style="text-align: center;">
@@ -136,31 +133,31 @@ Chaque terme est normalisé par la variance empirique des coefficients de scatte
        width="100%"
        alt="Architecture du réseau">
   <figcaption>
-    Figure 1 — Architecture du réseau : les trois étages s'enchaînent de gauche à droite, des pyramidal scattering spectra au fVAE, puis à la séparation par optimisation.
+    Figure 1 : Architecture du réseau : les trois étages s'enchaînent de gauche à droite, des pyramidal scattering spectra au fVAE, puis à la séparation par optimisation.
   </figcaption>
 </figure>
 
 ---
 
-## Résultats : ce que le modèle découvre dans les données martiennes
+## Résultats : Qui y'a t-il dans les données ?
 
 ### Clustering multi-échelle
 
 À chaque échelle de temps, le fVAE identifie 9 clusters. Pour les interpréter, on visualise deux choses : les **formes d'onde alignées** (les signaux typiques du cluster) et les **histogrammes d'occurrence** sur une journée martienne (à quelle heure du jour ces signaux apparaissent-ils le plus souvent ?). Cette dernière information est particulièrement utile : on sait par exemple que les *dust devils* sont majoritairement diurnes, ou que le bruit ambiant est plus faible la nuit.
 
-**Échelle fine (51,2 s)** — on s'attend à voir des signaux transitoires courts :
+**Échelle fine (51,2 s)** $\rightarrow$ on s'attend à voir des signaux transitoires courts :
 - Cluster de *glitches sans précurseur* — fréquents autour du coucher de soleil martien.
 - Cluster de *glitches avec précurseur* (spike d'amplitude juste avant l'impulsion) — même tendance temporelle.
 
-**Échelle intermédiaire (3,4 min)** — les clusters reflètent des phénomènes plus longs :
+**Échelle intermédiaire (3,4 min)** $\rightarrow$ les clusters reflètent des phénomènes plus longs :
 - Cluster de *signaux oscillatoires* à ~25 s de période, corrélés au vent, surtout la nuit. L'origine de ces oscillations n'est pas encore identifiée, mais une cause instrumentale a été écartée.
 - Cluster de *rafales haute fréquence* à dissipation rapide.
 
-**Échelle large (13,6 min)** — les interactions atmosphère-surface émergent :
+**Échelle large (13,6 min)** $\rightarrow$ les interactions atmosphère-surface émergent :
 - Cluster de *rafales de vent intenses* : onset brutal suivi de *ringing*. L'histogramme montre une occurrence concentrée avant et après le coucher de soleil.
 - Cluster de *dust devils* : cohérent avec la fenêtre 09h–15h LMST rapportée par les capteurs de pression InSight.
 
-**Échelle très large (54,6 min)** — les phénomènes globaux dominent :
+**Échelle très large (54,6 min)** $\rightarrow$ les phénomènes globaux dominent :
 - Cluster de *vents soutenus*, similaire aux rafales de l'échelle précédente mais plus persistants.
 - Cluster lié au *lever de soleil* : amplitude croissante, pic centré sur le début de journée martienne.
 
@@ -168,9 +165,9 @@ L'analyse saisonnière confirme la cohérence physique du clustering : les pics 
 
 ### Séparation des sources
 
-Le clustering ne sert pas qu'à décrire les données — il fournit les échantillons de prior nécessaires à la séparation. Deux expériences l'illustrent :
+Le clustering ne sert pas qu'à décrire les données, il fournit les échantillons de *prior* nécessaires à la séparation. Deux expériences l'illustrent :
 
-1. **Extraction de glitches** depuis une fenêtre nocturne de 54,6 min : les impulsions unilatérales sont supprimées avec un impact minimal sur le reste du signal. Sur une portion sans glitch, la méthode ne retire rien — propriété cruciale qui valide la robustesse de l'approche.
+1. **Extraction de glitches** depuis une fenêtre nocturne de 54,6 min : les impulsions unilatérales sont supprimées avec un impact minimal sur le reste du signal. Sur une portion sans glitch, la méthode ne retire rien, c'est une propriété cruciale qui valide la robustesse de l'approche.
 
 2. **Extraction de l'empreinte du vent** depuis une fenêtre diurne : les onsets brutaux suivis de *ringing* sont isolés proprement, laissant un résidu nettement plus calme.
 
@@ -178,7 +175,7 @@ Le clustering ne sert pas qu'à décrire les données — il fournit les échant
 
 La visualisation UMAP (réduction à 2D de l'espace latent de dimension 32) révèle une propriété remarquable : des signaux que le modèle n'a jamais vus comme classe à part entière se retrouvent spontanément regroupés au bon endroit.
 
-- Les **marsquakes** (39 événements sur 4 ans, jamais assez nombreux pour former leur propre cluster) se concentrent dans l'espace latent de l'échelle 54,6 min — cohérent avec leur durée typique de 30–60 min.
+- Les **marsquakes** (39 événements sur 4 ans, jamais assez nombreux pour former leur propre cluster) se concentrent dans l'espace latent de l'échelle 54,6 min, cohérent avec leur durée typique de 30–60 min.
 - Les **pressure drops** (très courts) se regroupent compactement dans l'espace latent de l'échelle 51,2 s.
 
 C'est une validation indirecte mais convaincante : la représentation apprise est physiquement *meaningful*, même pour des signaux rares.
@@ -189,7 +186,7 @@ C'est une validation indirecte mais convaincante : la représentation apprise es
        width="100%"
        alt="UMAP des espaces latents à différentes échelles de temps">
   <figcaption>
-    Figure 2 — Visualisation UMAP de l'espace latent aux quatre échelles de temps. À gauche : localisation des marsquakes (étoiles noires) ; à droite : localisation des pressure drops (cercles noirs). Les marsquakes se concentrent à l'échelle la plus large, les pressure drops à l'échelle la plus fine.
+    Figure 2 : Visualisation UMAP de l'espace latent aux quatre échelles de temps. À gauche : localisation des marsquakes (étoiles noires) ; à droite : localisation des pressure drops (cercles noirs). Les marsquakes se concentrent à l'échelle la plus large, les pressure drops à l'échelle la plus fine.
   </figcaption>
 </figure>
 
@@ -203,7 +200,7 @@ Trois propriétés méritent d'être soulignées :
 
 - **Pas d'hypothèse forte sur les sources** : contrairement à l'ICA, on ne suppose ni stationnarité, ni gaussianité, ni même le nombre de sources à l'avance.
 - **Multi-échelle par construction** : un glitch de 50 s et une interaction atmosphérique d'une heure sont traités dans des espaces latents distincts, sans se parasiter mutuellement.
-- **Généralisable** : la méthode ne suppose rien de spécifique à Mars. Elle est directement applicable à d'autres missions planétaires — Europa Clipper, Dragonfly sur Titan, ou le futur Farside Seismic Suite lunaire — où le manque de connaissance *a priori* sur les sources est encore plus sévère qu'ici.
+- **Généralisable** : la méthode ne suppose rien de spécifique à Mars. Elle est directement applicable à d'autres missions planétaires comme Europa Clipper, Dragonfly sur Titan, ou le futur Farside Seismic Suite lunaire, où le manque de connaissance *a priori* sur les sources est encore plus sévère qu'ici.
 
 ---
 
