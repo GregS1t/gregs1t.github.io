@@ -51,9 +51,9 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/trail/index.html";
           },
-        },{id: "post-démêler-les-sources-sismiques-de-mars-clustering-multi-échelle-et-séparation-de-sources-sur-les-données-insight",
+        },{id: "post-clustering-multi-échelle-et-séparation-de-sources-sur-les-données-insight",
         
-          title: "Démêler les sources sismiques de Mars : clustering multi-échelle et séparation de sources...",
+          title: "Clustering multi-échelle et séparation de sources sur les données InSight",
         
         description: "Comment séparer automatiquement des glitches, des rafales de vent et des interactions atmosphériques dans un signal sismique martien, sans aucune étiquette, grâce aux spectres de scattering par ondelettes et à un fVAE ?",
         section: "Posts",
