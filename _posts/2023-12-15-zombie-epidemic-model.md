@@ -6,6 +6,8 @@ description: >
   Un week-end pluvieux, une série à regarder, et une question qui s'impose : et si on modélisait ça ?
 tags: [EDO, simulation, zombies, last of us, epidemiology]
 categories: simulation
+thumbnail: assets/img/blog/Zombie_article/Maths_Zombies.png
+
 series_order: 1
 related_posts: true
 toc:
@@ -13,7 +15,7 @@ toc:
 math: true
 ---
 
-C'est en regardant *The Last of Us* que l'idée m'est venue. La série met en scène une pandémie fongique (au chordiceps) qui transforme progressivement les humains en créatures agressives. En parallèle, le souvenir du COVID-19 était encore frais — cette période étrange où chacun suivait des courbes, des $R_0$, des taux de reproduction. On était tous devenus épidémiologistes amateurs.
+C'est en regardant *The Last of Us* que l'idée m'est venue. La série met en scène une pandémie fongique (au chordiceps) qui transforme progressivement les humains en créatures agressives. En parallèle, le souvenir du COVID-19 était encore frais, cette période étrange où chacun suivait des courbes, des $R_0$, des taux de reproduction. On était tous devenus épidémiologistes amateurs.
 
 Et là, entre deux épisodes, la question s'est posée naturellement : *est-ce qu'on peut modéliser une épidémie de zombies de la même façon qu'une vraie épidémie ?*
 
@@ -56,7 +58,7 @@ où $\Pi$ est le taux de natalité, $\delta$ la mortalité naturelle, $\alpha$ l
 
 Munz et al. proposent ensuite plusieurs raffinements. Le plus intéressant est le modèle **SIZRQ**, qui ajoute deux compartiments :
 
-- **I** (Infectés) : les personnes mordues mais pas encore zombifiées — la période d'incubation   observée dans la plupart des œuvres de fiction, *The Last of Us* inclus.
+- **I** (Infectés) : les personnes mordues mais pas encore zombifiées : la période d'incubation   observée dans la plupart des œuvres de fiction, *The Last of Us* inclus.
 - **Q** (Quarantaine) : les infectés et zombies mis à l'écart de la population générale.
 
 Le système devient :
@@ -75,18 +77,18 @@ Ici $\rho$ est le taux de zombification, $\kappa$ et $\sigma$ les taux de mise e
 
 ### Ce que disent les paramètres
 
-Les paramètres ne sont pas de simples lettres grecques — ils ont chacun une interprétation concrète.
+Les paramètres ne sont pas de simples lettres grecques, ils ont chacun une interprétation concrète.
 
 **$\beta = 0.0095$** est le taux de transmission : avec $S = 500$ humains et $Z = 2$ zombies,
-le terme $\beta SZ \approx 9.5$ humains mordus par jour — l'épidémie démarre vite.
+le terme $\beta SZ \approx 9.5$ humains mordus par jour, l'épidémie démarre vite.
 
 **$\alpha = 0.005$** est le taux d'élimination des zombies par les humains. Plus faible que $\beta$ : les humains sont moins efficaces à tuer des zombies qu'à se faire mordre.
 
 **$\rho = 0.025$** est la vitesse de zombification : un mordu devient zombie en $1/\rho \approx 40$ jours en moyenne. C'est le paramètre qui donne toute sa tension narrative à *The Last of Us*.
 
-**$\zeta = 0.0001$** est le taux de résurrection spontanée : très faible, mais non nul — même sans morsure, les morts finissent par revenir.
+**$\zeta = 0.0001$** est le taux de résurrection spontanée : très faible, mais non nul, même sans morsure, les morts finissent par revenir.
 
-> J'ai repris les valeurs de Munz et al. (2009), choisies pour produire des dynamiques intéressantes, pas calibrées sur des données réelles — il n'en existe pas, enfin j'espère.
+> J'ai repris les valeurs de Munz et al. (2009), choisies pour produire des dynamiques intéressantes, pas calibrées sur des données réelles, il n'en existe pas, enfin j'espère.
 
 ## Le taux de reproduction de base $R_0$
 
@@ -96,8 +98,8 @@ Pendant l'épidémie de COVID-19, le $R_0$ était omniprésent dans les médias.
 
 Il répond à une question simple : **combien de nouveaux zombies un seul zombie crée-t-il, dans une population entièrement humaine ?**
 
-- Si $R_0 > 1$ : chaque zombie en fait plus d'un autre — l'épidémie s'emballe.
-- Si $R_0 < 1$ : chaque zombie disparaît avant d'en créer un autre — l'épidémie s'éteint.
+- Si $R_0 > 1$ : chaque zombie en fait plus d'un autre, l'épidémie s'emballe.
+- Si $R_0 < 1$ : chaque zombie disparaît avant d'en créer un autre, l'épidémie s'éteint.
 
 Pour le modèle SIZRQ, Munz et al. obtiennent *via* la méthode de la matrice de prochaine génération (van den Driessche & Watmough, 2002) :
 
@@ -106,14 +108,14 @@ $$R_0 = \frac{\rho \beta N}{(\rho + \delta + \kappa)(\alpha N + \sigma)}$$
 Lisons cette formule comme une fraction **"ce qui alimente les zombies" sur "ce qui les élimine"** :
 
 - Au numérateur : $\rho \beta N$ — la transmission ($\beta$) amplifiée par la vitesse de zombification ($\rho$) sur une population de taille $N$.
-- Au dénominateur : $(\rho + \delta + \kappa)$ est le taux total de sortie du compartiment I — un mordu peut zombifier ($\rho$), mourir naturellement ($\delta$), ou être mis en quarantaine ($\kappa$). Le terme $(\alpha N + \sigma)$ représente le taux d'élimination des zombies.
+- Au dénominateur : $(\rho + \delta + \kappa)$ est le taux total de sortie du compartiment I, un mordu peut zombifier ($\rho$), mourir naturellement ($\delta$), ou être mis en quarantaine ($\kappa$). Le terme $(\alpha N + \sigma)$ représente le taux d'élimination des zombies.
 
 **Le levier quarantaine est visible directement dans la formule** : augmenter $\kappa$ ou $\sigma$ fait grossir le dénominateur, donc réduit $R_0$. C'est exactement ce que cherchait
 le confinement COVID.
 
 ## Résoudre numériquement en Python
 
-Le système SIZRQ ne peut pas être résolu analytiquement — chaque compartiment dépendant des autres, on recourt à une intégration numérique [^1]. L'essentiel du code tient en quelques
+Le système SIZRQ ne peut pas être résolu analytiquement, chaque compartiment dépendant des autres, on recourt à une intégration numérique [^1]. L'essentiel du code tient en quelques
 lignes avec `scipy` :
 
 ```python
@@ -143,8 +145,7 @@ sol = solve_ivp(
 )
 ```
 
-[^1]: Le système SIZRQ forme un ensemble d'équations différentielles couplées — chaque compartiment dépend des autres — ce qui rend une solution analytique (formule exacte) impossible dans le cas général. On recourt donc à une résolution numérique : RK45, un intégrateur de la
-famille Runge-Kutta, estime l'erreur à chaque pas de temps en comparant deux approximations d'ordres différents (4 et 5), et ajuste automatiquement la taille du pas en conséquence. C'est la méthode par défaut de `solve_ivp` dans la librairie `scipy`.
+[^1]: Le système SIZRQ forme un ensemble d'équations différentielles couplées, chaque compartiment dépend des autres, ce qui rend une solution analytique (formule exacte) impossible dans le cas général. On recourt donc à une résolution numérique : RK45, un intégrateur de la famille Runge-Kutta, estime l'erreur à chaque pas de temps en comparant deux approximations d'ordres différents (4 et 5), et ajuste automatiquement la taille du pas en conséquence. C'est la méthode par défaut de `solve_ivp` dans la librairie `scipy`.
 
 ## Un graphique ou deux
 
@@ -161,9 +162,9 @@ Les deux panneaux racontent la même histoire depuis deux angles différents.
 
 **Panneau gauche — l'évolution temporelle.** Sans quarantaine ($\kappa = \sigma = 0$, $R_0 = 1.89$), le pic zombie est atteint dès le premier jour, puis la population zombie décroît lentement — mais ne disparaît jamais complètement. Augmenter progressivement le taux de quarantaine abaisse $R_0$ et réduit le pic, mais c'est seulement à partir de $\kappa = \sigma = 0.03$ que $R_0$ passe sous 1 et que les zombies tendent vers zéro à long terme. En dessous de ce seuil, la quarantaine ralentit sans éradiquer.
 
-**Panneau droit — le bilan au jour 80.** La courbe rouge montre que $R_0$ décroît rapidement dès que la quarantaine s'intensifie — la ligne pointillée à $R_0 = 1$ matérialise le seuil critique. La courbe bleue montre la contrepartie : plus on met en quarantaine, plus il reste d'humains survivants au jour 80. Les deux courbes se croisent visuellement autour de $\kappa = \sigma \approx 0.02$, précisément là où $R_0 = 1$ — c'est la définition même du seuil épidémique.
+**Panneau droit — le bilan au jour 80.** La courbe rouge montre que $R_0$ décroît rapidement dès que la quarantaine s'intensifie, la ligne pointillée à $R_0 = 1$ matérialise le seuil critique. La courbe bleue montre la contrepartie : plus on met en quarantaine, plus il reste d'humains survivants au jour 80. Les deux courbes se croisent visuellement autour de $\kappa = \sigma \approx 0.02$, précisément là où $R_0 = 1$, c'est la définition même du seuil épidémique.
 
-> **Ce que ce graphique dit en une phrase** : il existe un taux de quarantaine minimal en dessous duquel aucun effort ne suffit — exactement comme le seuil d'immunité collective pour un vaccin.
+> **Ce que ce graphique dit en une phrase** : il existe un taux de quarantaine minimal en dessous duquel aucun effort ne suffit, exactement comme le seuil d'immunité collective pour un vaccin.
 
 ## Ce que les zombies nous apprennent vraiment
 
@@ -171,10 +172,10 @@ La conclusion de Munz et al. est sans appel : face aux zombies, seule une interv
 
 Mais le parallèle le plus frappant avec le COVID concerne le traitement. Munz et al. explorent un scénario où un traitement permet de reconvertir un zombie en humain. Résultat : la coexistence devient possible — mais à des niveaux de population humaine très bas, et de façon instable. Pourquoi ? Parce que **le traitement ne confère aucune immunité** : un humain guéri retombe immédiatement dans le compartiment $S$, et peut être remordu le lendemain.
 
-C'est exactement la différence entre un **antiviral** et un **vaccin** dans une vraie épidémie. L'antiviral guérit l'individu mais ne protège pas la population. Le vaccin, lui, déplace définitivement des individus du compartiment $S$ vers un compartiment immunisé, hors d'atteinte du virus. C'est ce déplacement irréversible qui crée l'immunité collective et fait s'effondrer $R_0$ — non pas parce que le virus est moins transmissible, mais parce que la population
+C'est exactement la différence entre un **antiviral** et un **vaccin** dans une vraie épidémie. L'antiviral guérit l'individu mais ne protège pas la population. Le vaccin, lui, déplace définitivement des individus du compartiment $S$ vers un compartiment immunisé, hors d'atteinte du virus. C'est ce déplacement irréversible qui crée l'immunité collective et fait s'effondrer $R_0$, non pas parce que le virus est moins transmissible, mais parce que la population
 susceptible se raréfie structurellement.
 
-Les zombies, finalement, ne sont qu'un prétexte commode — mais remarquablement efficace — pour comprendre pourquoi le COVID n'a pas été maîtrisé par les antiviraux seuls, et pourquoi la vaccination de masse était la seule issue mathématiquement robuste.
+Les zombies, finalement, ne sont qu'un prétexte commode, mais remarquablement efficace, pour comprendre pourquoi le COVID n'a pas été maîtrisé par les antiviraux seuls, et pourquoi la vaccination de masse était la seule issue mathématiquement robuste.
 
 ---
 **Matériel**
@@ -184,7 +185,7 @@ disponible sur [GitHub](https://github.com/GregS1t/zombies_attack).*
 
 **Références**
 
-- Munz, P., Hudea, I., Imad, J., & Smith?, R. J. (2009). *When Zombies Attack! : Mathematical
+- Munz, P. et *al.* (2009). *When Zombies Attack! : Mathematical
   Modelling of an Outbreak of Zombie Infection*. In J. M. Tchuenche & C. Chiyaka (Eds.),
   Infectious Disease Modelling Research Progress (pp. 133–150). Nova Science Publishers.
 - van den Driessche, P., & Watmough, J. (2002). Reproduction numbers and sub-threshold endemic
