@@ -5,6 +5,7 @@ date: 2022-05-23
 description: Dans la nuit du 4 au 5 mai 2022, Mars a tremblé pour la première fois à magnitude 5. Ecoutez le séisme.
 tags: [sismologie, Mars, InSight, SEIS, IPGP, traitement du signal]
 categories: [planetologie, mars, traitement du signal]
+thumbnail: assets/img/blog/2021-06-13_Sonification_seisme/Sonification_visuel.png
 related_posts: false
 toc:
   sidebar: left
