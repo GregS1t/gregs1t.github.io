@@ -11,24 +11,24 @@ toc:
   sidebar: left
 math: true
 ---
-`Sigmoid`, `tanh`, `ReLU`, `Swish`, `ELU`... Une vraie zoologie de fonctions d'activation apparues depuis une dizaine d'années. Mais laquelle choisir ? Pour quel type de couche ? De réseaux ? De données... En préparant le cours Earth Data Science, j'avais besoin de faire le point sur le sujet. Quels sont les avantages, les défauts de chacune.
+`Sigmoid`, `tanh`, `ReLU`, `Swish`, `ELU`... Une vraie zoologie de fonctions d'activation apparues depuis une dizaine d'années. "On ne sait que choisir !" Pour quel type de couche ? De réseaux ? De données... En préparant le cours Earth Data Science, j'avais besoin de faire le point sur le sujet. Quels sont les avantages, les défauts de chacune. Depuis j'ai complété et enrichie cette note.
 
 ---
 
 ## 1. Propriétés mathématiques
 
-Les *fonctions d'activation* sont au cœur de ce qui rend les réseaux de neurones capables d'apprendre des représentations non linéaires. Si on ne les avait pas, empiler des couches linéaires reviendrait à n'avoir qu'une seule transformation linéaire — un perceptron multicouche se réduirait à une régression linéaire, quelle que soit sa profondeur. Mais il faut répondre à quelques exigeances mathématiques.
+Les *fonctions d'activation* sont au cœur de ce qui rend les réseaux de neurones capables d'apprendre des représentations non linéaires. Si on ne les avait pas, empiler des couches linéaires reviendrait à n'avoir qu'une seule transformation linéaire, un perceptron multicouche se réduirait à une régression linéaire, quelle que soit sa profondeur. Mais il faut répondre à quelques exigeances mathématiques.
 
 
 ### 1.1 Continuité et dérivabilité
 
-L'entraînement par descente de gradient stochastique (SGD) repose sur la rétropropagation, qui calcule le gradient de la *loss* couche par couche en remontant du réseau vers l'entrée. Cela impose que chaque fonction d'activation soit **différentiable** — ou au moins différentiable presque partout*.
+L'entraînement par descente de gradient stochastique (SGD) repose sur la rétropropagation, qui calcule le gradient de la *loss* couche par couche en remontant du réseau vers l'entrée. Cela impose que chaque fonction d'activation soit **différentiable**  ou au moins différentiable presque partout*.
 
-> *Preque partout ?* Si je prend l'exemple de la fonction `ReLU`, elle n'est pas dérivable en $x=0$, mais ce cas ne se produit que sur un seul point — on dit que `ReLU` est dérivable *presque partout*. Un point isolé ne contribue pas au calcul du gradient, et la rétropropagation fonctionne sans problème.
+> *Preque partout ?* Si je prend l'exemple de la fonction `ReLU`, elle n'est pas dérivable en $x=0$, mais ce cas ne se produit que sur un seul point, on dit que `ReLU` est dérivable *presque partout*. Un point isolé ne contribue pas au calcul du gradient, et la rétropropagation fonctionne sans problème.
 
 ### 1.2 Vanishing gradient — saturation
 
-Une fonction *sature* quand sa dérivée tend vers 0 pour $\lvert x \lvert\gg 0$. Dans un réseau de $L$ couches, le gradient de la loss par rapport aux poids de la première couche contient un produit de $L$ dérivées. Si chaque dérivée est inférieure à $\frac{1}{4}$ (comme pour Sigmoid), ce produit s'effondre exponentiellement — c'est le **vanishing gradient problem** (Hochreiter, 1991 ; Bengio et al., 1994).
+Une fonction *sature* quand sa dérivée tend vers 0 pour $\lvert x \lvert\gg 0$. Dans un réseau de $L$ couches, le gradient de la loss par rapport aux poids de la première couche contient un produit de $L$ dérivées. Si chaque dérivée est inférieure à $\frac{1}{4}$ (comme pour Sigmoid), ce produit s'effondre exponentiellement : c'est le **vanishing gradient problem** (Hochreiter, 1991 ; Bengio et al., 1994).
 
 ### 1.3 Exploding gradient
 
@@ -46,7 +46,7 @@ Si les activations sont toutes positives (Sigmoid, ReLU), les gradients des poid
 
 ## 2. Quelques fonctions d'activation
 
-Dans cette partie, on va passer quelques fonctions d'activation en revue. Comme vous pouvez l'imaginer, la liste est loin d'être exhaustive. Si jamais vous en voulez plus, je vous propose la lecture de l'article (Ramachandran et al., 2017)
+Dans cette partie, on va passer quelques fonctions d'activation en revue. Bien sûr, la liste est loin d'être exhaustive. Si jamais vous en voulez plus, je vous propose la lecture de l'article (Ramachandran et al., 2017)
 
 
 ### Petite figure de synthèse
@@ -104,10 +104,10 @@ $$\text{ReLU}(x) = \max(0, x), \qquad \text{ReLU}'(x) = \mathbf{1}_{x > 0}$$
 
 ReLU a démocratisé l'entraînement des réseaux profonds (Nair & Hinton, 2010) par sa simplicité et l'absence de saturation côté positif. Mais deux défauts principaux :
 
-- **Dying ReLU** : un neurone recevant systématiquement des préactivations négatives a un gradient nul — il ne se met plus jamais à jour. Un taux d'apprentissage trop élevé peut "tuer" une fraction significative des neurones.
+- **Dying ReLU** : un neurone recevant systématiquement des préactivations négatives a un gradient nul $\rightarrow$ il ne se met plus jamais à jour. Un taux d'apprentissage trop élevé peut "tuer" une fraction significative des neurones.
 - *Non zero-centered* et non bornée côté positif.
 
-Elle reste le point de départ par défaut pour la majorité des architectures.
+Elle reste le point de départ par défaut pour la majorité des réseaux.
 
 ---
 
@@ -141,7 +141,7 @@ $$\text{SELU}(x) = \lambda \begin{cases} x & x > 0 \\ \alpha(e^x - 1) & x \leq 0
 
 avec $\lambda \approx 1.0507$, $\alpha \approx 1.6733$ (valeurs dérivées analytiquement). (Klambauer et al., 2017)
 
-**Propriété clé :** avec l'initialisation LeCun normal et des couches entièrement connectées, SELU est *auto-normalisante* — les activations convergent vers une moyenne nulle et une variance unité couche après couche, sans normalisation. Cette propriété est fragile : elle ne s'applique pas aux CNN ni avec le dropout standard.
+**Propriété clé :** avec l'initialisation LeCun normal et des couches entièrement connectées, SELU est *auto-normalisante* *ie.* les activations convergent vers une moyenne nulle et une variance unité couche après couche, sans normalisation. Cette propriété est fragile : elle ne s'applique pas aux CNN ni avec le dropout standard.
 
 ---
 
@@ -178,23 +178,6 @@ $$\text{Swish}(x) = x \cdot \sigma(x) = \frac{x}{1 + e^{-x}}$$
   </figcaption>
 </figure>
 
-
----
-
-## 3. Tableau de synthèse
-
-| Fonction | Plage | Dérivée continue | Zero-centered | Saturation | Dying | Coût de calcul |
-|---|---|---|---|---|---|---|
-| Sigmoid | $(0,1)$ | ✓ ($C^\infty$) | ✗ | Oui | Non | Moyen |
-| Tanh | $(-1,1)$ | ✓ ($C^\infty$) | ✓ | Oui | Non | Moyen |
-| ReLU | $[0,+\infty)$ | ✗ (saut en 0) | ✗ | Non | Oui | Très faible |
-| Leaky ReLU | $\mathbb{R}$ | ✗ (saut en 0) | ✗ | Non | Non | Très faible |
-| ELU | $(-1,+\infty)$ | ✓ ($C^\infty$) | Quasi | Partielle | Non | Moyen |
-| SELU | $\mathbb{R}$ | ✓ ($C^\infty$) | ✓ | Partielle | Non | Moyen |
-| GELU | $\approx(-0.17,+\infty)$ | ✓ ($C^\infty$) | Quasi | Non | Non | Élevé |
-| Swish/SiLU | $\mathbb{R}$ | ✓ ($C^\infty$) | Quasi | Non | Non | Moyen |
-
----
 
 ## 4. Tentative de guide de sélection pratique
 
@@ -236,7 +219,7 @@ Le choix de la fonction d'activation reste principalement guidé par l'architect
 
 - **Données bruitées ou avec outliers** : les activations lisses (ELU, GELU) sont plus robustes, le gradient binaire de ReLU pouvant amplifier les discontinuités.
 - **Petit dataset** : éviter PReLU (paramètres supplémentaires) ; préférer ReLU ou ELU avec régularisation.
-- **Données normalisées (BatchNorm ou LayerNorm)** : la propriété zero-centered devient moins critique — ReLU suffit dans la plupart des cas.
+- **Données normalisées (BatchNorm ou LayerNorm)** : la propriété zero-centered devient moins critique ; ReLU suffit dans la plupart des cas.
 
 
 ---
@@ -267,7 +250,7 @@ La "prolifération" des fonctions d'activation reflète la diversité des compro
 
 En pratique, **ReLU** reste le point de départ pour la majorité des réseaux. **GELU** est devenu le standard des Transformers depuis BERT (Devlin et al., 2019). **Tanh** et **Sigmoid** survivent dans leurs niches (sorties, cellules récurrentes).
 
-Ce domaine reste actif. Ramachandran et al. (2017) ont montré, *via* une recherche automatique sur un espace de plusieurs milliers de fonctions composées, que Swish pouvait systématiquement surpasser ReLU sur des réseaux profonds — tout en notant que les gains restaient *inconsistants* selon les architectures et les tâches. 
+Ce domaine reste actif. Ramachandran et al. (2017) ont montré, *via* une recherche automatique sur un espace de plusieurs milliers de fonctions composées, que Swish pouvait systématiquement surpasser ReLU sur des réseaux profonds, tout en notant que les gains restaient *inconsistants* selon les architectures et les tâches. 
 
 On retiendra qu'il n'existe pas de choix universellement optimal : Le mieux, pour commencer, c'est d'utiliser la convention établie pour l'architecture cible (celle décrite dans la littérature), et de valider empiriquement tout écart.
 

@@ -10,7 +10,7 @@ related_posts: false
 toc:
   sidebar: left
 ---
-Il y a quelques années, j'ai donné des formations Git/Gitlab/GitHub a des collègues. J'ai décidé de reprendre le contenu des slides qui avait un peu vieilli et de le formuler sous une autre forme.
+Il y a quelques années, j'ai donné des formations Git/Gitlab/GitHub a des collègues. J'ai décidé de reprendre le contenu des slides qui avait un peu vieilli et de le formuler autrement.
 J'ai organisé le billet en deux parties. D'abord les **problèmes courants** — formulés comme tu les rencontres, du plus simple au plus avancé. Ensuite les **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
 Ca me sert aussi d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Donc ce contenu est régulièrement enrichi de mes trouvailles, voire corrigé.
 
@@ -42,10 +42,14 @@ git push -u origin main
 
 #### Je veux récupérer le code d'un collègue
 
+Quand tu veux récupérer un code qui t'intéresse sur GitHub ou le code d'un collègue, rien de plus simple.
+
+
 ```bash
 git clone git@github.com:user/repo.git          # Avec SSH (recommandé)
 git clone https://github.com/user/repo.git      # Avec HTTPS
 ```
+
 
 ---
 
@@ -62,7 +66,7 @@ git log --oneline -10           # Les 10 derniers commits
 
 ### Je travaille seul
 
-#### Git ouvre vim et je ne sais pas en sortir
+#### Git ouvre Vim et je ne sais pas en sortir
 
 Taper `:q!` pour quitter sans sauvegarder, ou `:wq` pour sauvegarder et quitter.
 
@@ -72,6 +76,8 @@ Pour ne plus avoir ce problème :
 git config --global core.editor "nano"
 git config --global core.editor "code --wait"   # VS Code
 ```
+
+Mais Vim, c'est très bien...
 
 ---
 
@@ -233,7 +239,7 @@ git commit -m "Normalize line endings"
 -->
 ---
 
-#### J'ai poussé un fichier sensible (`.env`, clé API)
+### J'ai poussé un fichier sensible (`.env`, clé API)
 
 **Étape 1 — Révoquer la clé immédiatement.** Le remote en a une copie.
 
@@ -249,9 +255,9 @@ git push --force-with-lease
 
 ---
 
-### Mon dépôt est dans un sale état
+## Mon dépôt est dans un sale état
 
-#### Je cherche qui a modifié cette ligne
+### Je cherche qui a modifié cette ligne
 
 ```bash
 git blame fichier.py
@@ -260,7 +266,7 @@ git blame -L 10,25 fichier.py       # Lignes 10 à 25 seulement
 
 ---
 
-#### Je ne sais pas quel commit a introduit ce bug
+### Je ne sais pas quel commit a introduit ce bug
 
 `git bisect` fait une recherche dichotomique dans l'historique.
 
@@ -282,7 +288,7 @@ git bisect run python tests/test_regression.py
 
 ---
 
-#### Mon merge est un désastre, je veux tout annuler
+### Mon merge est un désastre, je veux tout annuler
 
 Pendant le merge (avant le commit de merge) :
 
@@ -298,7 +304,7 @@ git revert -m 1 HEAD                # Crée un commit qui annule le merge
 
 ---
 
-#### Mon dépôt est devenu énorme
+### Mon dépôt est devenu énorme
 
 Identifier les gros objets dans l'historique :
 
@@ -321,7 +327,7 @@ git add .gitattributes
 
 ---
 
-#### Je veux repartir d'une version propre sans perdre l'historique
+### Je veux repartir d'une version propre sans perdre l'historique
 
 ```bash
 git revert abc1234                  # Annule un commit précis (crée un nouveau commit)
@@ -339,9 +345,7 @@ git push --force-with-lease
 
 ## Configuration
 
-### Débutant
-
-#### Configurer son identité
+### Configurer son identité
 
 ```bash
 git config --global user.name "Prénom Nom"
@@ -350,7 +354,7 @@ git config --global user.email "vous@example.com"
 
 ---
 
-#### Comprendre les niveaux de configuration
+### Comprendre les niveaux de configuration
 
 Git applique la configuration dans cet ordre (du plus prioritaire au moins prioritaire) :
 
@@ -367,7 +371,7 @@ git config --list --show-origin                 # Voir toutes les valeurs active
 
 ---
 
-#### Ignorer des fichiers avec `.gitignore`
+### Ignorer des fichiers avec `.gitignore`
 
 ```
 # Fichiers Python compilés
@@ -386,14 +390,13 @@ __pycache__/
 ```
 
 ```bash
-git check-ignore -v fichier.fits    # Vérifier quelle règle s'applique
+git check-ignore -v fichier.txt    # Vérifier quelle règle s'applique
 ```
 
 ---
 
-### Intermédiaire
 
-#### Configurer des alias
+### Configurer des alias
 
 ```bash
 git config --global alias.st "status"
@@ -403,19 +406,17 @@ git config --global alias.undo "reset HEAD~1 --mixed"
 
 ---
 
-#### Exclure des fichiers localement sans toucher `.gitignore`
+### Exclure des fichiers localement sans toucher `.gitignore`
 
 Éditer `.git/info/exclude` — même syntaxe que `.gitignore`, non versionné, non partagé.
 
 ---
 
-#### Normaliser les fins de ligne avec `.gitattributes`
+### Normaliser les fins de ligne avec `.gitattributes`
 
 Voir la section *Problèmes courants → Mes fins de ligne créent des conflits*.
 
 ---
-
-### Avancé
 <!--
 #### Configurer des identités différentes selon les projets (`includeIf`)
 
@@ -470,9 +471,9 @@ git log --show-signature
 
 ## Workflow quotidien
 
-### Débutant
+t
 
-#### Le cycle de base : modifier → stager → committer
+### Le cycle de base : modifier → stager → committer
 
 ```bash
 git add fichier.py              # Stager un fichier
@@ -484,7 +485,7 @@ Règle pratique pour les messages : compléter *"Ce commit…"*.
 
 ---
 
-#### Créer une branche et basculer dessus
+### Créer une branche et basculer dessus
 
 ```bash
 git switch -c ma-feature        # Créer + basculer
@@ -495,9 +496,7 @@ git branch -d ma-feature        # Supprimer une branche fusionnée
 
 ---
 
-### Intermédiaire
-
-#### Fusionner une branche
+### Fusionner une branche
 
 ```bash
 git switch main
@@ -507,7 +506,7 @@ git merge --no-ff ma-feature    # Force un commit de merge (conserve la trace)
 
 ---
 
-#### `merge` vs `rebase` : quand utiliser quoi ?
+### `merge` vs `rebase` : quand utiliser quoi ?
 
 | | `merge` | `rebase` |
 |---|---|---|
@@ -522,7 +521,7 @@ git rebase main                 # Rejoue ma-feature par-dessus main
 
 ---
 
-#### Voir l'historique efficacement
+### Voir l'historique efficacement
 
 ```bash
 git log --oneline --graph --all --decorate
@@ -534,7 +533,7 @@ git log --follow -- ancien_nom.py               # Suit les renommages
 
 ---
 
-#### Comparer des branches ou des commits
+### Comparer des branches ou des commits
 
 ```bash
 git diff main..ma-feature
@@ -542,11 +541,8 @@ git log main..ma-feature --oneline              # Commits dans ma-feature pas en
 git diff HEAD~3 HEAD -- fichier.py
 ```
 
----
 
-### Avancé
-
-#### Réécrire plusieurs commits (`rebase` interactif)
+### Réécrire plusieurs commits (`rebase` interactif)
 
 ```bash
 git rebase -i HEAD~5
@@ -554,32 +550,13 @@ git rebase -i HEAD~5
 
 Dans l'éditeur : `pick`, `squash`, `reword`, `drop`, `edit`.
 
----
-
-#### Travailler sur plusieurs branches en parallèle (`worktree`)
-
-```bash
-git worktree add ../projet-hotfix hotfix/bug-42
-git worktree list
-git worktree remove ../projet-hotfix
-```
-
----
-
-#### Appliquer un commit précis d'une autre branche (`cherry-pick`)
-
-```bash
-git cherry-pick abc1234
-git cherry-pick abc1234..def5678    # Plage de commits
-```
 
 ---
 
 ## Collaboration / Remotes
 
-### Débutant
 
-#### Ajouter et gérer un remote
+### Ajouter et gérer un remote
 
 ```bash
 git remote add origin git@github.com:user/repo.git
@@ -589,7 +566,7 @@ git remote set-url origin git@github.com:user/nouveau-repo.git
 
 ---
 
-#### Pousser une branche
+### Pousser une branche
 
 ```bash
 git push -u origin ma-feature       # Première fois (crée le tracking)
@@ -599,9 +576,7 @@ git push origin --delete ma-feature # Supprimer la branche distante
 
 ---
 
-### Intermédiaire
-
-#### `fetch` vs `pull` : quelle différence ?
+### `fetch` vs `pull` : quelle différence ?
 
 - `git fetch` : récupère les modifications distantes sans les intégrer. Sûr à tout moment.
 - `git pull` : `fetch` + `merge` (ou `rebase`). Modifie la branche courante.
@@ -614,7 +589,7 @@ git merge origin/main
 
 ---
 
-#### Marquer une version avec un tag
+### Marquer une version avec un tag
 
 ```bash
 git tag -a v1.0.0 -m "Version 1.0.0"
@@ -624,7 +599,7 @@ git tag -d v1.0.0                   # Supprimer localement
 git push origin --delete v1.0.0     # Supprimer sur le remote
 ```
 
----
+<!-- ---
 
 ### Avancé
 
@@ -653,7 +628,7 @@ git bundle verify archive.bundle
 ```bash
 git format-patch HEAD~3             # Génère 3 fichiers .patch
 git am *.patch                      # Applique dans un autre dépôt
-```
+``` -->
 
 ---
 
@@ -725,9 +700,7 @@ Même sans outillage automatique, ça rend `git log --oneline` immédiatement li
 
 ## Débogage & Inspection
 
-### Débutant
-
-#### Afficher le contenu d'un commit
+### Afficher le contenu d'un commit
 
 ```bash
 git show abc1234
@@ -737,7 +710,7 @@ git show HEAD~2
 
 ---
 
-#### Lister les fichiers suivis
+### Lister les fichiers suivis
 
 ```bash
 git ls-files
@@ -746,9 +719,8 @@ git ls-files --others --exclude-standard    # Fichiers non suivis
 
 ---
 
-### Intermédiaire
 
-#### Chercher dans le code et l'historique
+### Chercher dans le code et l'historique
 
 ```bash
 git grep "nom_fonction"                         # Dans le code actuel
@@ -758,7 +730,7 @@ git log -G "regex" --oneline                    # Idem avec une regex
 
 ---
 
-#### Statistiques de contribution
+### Statistiques de contribution
 
 ```bash
 git shortlog -sn                        # Nombre de commits par auteur
@@ -767,9 +739,8 @@ git shortlog -sn --since="1 year"
 
 ---
 
-### Avancé
 
-#### Retrouver un commit perdu (`reflog`)
+### Retrouver un commit perdu (`reflog`)
 
 ```bash
 git reflog                              # Historique de toutes les actions HEAD
@@ -779,13 +750,13 @@ git branch recuperation abc1234
 
 ---
 
-#### Trouver le commit qui a introduit un bug (`bisect`)
+### Trouver le commit qui a introduit un bug (`bisect`)
 
 Voir la section *Problèmes courants → Je ne sais pas quel commit a introduit ce bug*.
 
 ---
 
-#### Vérifier et optimiser le dépôt
+### Vérifier et optimiser le dépôt
 
 ```bash
 git fsck --full                         # Vérifier l'intégrité
@@ -795,7 +766,7 @@ git gc --aggressive                     # Nettoyage et compression
 
 ---
 
-#### Inspecter les objets internes de Git
+### Inspecter les objets internes de Git
 
 ```bash
 git cat-file -t abc1234     # Type : blob, tree, commit, tag
@@ -808,5 +779,6 @@ git ls-tree HEAD            # Arbre du commit courant
 ## Références
 
 - Documentation officielle Git : [git-scm.com/doc](https://git-scm.com/doc)
-- *Pro Git* (Chacon & Straub, 2e éd.) — gratuit en ligne : [git-scm.com/book/fr/v2](https://git-scm.com/book/fr/v2)
+- **Pro Git** (Chacon & Straub, 2e éd.) — gratuit en ligne : [git-scm.com/book/fr/v2](https://git-scm.com/book/fr/v2)
+- **Version Control with Git**: Powerful Tools and Techniques for Collaborative Software Development, Prem Kumar Ponuthorai, O'Reilly Ed, 2022 (ajout récent)
 - `man git-<commande>` — pages de manuel intégrées
