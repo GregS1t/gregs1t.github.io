@@ -4,13 +4,14 @@ title: Quelle heure est-il sur Mars ?
 date: 2020-11-22
 description: "Comment convertir une date terrestre en heure martienne ? De la longitude julienne au LMST, en passant par l'anomalie moyenne et l'équation du temps."
 tags: [astronomie, Mars, temps, planétologie, maths, SEIS, Insight, NASA]
+thumbnail: assets/img/blog/2020-11-22_mars_time_converter/CalculatingTimeonMars_visuel.png
 categories: [planetology]
 related_posts: false
 toc:
   sidebar: left
 ---
 
-> **MarsTimeConverter** — Cet article présente les équations implémentées dans la bibliothèque Python [MarsTimeConverter](https://github.com/GregS1t/marstimeconverter), développée à l'Institut de physique du Globe dans le cadre de la mission InSight.
+> **MarsTimeConverter** — Cet article présente les équations implémentées dans la bibliothèque Python [MarsTimeConverter](https://github.com/GregS1t/marstimeconverter), développée à l'Institut de physique du Globe dans le cadre de la mission InSight et notamment l'analyse des données du sismomètre SEIS.
 > Les références aux équations notées « AM2000 » renvoient à l'algorithme Mars24 de Allison & McEwen (2000) tel que documenté par la NASA/GISS.
 
 ---

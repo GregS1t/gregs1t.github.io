@@ -11,8 +11,8 @@ toc:
   sidebar: left
 ---
 Il y a quelques années, j'ai donné des formations Git/Gitlab/GitHub a des collègues. J'ai décidé de reprendre le contenu des slides qui avait un peu vieilli et de le formuler autrement.
-J'ai organisé le billet en deux parties. D'abord les **problèmes courants** — formulés comme tu les rencontres, du plus simple au plus avancé. Ensuite les **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
-Ca me sert aussi d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Donc ce contenu est régulièrement enrichi de mes trouvailles, voire corrigé.
+J'ai organisé le billet en deux parties. D'abord les **problèmes courants** — formulés comme tu les rencontres, plus ou moins simple à régler. Ensuite quelques **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
+Ca me sert aussi et surtout d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Ca veut dire que ce contenu est régulièrement enrichi de mes trouvailles, voire corrigé.
 
 ---
 
