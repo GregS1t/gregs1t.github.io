@@ -70,6 +70,36 @@ cv:
           - User training (20 people) and compliance software deployment
           - "Tech: Java, Oracle, SQL"
 
+    Supervision:
+        type: time_table
+        contents:
+          - title: Salma Barkaoui
+            institution: IPGP
+            year: 2018-2021
+            description:
+              - Participation à l'encadrement de Salma Barkaoui, doctorante en sismologie planétaire (2018-2021)
+              - "Sujet : Analyse des données VBBs de l'instrument SEIS de la mission InSight en utilisant des techniques de Machine Learning et de Deep Learning"
+          - title: Matthieu Nougaret 
+            institution: IPGP
+            year: 2022
+            description:
+              - Stagiaire M1
+              - "Sujet : classification automatique de signaux sismiques"
+          - title: Estéban Laigle
+            institution: IPGP
+            year: 2019
+            description:
+              - Stagiaire école d'ingénieur
+              - "Sujet : automatisation du reporting des activités sismiques pour la mission NASA/InSight"
+          - title: Matthieu Nougaret 
+            institution: IPGP
+            year: 2022
+            description:
+              - Stagiaire M1
+              - "Sujet : classification automatique de signaux sismiques"
+
+
+
     Education:
       - institution: "Universite Pierre et Marie Curie"
         location: Paris, France
