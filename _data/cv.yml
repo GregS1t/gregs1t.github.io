@@ -71,23 +71,6 @@ cv:
           - "Tech: Java, Oracle, SQL"
           - "Certification: CMMi Level 2 (internal audit)"
 
-    Supervision:
-      - name: "Salma Barkaoui — Phde student in planetary seismology and machine learning"
-        date: "2018-2021"
-        issuer: IPGP
-        description: "Participation informelle à l'encadrement. Sujet : analyse des données VBBs de l'instrument SEIS/InSight par méthodes de ML et Deep Learning."
-
-      - name: "Matthieu Nougaret — Master 1 student in Geophysics"
-        date: "2022"
-        issuer: IPGP
-        description: "Sujet : classification automatique de signaux sismiques."
-
-      - name: "Estéban Laigle — EIDD engineering student"
-        date: "2019"
-        issuer: IPGP
-        description: "Sujet : automatisation du reporting sismique pour la mission NASA/InSight."
-
-
     Education:
       - institution: "Universite Pierre et Marie Curie"
         location: Paris, France
