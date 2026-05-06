@@ -71,34 +71,22 @@ cv:
           - "Tech: Java, Oracle, SQL"
 
     Supervision:
-        type: time_table
-        contents:
-          - title: Salma Barkaoui
-            institution: IPGP
-            year: 2018-2021
-            description:
-              - Participation à l'encadrement de Salma Barkaoui, doctorante en sismologie planétaire (2018-2021)
-              - "Sujet : Analyse des données VBBs de l'instrument SEIS de la mission InSight en utilisant des techniques de Machine Learning et de Deep Learning"
-          - title: Matthieu Nougaret 
-            institution: IPGP
-            year: 2022
-            description:
-              - Stagiaire M1
-              - "Sujet : classification automatique de signaux sismiques"
-          - title: Estéban Laigle
-            institution: IPGP
-            year: 2019
-            description:
-              - Stagiaire école d'ingénieur
-              - "Sujet : automatisation du reporting des activités sismiques pour la mission NASA/InSight"
-          - title: Matthieu Nougaret 
-            institution: IPGP
-            year: 2022
-            description:
-              - Stagiaire M1
-              - "Sujet : classification automatique de signaux sismiques"
-
-
+      - title: Salma Barkaoui — Doctorante en sismologie planétaire
+        institution: IPGP
+        year: 2018-2021
+        description:
+          - Participation informelle à l'encadrement
+          - "Sujet : analyse des données VBBs de l'instrument SEIS/InSight par méthodes de ML et Deep Learning"
+      - title: Matthieu Nougaret — Stagiaire M1
+        institution: IPGP
+        year: 2022
+        description:
+          - "Sujet : classification automatique de signaux sismiques"
+      - title: "Estéban Laigle — Stagiaire école d'ingénieur (EIDD)"
+        institution: IPGP
+        year: 2019
+        description:
+          - "Sujet : automatisation du reporting sismique pour la mission NASA/InSight"
 
     Education:
       - institution: "Universite Pierre et Marie Curie"
@@ -146,7 +134,7 @@ cv:
         start_date: 1999
         end_date: 2000
         highlights:
-          - "Internship: Calibration of the Faber-Jackson relation using Cepheids using LEDA database"
+          - "Internship: Calibration of the Faber-Jackson relation with Cepheids using LEDA database"
           - "Advisor: Pr. Hélène Courtois"
 
     Certificates:
