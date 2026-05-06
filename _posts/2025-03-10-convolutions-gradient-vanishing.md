@@ -3,14 +3,14 @@ layout: post
 title: "Convolutions et gradient vanishing — DDPM 2"
 date: 2025-03-10
 description: >
-  Les briques fondamentales d'un réseau convolutif : pourquoi les convolutions,
-  le problème du gradient vanishing, et la solution des connexions résiduelles.
+  Les briques fondamentales d'un réseau convolutif : pourquoi les convolutions, le problème du gradient vanishing, et la solution des connexions résiduelles.
 tags: [deep-learning, convolution, resnet, gradient-vanishing, DDPM]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+
 published: true
 series_order: 2
-related_posts: false
+related_posts: true
 toc:
   sidebar: left
 math: true
@@ -18,7 +18,7 @@ math: true
 
 ## Introduction
 
-Dans ce deuxième billet, je pose les briques mathématiques et architecturales qui me permettront de construire le réseau de débruitage du DDPM. Je commence par la convolution — l'opération centrale du traitement d'images par deep learning — puis j'aborde le problème du gradient vanishing qui limite les réseaux profonds, et la solution élégante que propose ResNet.
+Dans ce deuxième billet, j'abord un peu les briques mathématiques et architecturales qui permettent de construire le réseau de débruitage du DDPM. Je démarre par la convolution, puis j'enchaine sur le problème du *gradient vanishing* qui limite les réseaux profonds, et la solution élégante que propose ResNet. 
 
 ---
 
@@ -34,9 +34,9 @@ $$
 \mathbf{x}[i+u,\, j+v]\; \mathbf{W}[u,v]
 $$
 
-En pratique, on empile $C_\text{out}$ filtres différents, produisant $C_\text{out}$ **cartes de caractéristiques** (*feature maps*). Le nombre de paramètres d'une telle couche est $C_\text{in} \times C_\text{out} \times k^2$, indépendant de la résolution spatiale — un avantage décisif pour des images de grande taille.
+En pratique, on empile $C_\text{out}$ filtres différents, produisant $C_\text{out}$ **cartes de caractéristiques** (*feature maps*). Le nombre de paramètres d'une telle couche est $C_\text{in} \times C_\text{out} \times k^2$, indépendant de la résolution spatiale : un avantage décisif pour des images de grande taille.
 
-Pour une image 64×64×3 et une couche convolutive 3×3 produisant 64 feature maps, le nombre de paramètres est $3 \times 64 \times 9 = 1\,728$ — contre plusieurs millions pour une couche *fully connected* équivalente.
+Pour une image 64×64×3 et une couche convolutive 3×3 produisant 64 feature maps, le nombre de paramètres est $3 \times 64 \times 9 = 1\,728$, contre plusieurs millions pour une couche *fully connected* équivalente.
 
 Cette réduction drastique du nombre de paramètres est la raison principale du succès des réseaux convolutifs et c'est ce qui a permis, dans les années 2010 de se lancer dans des réseaux de plus en plus profonds. 
 
@@ -73,7 +73,7 @@ Plusieurs palliatifs ont été proposés, sans résoudre le problème structurel
 - **Batch Normalization** (Ioffe & Szegedy 2015) : normalise les activations intermédiaires, stabilise les gradients et permet d'utiliser des learning rates plus élevés. Efficace mais insuffisant au-delà d'une certaine profondeur.
 - **Initialisation soignée** (Glorot & Bengio 2010 ; He et al. 2015) : calibre la variance des poids à l'initialisation pour maintenir la norme du gradient à travers les couches. Voir le livre de Géron également.
 
-Ces techniques améliorent la situation mais ne la résolvent pas structurellement — elles retardent l'apparition du problème mais ne l'évitent pas.
+Ces techniques améliorent la situation mais ne la résolvent pas structurellement. Elles retardent l'apparition du problème mais ne l'évitent pas.
 
 ---
 
@@ -107,13 +107,13 @@ $$
   \cdot \left(1 + \frac{\partial \mathcal{F}}{\partial \mathbf{x}}\right)
 $$
 
-Le terme $1$ garantit qu'il existe **toujours un chemin de gradient direct** depuis la sortie vers l'entrée, quelle que soit la profondeur du réseau. Et même si $\partial \mathcal{F}/\partial \mathbf{x}$ devient petit, le gradient ne disparaît pas pour autant — il est au minimum égal au gradient de la couche suivante.
+Le terme $1$ garantit qu'il existe **toujours un chemin de gradient direct** depuis la sortie vers l'entrée, quelle que soit la profondeur du réseau. Et même si $\partial \mathcal{F}/\partial \mathbf{x}$ devient petit, le gradient ne disparaît pas pour autant. Il est au minimum égal au gradient de la couche suivante.
 
-Intuitivement : si un bloc résiduel n'apprend rien ($\mathcal{F}(\mathbf{x}) \to \mathbf{0}$), il se comporte comme une identité. Le réseau peut donc ajouter des blocs sans risque de dégradation — ce qui a permis d'entraîner à l'épique, des réseaux de 152 couches (He et al. 2016), c'est le réseau ResNet-152
+Intuitivement : si un bloc résiduel n'apprend rien ($\mathcal{F}(\mathbf{x}) \to \mathbf{0}$), il se comporte comme une identité. Le réseau peut donc ajouter des blocs sans risque de dégradation, ce qui a permis d'entraîner à l'époque, des réseaux de 152 couches (He et al. 2016), c'est le réseau ResNet-152
 
 ### 3.2 La projection 1×1 pour changer la dimension
 
-Lorsque $\text{in\_c} \neq \text{out\_c}$, la connexion résiduelle $\mathbf{x} + \mathcal{F}(\mathbf{x})$ n'est pas dimensionnellement cohérente. He et al. (2016) proposent d'utiliser une **convolution 1×1** — aussi appelée *projection* — pour aligner les dimensions sans modifier la résolution spatiale :
+Lorsque $\text{in\_c} \neq \text{out\_c}$, la connexion résiduelle $\mathbf{x} + \mathcal{F}(\mathbf{x})$ n'est pas dimensionnellement cohérente. He et al. (2016) proposent d'utiliser une **convolution 1×1**, aussi appelée *projection* — pour aligner les dimensions sans modifier la résolution spatiale :
 
 $$
 \mathbf{y} = \mathcal{F}(\mathbf{x}) + \mathbf{W}_s \mathbf{x}
@@ -138,13 +138,13 @@ La normalisation est une composante essentielle des réseaux profonds modernes. 
   </figcaption>
 </figure>
 
-- **BatchNorm** (Ioffe & Szegedy 2015) — normalise sur $(N, H, W)$ : statistique partagée entre tous les exemples du batch pour chaque canal. Efficace avec de grands batchs, instable avec de petits batchs ou des batchs hétérogènes.
+- **BatchNorm** (Ioffe & Szegedy 2015) : normalise sur $(N, H, W)$ : statistique partagée entre tous les exemples du batch pour chaque canal. Efficace avec de grands batchs, instable avec de petits batchs ou des batchs hétérogènes.
 
-- **LayerNorm** (Ba et al. 2016) — normalise sur $(C, H, W)$ : statistique calculée indépendamment pour chaque exemple. Aucune dépendance au batch.
+- **LayerNorm** (Ba et al. 2016) : normalise sur $(C, H, W)$ : statistique calculée indépendamment pour chaque exemple. Aucune dépendance au batch.
 
-- **GroupNorm** (Wu & He 2018) — normalise sur des groupes de canaux et $(H, W)$ : divise les $C$ canaux en $G$ groupes et normalise chaque groupe indépendamment. Stable quelle que soit la taille du batch. Cas limite : $G = 1$ redonne LayerNorm, $G = C$ donne InstanceNorm.
+- **GroupNorm** (Wu & He 2018) : normalise sur des groupes de canaux et $(H, W)$ : divise les $C$ canaux en $G$ groupes et normalise chaque groupe indépendamment. Stable quelle que soit la taille du batch. Cas limite : $G = 1$ redonne LayerNorm, $G = C$ donne InstanceNorm.
 
-Dans le contexte du DDPM, **chaque image est conditionnée par son propre pas de temps $t$**, ce qui rend la statistique de batch hétérogène. GroupNorm(32) est le choix de Ho et al. (2020) dans leur implémentation de référence — et celui que j'ai retenu.
+Dans le contexte du DDPM, **chaque image est conditionnée par son propre pas de temps $t$**, ce qui rend la statistique de batch hétérogène. GroupNorm(32) est le choix de Ho et al. (2020) dans leur implémentation de référence : et celui que j'ai retenu.
 
 ---
 

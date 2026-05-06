@@ -8,9 +8,10 @@ description: >
 tags: [deep-learning, diffusion, galaxies, generative-models, astrophysique, DDPM]
 categories: deep-learning
 series: "Modèles génératifs pour la morphologie galactique"
+thumbnail : assets/img/blog/DDPM_Article_1/DDPM_galaxie.png
 published: true
 series_order: 1
-related_posts: false
+related_posts : true
 toc:
   sidebar: left
 math: true
