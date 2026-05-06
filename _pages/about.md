@@ -13,7 +13,7 @@ profile:
   image_circular: false
 
 news: true
-selected_papers: false
+selected_papers: true
 social: false
 latest_posts: true
 ---
