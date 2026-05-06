@@ -5,6 +5,7 @@ date: 2025-12-14
 description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser..."
 tags: [trail, données, python, analyse, FIT, montre, GPS, visualisation]
 categories: [tutoriel, trail, data, running, fit]
+thumbnail: assets/img/blog/2025-12_analyse_data_trail/Trail_analyse_data.png
 related_posts: false,
 toc:
   sidebar: left

@@ -6,6 +6,7 @@ description: >
   Ton fichier .fit contient des coordonnées GPS. Comment représenter la trace sur une carte ? 
 tags: [tutoriel, trail, GPS, cartographie, folium, FIT, python, télédétection, data, running]
 categories: [tutoriel, trail, data, running, FIT, python]
+thumbnail : assets/img/blog/2025-12_analyse_data_trail/Trail_cartographie.png
 related_posts: false
 toc:
   sidebar: left
