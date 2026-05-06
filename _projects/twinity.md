@@ -2,7 +2,7 @@
 layout: page
 title: Twinity
 description: A digital twin for trail running — fitness, fatigue, and performance readiness modelling.
-img: assets/img/twinity_preview.png
+#img: assets/img/twinity_preview.png
 importance: 1
 category: fun
 ---
@@ -15,19 +15,19 @@ A digital twin for trail running — ingesting FIT files from GPS watches to mod
 
 **Twinity** is a personal project aimed at building a **digital twin of a trail runner**, combining physiological data, training load models, and daily health metrics to simulate and optimise endurance training.
 
-The system ingests `.FIT` files from GPS sports watches (Suunto, Garmin, etc.) to reconstruct training sessions and provide insights into **fitness**, **fatigue**, and **performance readiness** — with the long-term goal of personalising the model to each athlete using machine learning.
+The system ingests `.FIT` files from GPS sports watches (Suunto, Garmin, etc.) to reconstruct training sessions and provide insights into **fitness**, **fatigue**, and **performance readiness**, with the long-term goal of personalising the model to each athlete using machine learning.
 
 Because why apply data science only to Mars when you can also apply it to mountains? 🏔️
 
 ## Features
 
 ### 👤 Athlete management
-Create and edit athlete profiles (HR max, resting HR, sports). Import `.FIT` sessions directly from the Athlete page — sport type, session type (training / competition / race…), and RPE are recorded at import time.
+Create and edit athlete profiles (HR max, resting HR, sports). Import `.FIT` sessions directly from the Athlete page, sport type, session type (training / competition / race…), and RPE are recorded at import time.
 
 ### 📈 Training load dashboard (PMC)
-- **Performance Management Chart** — CTL (fitness), ATL (fatigue), TSB (form) computed from TRIMP (Banister 1991) using exponentially weighted moving averages (Coggan 2003).
+- **Performance Management Chart**: CTL (fitness), ATL (fatigue), TSB (form) computed from TRIMP (Banister 1991) using exponentially weighted moving averages (Coggan 2003).
 - Competition markers ⭐ overlaid on the TSB curve.
-- **Automatic calibration of τ_CTL and τ_ATL** — grid search over (14–60 j) × (3–14 j), maximising the Pearson correlation between TSB on the eve of competitions and normalised race performance. Requires ≥ 5 competition results. A heatmap of the full correlation grid is displayed.
+- **Automatic calibration of τ_CTL and τ_ATL**: grid search over (14–60 j) × (3–14 j), maximising the Pearson correlation between TSB on the eve of competitions and normalised race performance. Requires ≥ 5 competition results. A heatmap of the full correlation grid is displayed.
 - Monthly distance chart by sport (stacked bars), filterable by date range and sport type.
 - Session list with direct access to individual analytics.
 
