@@ -95,11 +95,6 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 
 
-
-
-
-
-
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
@@ -121,6 +116,12 @@ pagination:
 related_blog_posts:
   enabled: true
   max_related: 3
+
+latest_posts:
+  enabled: true
+  scrollable: true
+  limit: 3
+
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
