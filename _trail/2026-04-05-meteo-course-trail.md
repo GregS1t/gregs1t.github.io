@@ -5,6 +5,7 @@ date: 2026-04-05
 description: >
   Ta montre enregistre la température, mais ce qu'elle mesure c'est en partie la chaleur de ton poignet. Comment récupérer la météo réelle de ta course ?
 tags: [trail, météo, python, open-meteo, ERA5, température, humidité, analyse, running]
+thumbnail: assets/img/blog/2026_04_Trail_meteo/Meteo_Trail Running.png
 categories: trail
 related_posts: false
 toc:
@@ -14,7 +15,7 @@ math: true
 
 *"J'avais trop chaud sur la deuxième partie. Mais est-ce que c'est vraiment la température qui a joué ?"*
 
-Sur n'importe quelle course, les conditions thermiques influencent directement la physiologie. La dérive cardiaque peut s'expliquer autant par la chaleur que par la fatigue musculaire. Mais pour le savoir, il faut la météo réelle — pas l'estimation de ta montre.
+Sur n'importe quelle course, les conditions thermiques influencent directement la physiologie. La dérive cardiaque peut s'expliquer autant par la chaleur que par la fatigue musculaire. Mais pour le savoir, il faut la météo réelle, pas l'estimation de ta montre.
 
 >Au passage, je conseille la lecture de l'article ou l'écoute du podcast sur Courir-mieux à propos de l'acclimatation à la chaleur : [Chaleur et trail : Comment s’acclimater ? (2025)](https://courir-mieux.fr/acclimatation-chaleur-trail/) 
 
