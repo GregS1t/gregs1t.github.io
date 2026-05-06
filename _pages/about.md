@@ -12,9 +12,10 @@ profile:
   image: prof_pic.jpg
   image_circular: false
 
-news: false
+news: true
 selected_papers: false
 social: false
+latest_posts: true
 ---
 
 With a PhD in Astrophysics and a background spanning supernova spectroscopy, Martian seismology, and radio astronomy, the common thread has always been the same: large, complex, noisy datasets, and the challenge of extracting something meaningful from them.

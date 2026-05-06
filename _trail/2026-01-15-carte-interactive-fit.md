@@ -23,7 +23,7 @@ Là encore, il faut que tu aies prétraité les données avec le notebook 1 (lir
 
 ## "Les semi-circles"
 
-Le format FIT (*Flexible and Interoperable Data Transfer*) est un standard binaire développé par Garmin et maintenu par la société ANT+ depuis 2008. Il est aujourd'hui utilisé par la quasi-totalité des montres sport du marché (Garmin, Suunto, Polar, Coros...). Chaque fichier contient une série de **messages** structurés — un message `record` par seconde de course, un message `session` de résumé, des messages `lap`, etc.
+Le format FIT (*Flexible and Interoperable Data Transfer*) est un standard binaire développé par Garmin et maintenu par la société ANT+ depuis 2008. Il est aujourd'hui utilisé par la quasi-totalité des montres sport du marché (Garmin, Suunto, Polar, Coros...). Chaque fichier contient une série de **messages** structurés, un message `record` par seconde de course, un message `session` de résumé, des messages `lap`, etc.
 
 Les coordonnées GPS dans un fichier FIT ne sont **pas stockées en degrés décimaux** mais en **semicircles** — une unité propriétaire qui encode la position sur un entier 32 bits signé.
 

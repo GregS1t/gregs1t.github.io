@@ -71,22 +71,21 @@ cv:
           - "Tech: Java, Oracle, SQL"
 
     Supervision:
-      - title: Salma Barkaoui — Doctorante en sismologie planétaire
-        institution: IPGP
-        year: 2018-2021
-        description:
-          - Participation informelle à l'encadrement
-          - "Sujet : analyse des données VBBs de l'instrument SEIS/InSight par méthodes de ML et Deep Learning"
-      - title: Matthieu Nougaret — Stagiaire M1
-        institution: IPGP
-        year: 2022
-        description:
-          - "Sujet : classification automatique de signaux sismiques"
-      - title: "Estéban Laigle — Stagiaire école d'ingénieur (EIDD)"
-        institution: IPGP
-        year: 2019
-        description:
-          - "Sujet : automatisation du reporting sismique pour la mission NASA/InSight"
+      - name: "Salma Barkaoui — Doctorante en sismologie planétaire"
+        date: "2018-2021"
+        issuer: IPGP
+        description: "Participation informelle à l'encadrement. Sujet : analyse des données VBBs de l'instrument SEIS/InSight par méthodes de ML et Deep Learning."
+        icon: fa-solid fa-user-graduate
+      - name: "Matthieu Nougaret — Stagiaire M1"
+        date: "2022"
+        issuer: IPGP
+        description: "Sujet : classification automatique de signaux sismiques."
+        icon: fa-solid fa-user-graduate
+      - name: "Estéban Laigle — Stagiaire école d'ingénieur (EIDD)"
+        date: "2019"
+        issuer: IPGP
+        description: "Sujet : automatisation du reporting sismique pour la mission NASA/InSight."
+        icon: fa-solid fa-user-graduate
 
     Education:
       - institution: "Universite Pierre et Marie Curie"
