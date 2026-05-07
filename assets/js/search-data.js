@@ -168,7 +168,7 @@ ninja.data = [{
               window.location.href = "/projects/03_seisdeglitch/";
             },},{id: "projects-mars-time-converter",
           title: 'Mars Time Converter',
-          description: "",
+          description: "A Python library and CLI tool for converting Earth UTC time to Martian time systems, supporting multiple Mars missions.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_marsconverter/";
             },},{id: "projects-aspic",
