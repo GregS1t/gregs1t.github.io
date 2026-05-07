@@ -2,7 +2,7 @@
 layout: page
 title: Mars Time Converter
 # description: A Python library and CLI tool for converting Earth UTC time to Martian time systems, supporting multiple Mars missions.
-img: assets/img/projects/MarsTimeConverter_logo.png
+img: assets/img/projects/MarsTimeConverter_logo_square.png
 importance: 2
 category: work
 related_publications: false

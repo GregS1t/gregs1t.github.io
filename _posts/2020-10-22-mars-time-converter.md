@@ -4,7 +4,7 @@ title: Quelle heure est-il sur Mars ?
 date: 2020-11-22
 description: "Comment convertir une date terrestre en heure martienne ? De la longitude julienne au LMST, en passant par l'anomalie moyenne et l'équation du temps."
 tags: [astronomie, Mars, temps, planétologie, maths, SEIS, Insight, NASA]
-thumbnail: assets/img/projects/MarsTimeConverter_logo.png
+thumbnail: assets/img/projects/MarsTimeConverter_logo_square.png
 categories: [planetology]
 related_posts: false
 toc:
