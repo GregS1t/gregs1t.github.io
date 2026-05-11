@@ -207,8 +207,8 @@ ninja.data = [{
           description: "This course covers the foundational aspects of Git, from create a repository, push/pull your codes and work with collaborators",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2019_git_crash_course/";
-            },},{id: "teachings-algorithmique-et-programmation-l2",
-          title: 'Algorithmique et Programmation L2',
+            },},{id: "teachings-l2-algo-et-programmation",
+          title: 'L2 Algo. et programmation',
           description: "Fondamentaux de l&#39;algorithmique et de la programmation en Python, depuis les bases du langage jusqu&#39;aux méthodes numériques appliquées à la physique (intégration, équations différentielles, ajustement de données, nombres aléatoires).",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2020_Algo_programmation_UPC_IF402/";
