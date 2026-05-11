@@ -207,6 +207,11 @@ ninja.data = [{
           description: "This course covers the foundational aspects of Git, from create a repository, push/pull your codes and work with collaborators",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2019_git_crash_course/";
+            },},{id: "teachings-algorithmique-et-programmation-l2",
+          title: 'Algorithmique et Programmation L2',
+          description: "Fondamentaux de l&#39;algorithmique et de la programmation en Python, depuis les bases du langage jusqu&#39;aux méthodes numériques appliquées à la physique (intégration, équations différentielles, ajustement de données, nombres aléatoires).",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2020_Algo_programmation_UPC_IF402/";
             },},{id: "teachings-earth-data-science",
           title: 'Earth Data Science',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets oriented on earth data (seismic data, Lidar data, satellite images...)",
