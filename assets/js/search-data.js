@@ -139,22 +139,11 @@ ninja.data = [{
             window.location.href = "/blog/2022/seisme-mars-insight/";
           
         },
-      },{id: "post-git-a-cheat-sheet-in-questions",
-        
-          title: "Git: a cheat sheet in questions",
-        
-        description: "🇫🇷/🇬🇧 A practical cheat sheet for mastering Git, from first steps to advanced usage, organised around concrete problems.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2021/git-cheat-sheet/";
-          
-        },
       },{id: "post-git-aide-mémoire-en-questions",
         
           title: "Git : aide-mémoire en questions",
         
-        description: "🇫🇷/🇬🇧 - Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets.",
+        description: "Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets.",
         section: "Posts",
         handler: () => {
           
