@@ -15,7 +15,7 @@ toc:
   sidebar: left
 ---
 
-> 🇬🇧 [Read this post in English](/blog/2021/git-cheat-sheet/)
+> 🇫🇷 [Lire ce billet en français](/blog/2021/git-aide-memoire/)
 
 A few years ago I ran some Git/GitLab/GitHub workshops for colleagues. I decided to revisit the slide content — which had aged a bit — and reframe it differently.
 
