@@ -4,7 +4,7 @@ title: "Git: a cheat sheet in questions"
 date: 2021-06-13
 description: "A practical cheat sheet for mastering Git, from first steps to advanced usage, organised around concrete problems."
 tags: [git, development, workflow, tools]
-published: false
+published: true
 lang: en
 lang_switch:
   fr: /blog/2021/git-aide-memoire/
