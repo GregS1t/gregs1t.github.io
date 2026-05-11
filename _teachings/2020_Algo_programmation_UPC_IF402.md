@@ -1,6 +1,6 @@
 ---
 layout: course
-title: Algorithmique et Programmation
+title: Algorithmique et Programmation L2
 description: Ce cours couvre les fondamentaux de l'algorithmique et de la programmation en Python, depuis les bases du langage jusqu'aux méthodes numériques appliquées à la physique (intégration, équations différentielles, ajustement de données, nombres aléatoires).
 instructor: Grégory Sainton (Assistant TP)
 year: 2020
