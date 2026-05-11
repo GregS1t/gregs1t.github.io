@@ -2,11 +2,12 @@
 layout: post
 title: "Git : aide-mémoire en questions"
 date: 2021-06-13
-description: "🇫🇷/🇬🇧 - Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets."
+description: "Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets."
 tags: [git, développement, workflow, outils]
 lang: fr
 lang_switch:
   en: /blog/2021/git-cheat-sheet/
+
 categories: [tutoriels]
 giscus_comments: false
 related_posts: false
