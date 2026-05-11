@@ -263,7 +263,7 @@ ninja.data = [{
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-03-association-dissociation/";
             },},{id: "trail-data-la-météo-comme-donnée-d-39-entraînement-comment-la-récupérer-et-l-39-exploiter",
-          title: '[data] La météo comme donnée d&amp;#39;entraînement — comment la récupérer et l&amp;#39;exploiter',
+          title: '[data] La météo comme donnée d&amp;#39;entraînement : comment la récupérer et l&amp;#39;exploiter',
           description: "Ta montre enregistre la température, mais ce qu&#39;elle mesure c&#39;est en partie la chaleur de ton poignet. Comment récupérer la météo réelle de ta course ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-05-meteo-course-trail/";
