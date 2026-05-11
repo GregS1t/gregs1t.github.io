@@ -2,7 +2,7 @@
 layout: page
 title: SeisDeglitch
 description: MATLAB tools for automated detection and removal of glitches in seismic data from the SEIS instrument onboard NASA InSight.
-img: assets/img/projects/SeisDeglitch_logo.png
+#img: assets/img/projects/SeisDeglitch_logo.png
 importance: 4
 category: work
 related_publications: true

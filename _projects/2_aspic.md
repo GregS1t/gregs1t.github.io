@@ -2,7 +2,7 @@
 layout: page
 title: ASPIC
 description: A Python/Jupyter tool for visualising and processing seismic MiniSEED data from the NASA InSight mission on Mars.
-img: assets/img/projects/ASPIC_logo_transparent.png
+#img: assets/img/projects/ASPIC_logo_transparent.png
 importance: 3
 category: work
 related_publications: false
