@@ -2,7 +2,7 @@
 layout: post
 title: "Git: a cheat sheet in questions"
 date: 2021-06-13
-description: "A practical cheat sheet for mastering Git — from first steps to advanced usage, organised around concrete problems."
+description: "🇫🇷/🇬🇧 A practical cheat sheet for mastering Git, from first steps to advanced usage, organised around concrete problems."
 tags: [git, development, workflow, tools]
 lang: en
 lang_switch:

@@ -2,7 +2,7 @@
 layout: post
 title: "Git : aide-mémoire en questions"
 date: 2021-06-13
-description: "Un aide-mémoire pratique pour maîtriser Git — des premiers pas aux usages avancés, organisé par problèmes concrets."
+description: "🇫🇷/🇬🇧 - Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets."
 tags: [git, développement, workflow, outils]
 lang: fr
 lang_switch:
@@ -17,7 +17,7 @@ toc:
 > 🇫🇷 [Lire ce billet en français](/blog/2021/git-aide-memoire/)
 
 Il y a quelques années, j'ai donné des formations Git/Gitlab/GitHub a des collègues. J'ai décidé de reprendre le contenu des slides qui avait un peu vieilli et de le formuler autrement.
-J'ai organisé le billet en deux parties. D'abord les **problèmes courants** — formulés comme tu les rencontres, plus ou moins simple à régler. Ensuite quelques **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
+J'ai organisé le billet en deux parties. D'abord les **problèmes courants**,  formulés comme tu les rencontres, plus ou moins simple à régler. Ensuite quelques **références thématiques** pour aller plus loin sur chaque sujet. Je ne suis clairement pas exhaustif mais j'espère que tu trouveras ton bonheur !
 Ca me sert aussi et surtout d'aide-mémoire perso pour éviter d'avoir à rechercher tout le temps les mêmes commandes. Ca veut dire que ce contenu est régulièrement enrichi de mes trouvailles, voire corrigé.
 
 ---
