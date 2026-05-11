@@ -272,8 +272,8 @@ ninja.data = [{
           description: "Du polynôme de Minetti aux réseaux LSTM, en passant par l&#39;ITRA et Strava GAP : tour d&#39;horizon honnête des modèles de prédiction de performance en trail, de leurs apports, et surtout de leurs limites communes.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-12-trail-predictors/";
-            },},{id: "trail-mental-se-parler-à-soi-même-le-self-talk-est-ce-que-ça-sert-vraiment-en-trail",
-          title: '[mental] Se parler à soi-même — le self-talk, est-ce que ça sert vraiment...',
+            },},{id: "trail-mental-le-self-talk-est-ce-que-ça-sert-vraiment-en-trail",
+          title: '[mental] Le self-talk, est-ce que ça sert vraiment en trail ?',
           description: "Tu te parles à toi-même quand tu fais un effort ? Tu te dis quoi ? Ca marche ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-29-self-talk/";
