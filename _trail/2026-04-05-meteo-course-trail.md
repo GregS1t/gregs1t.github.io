@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[data] La météo comme donnée d'entraînement — comment la récupérer et l'exploiter"
+title: "[data] La météo comme donnée d'entraînement : comment la récupérer et l'exploiter"
 date: 2026-04-05
 description: >
   Ta montre enregistre la température, mais ce qu'elle mesure c'est en partie la chaleur de ton poignet. Comment récupérer la météo réelle de ta course ?
@@ -157,7 +157,7 @@ def enrich_df_with_weather(df, df_weather):
     return df
 ```
 
-L'interpolation linéaire, c'est une approximation acceptable pour la température, l'humidité qui évoluent lentement *a priori*. La précipitation en revanche ne s'interpole pas — on la garde à la résolution horaire.
+L'interpolation linéaire, c'est une approximation acceptable pour la température, l'humidité qui évoluent lentement *a priori*. La précipitation en revanche ne s'interpole pas, on la garde à la résolution horaire.
 
 
 ---
@@ -168,7 +168,7 @@ La figure produite par `plot_weather_along_race()` comprend deux panneaux :
 
 **Panel 1 — Températures.** La courbe montre (lissée sur 3 km) et la courbe ERA5-Land interpolée. 
 
-**Panel 2 — Humidité et vent.** L'humidité est la variable clé pour analyser certaines données physio. en conditions nocturnes. Un vent fort peut compenser partiellement une humidité élevée — mais sur un parcours en forêt, le vent mesuré par ERA5 (vent de surface libre) surestime ce qui est ressenti sous couvert.
+**Panel 2 — Humidité et vent.** L'humidité est la variable clé pour analyser certaines données physio. en conditions nocturnes. Un vent fort peut compenser partiellement une humidité élevée. Mais sur un parcours en forêt, le vent mesuré par ERA5 (vent de surface libre) surestime ce qui est ressenti sous couvert.
 
 ---
 
@@ -178,7 +178,7 @@ La figure produite par `plot_weather_along_race()` comprend deux panneaux :
 
 **Interpolation linéaire.**: La météo ne varie pas linéairement, surtout pour le vent. L'interpolation horaire est acceptable pour la température et l'humidité, moins pour les rafales ou les phénomènes convectifs locaux (orage).
 
-**ERA5-Land *vs* stations météo locales.**: Pour une analyse scientifique rigoureuse, croiser ERA5-Land avec les données des stations Météo-France proches (via l'[API publique de Météo-France](https://portail-api.meteofrance.fr/web/fr/)) serait plus robuste. Mais pour un usage terrain et coaching, je pense qu'ERA5-Land est suffisant.
+**ERA5-Land *vs* stations météo locales.**: Pour une analyse scientifique rigoureuse, croiser ERA5-Land avec les données des stations Météo-France proches (*via* l'[API publique de Météo-France](https://portail-api.meteofrance.fr/web/fr/)) serait plus robuste. Mais pour un usage terrain et coaching, je pense qu'ERA5-Land est suffisant.
 
 ---
 
