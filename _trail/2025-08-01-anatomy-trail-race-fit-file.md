@@ -269,7 +269,7 @@ fig.show()
 ```
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/plotly/2025-08_fit_file/elevation.html"
+  <iframe src="{{ site.baseurl }}/assets/2025-08_fit_file/elevation.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
