@@ -227,11 +227,11 @@ ninja.data = [{
           description: "Hands-on course on efficient and low-cost AI, covering computational optimization of matrix operations (Python, C, GPU) and neural network compression techniques. Part of the PSL Week programme.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025_frugal_ai/";
-            },},{id: "trail-data-analyser-ses-données-trail-comment-lire-les-données-de-sa-montre",
-          title: '[data] Analyser ses données trail — Comment lire les données de sa montre...',
-          description: "Du fichier FIT à tes premiers graphiques : charger, nettoyer, visualiser...",
+            },},{id: "trail-data-anatomy-of-a-trail-race-reading-your-fit-file",
+          title: '[data] Anatomy of a trail race: reading your FIT file',
+          description: "From binary file to your first plots: loading, cleaning, and visualizing trail running data with Python.",
           section: "Trail",handler: () => {
-              window.location.href = "/trail/2025-12-14-lire-donnees/";
+              window.location.href = "/trail/2025-08-01-anatomy-trail-race-fit-file/";
             },},{id: "trail-data-analyser-ses-données-trail-comprendre-le-terrain",
           title: '[data] Analyser ses données trail — Comprendre le terrain',
           description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
