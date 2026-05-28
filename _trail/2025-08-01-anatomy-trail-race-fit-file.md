@@ -269,7 +269,7 @@ fig.show()
 ```
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/2025-08_fit_file/elevation.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/elevation.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
@@ -302,7 +302,7 @@ if "heart_rate" in df.columns:
 ```
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/2025-08_fit_file/heart_rate.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/heart_rate.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
@@ -335,7 +335,7 @@ fig.show()
 ```
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/2025-08_fit_file/pace.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/pace.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
