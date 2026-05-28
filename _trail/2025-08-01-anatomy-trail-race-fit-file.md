@@ -5,7 +5,7 @@ date: 2025-08-01
 description: "From binary file to your first plots: loading, cleaning, and visualizing trail running data with Python."
 tags: [trail, data, python, fit-file, gps, signal-processing, explained]
 categories: [explained, trail, data, running]
-thumbnail: assets/img/blog/2025-08_fit_file/thumbnail.png
+thumbnail: assets/img/blog/2025-12_analyse_data_trail/Trail_analyse_data.png
 published: true
 related_posts: false
 toc:
