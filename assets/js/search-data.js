@@ -242,6 +242,11 @@ ninja.data = [{
           description: "When your head says stop, is your body truly spent? A look at Noakes&#39; central governor theory, at what it explains, where it falls short, and at what perceived exertion really tells us about fatigue in endurance.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-10-23-central-governor/";
+            },},{id: "trail-science-research-the-minetti-model-energy-cost-of-running-on-slopes",
+          title: '[science · research] The Minetti Model: Energy Cost of Running on Slopes',
+          description: "The 2002 polynomial that powers every GAP calculator on the market. Where it comes from, what it captures, where it breaks, and what has happened since.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2025-11-27-minetti-model/";
             },},{
         id: 'social-cv',
         title: 'CV',
