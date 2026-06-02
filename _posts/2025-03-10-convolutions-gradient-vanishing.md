@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Convolutions et gradient vanishing — DDPM 2"
+title: "Convolutions et gradient vanishing. (DDPM 2)"
 date: 2025-03-10
 description: >
   Les briques fondamentales d'un réseau convolutif : pourquoi les convolutions, le problème du gradient vanishing, et la solution des connexions résiduelles.
@@ -24,7 +24,7 @@ Dans ce deuxième billet, j'abord un peu les briques mathématiques et architect
 
 ## 1. Pourquoi des convolutions ?
 
-Lorsqu'on traite une image astro, le signal physique est **local** : le profil de brillance, le gradient de couleur, la texture d'une région s'expriment sur quelques dizaines de pixels. Un réseau entièrement connecté (*fully connected network*, FCN) traiterait chaque pixel indépendamment, ignorant toute cohérence spatiale, et nécessiterait un nombre de paramètres prohibitif — de l'ordre de $H \times W \times C$ par neurone, soit plusieurs millions pour une image 64×64×3.
+Lorsqu'on traite une image astro., le signal physique est **local** : le profil de brillance, le gradient de couleur, la texture d'une région s'expriment sur quelques dizaines de pixels. Un réseau entièrement connecté (*fully connected network*, FCN) traiterait chaque pixel indépendamment, ignorant toute cohérence spatiale, et nécessiterait un nombre de paramètres prohibitif, de l'ordre de $H \times W \times C$ par neurone, soit plusieurs millions pour une image 64×64×3 comme dans mon cas.
 
 Une **couche convolutive** résout les deux problèmes simultanément. Elle applique un filtre $\mathbf{W} \in \mathbb{R}^{k \times k}$ qui se déplace sur l'image par fenêtre glissante, extrayant des motifs locaux (avec un hypothèse d'invariance par translation) :
 
@@ -57,7 +57,7 @@ $$
 \cdot \frac{\partial \mathbf{h}^{(\ell)}}{\partial \mathbf{W}^{(\ell)}}
 $$
 
-Si chaque Jacobien a une norme spectrale* inférieure à 1 — ce qui est fréquent avec des activations saturantes comme $\texttt{sigmoid}$ ou $\texttt{tanh}$ dont les dérivées sont au plus $\frac{1}{4}$ et $1$ respectivement — le produit décroît **exponentiellement** avec la profondeur $L - \ell$. Les couches proches de l'entrée reçoivent un gradient quasi nul et cessent d'apprendre. C'est ça la disparition du gradient, le malédiction de la grande dimension comme le nomme [Stéphane Mallat](https://www.di.ens.fr/~mallat/College/CoursMallat2018-4.pdf)
+Si chaque Jacobien a une norme spectrale* inférieure à 1 — ce qui est fréquent avec des activations saturantes comme $\texttt{sigmoid}$ ou $\texttt{tanh}$ dont les dérivées sont au plus $\frac{1}{4}$ et $1$ respectivement. Le produit décroît **exponentiellement** avec la profondeur $L - \ell$. Les couches proches de l'entrée reçoivent un gradient quasi nul et cessent d'apprendre. C'est ça la disparition du gradient, le malédiction de la grande dimension comme le nomme [Stéphane Mallat](https://www.di.ens.fr/~mallat/College/CoursMallat2018-4.pdf)
 
 <div style="font-size: 0.85em;">
 
@@ -77,7 +77,7 @@ Ces techniques améliorent la situation mais ne la résolvent pas structurelleme
 
 ---
 
-## 3. Les connexions résiduelles — ResNet
+## 3. Les connexions résiduelles : le ResNet
 
 He et al. (2016) proposent une solution élégante au gradient vanishing : plutôt qu'apprendre directement la transformation souhaitée $\mathcal{H}(\mathbf{x})$, on apprend la **résiduelle** $\mathcal{F}(\mathbf{x}) = \mathcal{H}(\mathbf{x}) - \mathbf{x}$. La sortie du bloc devient :
 
@@ -92,7 +92,7 @@ Le terme $+ \mathbf{x}$ est la **connexion résiduelle** (*skip connection*) : i
        width="40%"
        alt="Bloc résiduel de He et al. (2016)">
   <figcaption>
-    Figure 1 — Bloc résiduel (He et al., 2016). La connexion résiduelle + x
+    Figure 1:  Bloc résiduel (He et al., 2016). La connexion résiduelle + x
     court-circuite les couches convolutives.
   </figcaption>
 </figure>
@@ -113,7 +113,7 @@ Intuitivement : si un bloc résiduel n'apprend rien ($\mathcal{F}(\mathbf{x}) \t
 
 ### 3.2 La projection 1×1 pour changer la dimension
 
-Lorsque $\text{in\_c} \neq \text{out\_c}$, la connexion résiduelle $\mathbf{x} + \mathcal{F}(\mathbf{x})$ n'est pas dimensionnellement cohérente. He et al. (2016) proposent d'utiliser une **convolution 1×1**, aussi appelée *projection* — pour aligner les dimensions sans modifier la résolution spatiale :
+Lorsque $\text{in\_c} \neq \text{out\_c}$, la connexion résiduelle $\mathbf{x} + \mathcal{F}(\mathbf{x})$ n'est pas dimensionnellement cohérente. He et al. (2016) proposent d'utiliser une **convolution 1×1**, aussi appelée *projection*,  pour aligner les dimensions sans modifier la résolution spatiale :
 
 $$
 \mathbf{y} = \mathcal{F}(\mathbf{x}) + \mathbf{W}_s \mathbf{x}
@@ -133,7 +133,7 @@ La normalisation est une composante essentielle des réseaux profonds modernes. 
        width="60%"
        alt="Normalization methods (Wu & He, 2018)">
   <figcaption>
-    Figure 2 — Les différentes méthodes de normalisation (Wu & He, 2018).
+    Figure 2 : Les différentes méthodes de normalisation (Wu & He, 2018).
     En bleu : les dimensions sur lesquelles la statistique est calculée.
   </figcaption>
 </figure>
@@ -156,7 +156,7 @@ $$
 f(x) = x \cdot \sigma(x) = \frac{x}{1 + e^{-x}}
 $$
 
-introduite par Ramachandran et al. (2017). Contrairement à la ReLU qui annule strictement les valeurs négatives, la SiLU est partout dérivable et laisse passer une fraction des activations négatives, produisant des gradients plus réguliers. Elle est couramment adoptée dans les réimplémentations de DDPM pour sa régularité numérique — Ho et al. (2020) n'en font pas mention explicitement dans leur papier original, mais c'est le choix de la majorité des implémentations de référence.
+introduite par Ramachandran et al. (2017). Contrairement à la ReLU qui annule strictement les valeurs négatives, la SiLU est partout dérivable et laisse passer une fraction des activations négatives, produisant des gradients plus réguliers. Elle est couramment adoptée dans les réimplémentations de DDPM pour sa régularité numérique. Ho et al. (2020) n'en font pas mention explicitement dans leur papier original, mais c'est le choix de la majorité des implémentations de référence.
 J'ai fait un billet sur la [zoologie des fonctions d'activations](https://gregs1t.github.io/blog/2023/zoologie-activation-functions/). 
 
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Pourquoi des modèles génératifs pour les galaxies ? — DDPM 1"
+title: "Pourquoi des modèles génératifs pour les galaxies ? (DDPM 1)"
 date: 2025-03-06
 description: >
   Motivation, état de l'art, spécificités des images astronomiques
@@ -24,11 +24,11 @@ Afin de rendre mon travail réaliste, j'ai, dans un premier temps, commencé par
 
 Ensuite, je vais essayer de discuter des raisons qui m'ont poussé à développer les modèles génératifs, tout en pointant les limites liées aux spécificités des images astronomiques. 
 
-Ce billet (comme les autres) a été réédité et corrigé et complété pour rester à jour.
+Ce billet (comme les autres) a été réédité, corrigé et complété pour rester à jour.
 
 ## 1. Galaxy Zoo 2 : classifier la morphologie à grande échelle
 
-Le catalogue Galaxy Zoo 2 (GZ2, Willett et al. 2013 ; Hart et al. 2016), c'est le résultat d'un projet de *science citoyenne* dans lequel des centaines de milliers de volontaires ont classé visuellement des centaines de milliers de galaxies issues du Sloan Digital Sky Survey (SDSS, York et al. 2000). Chaque galaxie a reçu une étiquette morphologique — spirale, elliptique, irrégulière, avec ou sans barre, etc., à partir de réponses à un arbre de décision.
+Le catalogue Galaxy Zoo 2 (GZ2, Willett et al. 2013 ; Hart et al. 2016), c'est le résultat d'un projet de *science citoyenne* dans lequel des centaines de milliers de volontaires ont classé visuellement des centaines de milliers de galaxies issues du Sloan Digital Sky Survey (SDSS, York et al. 2000). Chaque galaxie a reçu une étiquette morphologique  (spirale, elliptique, irrégulière, avec ou sans barre, etc.), à partir de réponses à un arbre de décision.
 
 Le résultat est un catalogue de ~240 000 galaxies (images RGB, $64^2$ pixels) et des probabilités de classification par morphologie. C'est mon premier terrain de jeu pour mes modèles génératifs, en me concentrant sur les **galaxies spirales**.
 
