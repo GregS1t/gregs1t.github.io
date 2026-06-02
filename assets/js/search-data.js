@@ -154,7 +154,7 @@ ninja.data = [{
         
           title: "Git : aide-mémoire en questions",
         
-        description: "Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets.",
+        description: "Un aide-mémoire pratique pour maîtriser Git.",
         section: "Posts",
         handler: () => {
           
@@ -208,22 +208,22 @@ ninja.data = [{
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2019_git_crash_course/";
             },},{id: "teachings-l2-algo-et-programmation",
-          title: 'L2 Algo. et programmation',
+          title: 'L2 - Algo. et programmation',
           description: "Fondamentaux de l&#39;algorithmique et de la programmation en Python, depuis les bases du langage jusqu&#39;aux méthodes numériques appliquées à la physique (intégration, équations différentielles, ajustement de données, nombres aléatoires).",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2020_Algo_programmation_UPC_IF402/";
-            },},{id: "teachings-earth-data-science",
-          title: 'Earth Data Science',
+            },},{id: "teachings-m2-d-earth-data-science",
+          title: 'M2/D - Earth Data Science',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets oriented on earth data (seismic data, Lidar data, satellite images...)",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2021_earthdatascience/";
-            },},{id: "teachings-earth-data-science",
-          title: 'Earth Data Science',
+            },},{id: "teachings-m2-d-earth-data-science",
+          title: 'M2/D - Earth Data Science',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets oriented on earth data (seismic data, Lidar data, satellite images...)",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2022_earthdatascience/";
-            },},{id: "teachings-frugal-ai",
-          title: 'Frugal AI',
+            },},{id: "teachings-frugal-ai-psl-week",
+          title: 'Frugal AI - PSL Week',
           description: "Hands-on course on efficient and low-cost AI, covering computational optimization of matrix operations (Python, C, GPU) and neural network compression techniques. Part of the PSL Week programme.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025_frugal_ai/";
