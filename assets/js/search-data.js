@@ -232,46 +232,6 @@ ninja.data = [{
           description: "From binary file to your first plots: loading, cleaning, and visualizing trail running data with Python.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-08-01-anatomy-trail-race-fit-file/";
-            },},{id: "trail-data-analyser-ses-données-trail-comprendre-le-terrain",
-          title: '[data] Analyser ses données trail — Comprendre le terrain',
-          description: "Pente robuste, segmentation montées/descentes, marche vs course, GAP et VAM. Ce que le profil altimétrique ne te dit pas.",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2025-12-21-terrain/";
-            },},{id: "trail-mental-le-gouverneur-central-le-cerveau-arbitre-t-il-la-fatigue",
-          title: '[mental] Le gouverneur central — Le cerveau arbitre-t-il la fatigue ?',
-          description: "Quand la tête dit stop, est-ce que le corps est vraiment à sec ? On va parler du gouverneur central de Noakes, de ce qu&#39;il explique, de ses limites, et de ce que la perception de l&#39;effort nous apprend vraiment sur la fatigue en endurance.",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2025-12-28-gouverneur-central/";
-            },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
-          title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
-          description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-02-25-minetti-2002/";
-            },},{id: "trail-trimp-amp-co-quantifier-la-charge-d-39-entraînement",
-          title: 'TRIMP &amp;amp; Co : quantifier la charge d&amp;#39;entraînement',
-          description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-03-28-trimp-bannister/";
-            },},{id: "trail-mental-association-vs-dissociation-où-mettre-ton-attention-pendant-un-effort",
-          title: '[mental] Association vs dissociation — où mettre ton attention pendant un effort ?...',
-          description: "Tu regardes le paysage ou tu surveilles tes jambes ? T&#39;écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ?",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-04-03-association-dissociation/";
-            },},{id: "trail-data-la-météo-comme-donnée-d-39-entraînement-comment-la-récupérer-et-l-39-exploiter",
-          title: '[data] La météo comme donnée d&amp;#39;entraînement : comment la récupérer et l&amp;#39;exploiter',
-          description: "Ta montre enregistre la température, mais ce qu&#39;elle mesure c&#39;est en partie la chaleur de ton poignet. Comment récupérer la météo réelle de ta course ?",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-04-05-meteo-course-trail/";
-            },},{id: "trail-prédire-son-temps-en-trail-un-problème-vraiment-difficile",
-          title: 'Prédire son temps en trail — Un problème (vraiment) difficile',
-          description: "Du polynôme de Minetti aux réseaux LSTM, en passant par l&#39;ITRA et Strava GAP : tour d&#39;horizon honnête des modèles de prédiction de performance en trail, de leurs apports, et surtout de leurs limites communes.",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-04-12-trail-predictors/";
-            },},{id: "trail-mental-le-self-talk-est-ce-que-ça-sert-vraiment-en-trail",
-          title: '[mental] Le self-talk, est-ce que ça sert vraiment en trail ?',
-          description: "Tu te parles à toi-même quand tu fais un effort ? Tu te dis quoi ? Ca marche ?",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-04-29-self-talk/";
             },},{
         id: 'social-cv',
         title: 'CV',
