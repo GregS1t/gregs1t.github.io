@@ -237,6 +237,11 @@ ninja.data = [{
           description: "Robust slope estimation, uphill/downhill segmentation, and walk-vs-run classification. What the elevation profile alone cannot tell you.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-09-25-gps-elevation-slope/";
+            },},{id: "trail-mental-exploration-the-central-governor-does-your-brain-referee-fatigue",
+          title: '[mental · exploration] The Central Governor: Does Your Brain Referee Fatigue?',
+          description: "When your head says stop, is your body truly spent? A look at Noakes&#39; central governor theory, at what it explains, where it falls short, and at what perceived exertion really tells us about fatigue in endurance.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2025-10-23-central-governor/";
             },},{
         id: 'social-cv',
         title: 'CV',
