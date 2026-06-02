@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[data · 101] Why GPS Lies About Elevation: Slope, Segments, and Walk Detection"
+title: "[data] Why GPS lies about elevation ?"
 date: 2025-09-25
 description: >
   Robust slope estimation, uphill/downhill segmentation, and walk-vs-run classification.
