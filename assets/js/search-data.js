@@ -232,13 +232,13 @@ ninja.data = [{
           description: "From binary file to your first plots: loading, cleaning, and visualizing trail running data with Python.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-08-01-anatomy-trail-race-fit-file/";
-            },},{id: "trail-data-101-why-gps-lies-about-elevation-slope-segments-and-walk-detection",
-          title: '[data · 101] Why GPS Lies About Elevation: Slope, Segments, and Walk Detection...',
+            },},{id: "trail-data-why-gps-lies-about-elevation",
+          title: '[data] Why GPS lies about elevation ?',
           description: "Robust slope estimation, uphill/downhill segmentation, and walk-vs-run classification. What the elevation profile alone cannot tell you.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-09-25-gps-elevation-slope/";
-            },},{id: "trail-mental-exploration-the-central-governor-does-your-brain-referee-fatigue",
-          title: '[mental · exploration] The Central Governor: Does Your Brain Referee Fatigue?',
+            },},{id: "trail-mental-the-central-governor-does-your-brain-referee-fatigue",
+          title: '[mental] The Central Governor: Does Your Brain Referee Fatigue?',
           description: "When your head says stop, is your body truly spent? A look at Noakes&#39; central governor theory, at what it explains, where it falls short, and at what perceived exertion really tells us about fatigue in endurance.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-10-23-central-governor/";
