@@ -1,6 +1,6 @@
 ---
 layout: course
-title: Frugal AI
+title: Frugal AI - PSL Week
 description: >
   Hands-on course on efficient and low-cost AI, covering computational
   optimization of matrix operations (Python, C, GPU) and neural network
@@ -17,8 +17,8 @@ course_id: frugal-ai
 
 This course introduces frugal approaches in artificial intelligence, addressing the
 growing need for efficient and sustainable ML systems. Students explore the full
-stack of computational optimisation — from low-level matrix operations in C to
-GPU acceleration and neural network compression — through hands-on practical work.
+stack of computational optimisation from low-level matrix operations in C to
+GPU acceleration and neural network compression through hands-on practical work.
 
 Course materials are available at
 [github.com/Deyht/frugal_ai](https://github.com/Deyht/frugal_ai).
@@ -29,7 +29,7 @@ Course materials are available at
 - Baseline implementation in Python and C
 - Vectorisation and memory access optimisation
 - Parallelisation strategies
-- GPU acceleration (Google Colab environment)
+- GPU acceleration (tests in Google Colab env.)
 
 **Part II — Neural network optimisation**
 - Reducing model size and computational cost

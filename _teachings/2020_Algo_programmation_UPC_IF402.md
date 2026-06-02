@@ -1,6 +1,6 @@
 ---
 layout: course
-title: L2 Algo. et programmation
+title: L2 - Algo. et programmation
 description: Fondamentaux de l'algorithmique et de la programmation en Python, depuis les bases du langage jusqu'aux méthodes numériques appliquées à la physique (intégration, équations différentielles, ajustement de données, nombres aléatoires).
 instructor: Grégory Sainton (Assistant TP)
 year: 2020

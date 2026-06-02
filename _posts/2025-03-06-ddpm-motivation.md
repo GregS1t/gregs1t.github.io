@@ -28,9 +28,9 @@ Ce billet (comme les autres) a été réédité et corrigé et complété pour r
 
 ## 1. Galaxy Zoo 2 : classifier la morphologie à grande échelle
 
-Le catalogue Galaxy Zoo 2 (GZ2, Willett et al. 2013 ; Hart et al. 2016), c'est le résultat d'un projet de *science citoyenne* dans lequel des centaines de milliers de volontaires ont classé visuellement des centaines de milliers de galaxies issues du Sloan Digital Sky Survey (SDSS, York et al. 2000). Chaque galaxie a reçu une étiquette morphologique — spirale, elliptique, irrégulière, avec ou sans barre, etc. — à partir de réponses à un arbre de décision.
+Le catalogue Galaxy Zoo 2 (GZ2, Willett et al. 2013 ; Hart et al. 2016), c'est le résultat d'un projet de *science citoyenne* dans lequel des centaines de milliers de volontaires ont classé visuellement des centaines de milliers de galaxies issues du Sloan Digital Sky Survey (SDSS, York et al. 2000). Chaque galaxie a reçu une étiquette morphologique — spirale, elliptique, irrégulière, avec ou sans barre, etc., à partir de réponses à un arbre de décision.
 
-Le résultat est un catalogue de ~240 000 galaxies (images RGB, 64² pixels) et des probabilités de classification par morphologie. C'est mon premier terrain de jeu pour mes modèles génératifs, en me concentrant sur les **galaxies spirales**.
+Le résultat est un catalogue de ~240 000 galaxies (images RGB, $64^2$ pixels) et des probabilités de classification par morphologie. C'est mon premier terrain de jeu pour mes modèles génératifs, en me concentrant sur les **galaxies spirales**.
 
 ---
 
@@ -50,9 +50,9 @@ Un modèle génératif apprend la distribution statistique $p(\mathbf{x})$ des i
 
 **Augmentation de données.** Les réseaux de classification souffrent du déséquilibre entre classes morphologiques. Générer des exemples synthétiques réalistes permet d'équilibrer le dataset sans avoir recours à de simples symétries ou rotations.
 
-**Exploration de l'espace morphologique.** Un bon modèle génératif capture l'ensemble de la diversité morphologique — spirales serrées, ouvertes, barrées, en interaction. On peut explorer cet espace de manière continue, ce qui est impossible avec un catalogue discret.
+**Exploration de l'espace morphologique.** Un bon modèle génératif capture l'ensemble de la diversité morphologique : spirales serrées, ouvertes, barrées, en interaction. On peut explorer cet espace de manière continue, ce qui est impossible avec un catalogue discret.
 
-**Détection d'anomalies.** En apprenant la distribution des galaxies "normales", un modèle génératif peut signaler des objets atypiques dont la vraisemblance sous le modèle est faible — fusion de galaxies, artefacts d'imagerie, autres objets rares...
+**Détection d'anomalies.** En apprenant la distribution des galaxies "normales", un modèle génératif peut signaler des objets atypiques dont la vraisemblance sous le modèle est faible ie. fusion de galaxies, artefacts d'imagerie, autres objets rares...
 
 **Simulation de futures observations.** Des instruments comme le SKA (Square Kilometer Array) ou le Vera Rubin Observatory vont générer des volumes de données sans précédent. Des modèles génératifs entraînés sur des données existantes peuvent servir à simuler des populations réalistes pour préparer les pipelines d'analyse et les algorithmes d'identification de sources comme YOLO-CIANNA.
 
@@ -66,7 +66,7 @@ Trois principales familles de modèles génératifs dominent la littérature :
 
 **Generative Adversarial Networks (GAN).** Goodfellow et al. (2014) mettent en compétition un générateur et un discriminateur. Les GAN produisent des images très nettes mais sont difficiles à entraîner (instabilité, mode collapse) et leur couverture de la distribution réelle est souvent partielle.
 
-**Modèles de diffusion (DDPM).** Ho et al. (2020) proposent d'apprendre à inverser un processus de bruitage gaussien progressif. Les modèles de diffusion sont stables à l'entraînement, couvrent bien la distribution réelle et produisent des échantillons de haute qualité — au prix d'un temps d'inférence plus long. C'est l'approche que j'ai retenue.
+**Modèles de diffusion (DDPM).** Ho et al. (2020) proposent d'apprendre à inverser un processus de bruitage gaussien progressif. Les modèles de diffusion sont stables à l'entraînement, couvrent bien la distribution réelle et produisent des échantillons de haute qualité, au prix d'un temps d'inférence plus long. C'est l'approche que j'ai retenue.
 
 Il existe d'autres modèles comme les *Autoregressive Models* (PixelCNN, GPT...), les *Normalizing Flows*, les *Energy-Based Models* que je n'aborderai pas ici. On pourra se reporter au livre de David Foster *Generative Deep Learning* dont vous trouverez la référence en bas de ce billet. 
 
@@ -92,11 +92,11 @@ La PSF (*Point Spread Function* ou "fonction d'étalement du point") décrit la 
 </figure>
 
 
-La PSF a deux conséquences importantes pour le *deep learning*. D'abord, elle **corrèle spatialement les pixels voisins** — deux pixels proches ne sont pas des mesures indépendantes du flux physique sous-jacent. Ensuite, elle est **anisotrope** : toute transformation géométrique appliquée à l'image modifie la forme apparente de la PSF. En particulier, une rotation à angle arbitraire nécessite une interpolation bilinéaire qui filtre les hautes fréquences spatiales et dégrade la PSF — c'est pourquoi plusieurs travaux de deep learning sur les images astronomiques se limitent aux rotations discrètes {0°,90°,180°,270°} (Flamary et al. 2022 ; Asensio Ramos et al. 2024). C'est le choix que j'ai également adopté dans mon processus d'augmentation d'image.
+La PSF a deux conséquences importantes pour le *deep learning*. D'abord, elle **corrèle spatialement les pixels voisins** : deux pixels proches ne sont pas des mesures indépendantes du flux physique sous-jacent. Ensuite, elle est **anisotrope** : toute transformation géométrique appliquée à l'image modifie la forme apparente de la PSF. En particulier, une rotation à angle arbitraire nécessite une interpolation bilinéaire qui filtre les hautes fréquences spatiales et dégrade la PSF. C'est pourquoi plusieurs travaux de deep learning sur les images astronomiques se limitent aux rotations discrètes {0°,90°,180°,270°} (Flamary et al. 2022 ; Asensio Ramos et al. 2024). C'est le choix que j'ai également adopté dans mon processus d'augmentation d'image.
 
 ### 4.2 La dynamique logarithmique du flux
 
-La brillance de surface des galaxies couvre **plusieurs ordres de grandeur** — du fond de ciel très sombre au noyau galactique très brillant (Binney & Merrifield, 1998). Cette dynamique est mal adaptée aux réseaux de neurones qui, généralement, opèrent sur des valeurs normalisées dans $[0, 1]$ : la quasi-totalité des pixels sont proches de 0, tandis qu'une poignée de pixels très brillants dominent la plage de valeurs.
+La brillance de surface des galaxies couvre **plusieurs ordres de grandeur**, du fond de ciel très sombre au noyau galactique très brillant (Binney & Merrifield, 1998). Cette dynamique est mal adaptée aux réseaux de neurones qui, généralement, opèrent sur des valeurs normalisées dans $[0, 1]$ : la quasi-totalité des pixels sont proches de 0, tandis qu'une poignée de pixels très brillants dominent la plage de valeurs.
 
 La photométrie SDSS traite ce problème en utilisant des magnitudes `asinh` (Lupton, Gunn & Szalay, 1999), une transformation conçue pour se comporter comme la magnitude standard à haut rapport signal/bruit, mais rester bien définie aux faibles flux et aux valeurs négatives. La transformation `asinh` comprime la dynamique de manière logarithmique tout en restant définie en zéro.
 

@@ -28,4 +28,4 @@ One-day hands-on training introducing version control with Git and GitLab to res
 
 ## Textbooks
 
-- Pro Git — Scott Chacon & Ben Straub (2nd ed., 2014). Freely available at git-scm.com/book
+- Pro Git: Scott Chacon & Ben Straub (2nd ed., 2014). Freely available at git-scm.com/book

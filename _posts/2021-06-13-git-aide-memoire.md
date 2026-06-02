@@ -2,7 +2,7 @@
 layout: post
 title: "Git : aide-mémoire en questions"
 date: 2021-06-13
-description: "Un aide-mémoire pratique pour maîtriser Git, des premiers pas aux usages avancés, organisé par problèmes concrets."
+description: "Un aide-mémoire pratique pour maîtriser Git."
 tags: [git, développement, workflow, outils]
 lang: fr
 lang_switch:
@@ -248,9 +248,9 @@ git commit -m "Normalize line endings"
 
 ### J'ai poussé un fichier sensible (`.env`, clé API)
 
-**Étape 1 — Révoquer la clé immédiatement.** Le remote en a une copie.
+**Étape 1 - Révoquer la clé immédiatement.** Le remote en a une copie.
 
-**Étape 2 — Supprimer le fichier de tout l'historique :**
+**Étape 2 - Supprimer le fichier de tout l'historique :**
 
 ```bash
 pip install git-filter-repo
@@ -258,7 +258,7 @@ git filter-repo --path .env --invert-paths
 git push --force-with-lease
 ```
 
-**Étape 3 — Ajouter le fichier à `.gitignore`.**
+**Étape 3 - Ajouter le fichier à `.gitignore`.**
 
 ---
 
@@ -415,7 +415,7 @@ git config --global alias.undo "reset HEAD~1 --mixed"
 
 ### Exclure des fichiers localement sans toucher `.gitignore`
 
-Éditer `.git/info/exclude` — même syntaxe que `.gitignore`, non versionné, non partagé.
+Éditer `.git/info/exclude`, même syntaxe que `.gitignore`, non versionné, non partagé.
 
 ---
 
@@ -786,6 +786,6 @@ git ls-tree HEAD            # Arbre du commit courant
 ## Références
 
 - Documentation officielle Git : [git-scm.com/doc](https://git-scm.com/doc)
-- **Pro Git** (Chacon & Straub, 2e éd.) — gratuit en ligne : [git-scm.com/book/fr/v2](https://git-scm.com/book/fr/v2)
+- **Pro Git** (Chacon & Straub, 2e éd.), gratuit en ligne : [git-scm.com/book/fr/v2](https://git-scm.com/book/fr/v2)
 - **Version Control with Git**: Powerful Tools and Techniques for Collaborative Software Development, Prem Kumar Ponuthorai, O'Reilly Ed, 2022 (ajout récent)
-- `man git-<commande>` — pages de manuel intégrées
+- `man git-<commande>`: pages de manuel intégrées (oui, c'est bien man !)
