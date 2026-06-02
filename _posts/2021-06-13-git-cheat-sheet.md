@@ -17,11 +17,11 @@ toc:
 
 > 🇫🇷 [Lire ce billet en français](/blog/2021/git-aide-memoire/)
 
-A few years ago I ran some Git/GitLab/GitHub workshops for colleagues. I decided to revisit the slide content — which had aged a bit — and reframe it differently.
+A few years ago I ran some Git/GitLab/GitHub workshops for colleagues of my lab. I decided to revisit the slide content which had aged a bit and reframe it differently.
 
-The post is split into two parts. First, **common problems** — phrased the way you actually encounter them, ranging from simple to trickier. Then a few **thematic references** to go deeper on each topic. It's far from exhaustive, but hopefully you'll find what you need!
+The post is split into two parts. First, **common problems**, phrased the way you actually encounter them, ranging from simple to trickier. Then a few **thematic references** to go deeper on each topic. It's far from exhaustive, but hopefully you'll find what you need!
 
-It also serves — above all — as a personal cheat sheet so I don't have to look up the same commands over and over. That means the content gets regularly updated with new finds, or corrected when needed.
+It also serves above all as a personal cheat sheet so I don't have to look up the same commands over and over. That means the content gets regularly updated with new finds, or corrected when needed.
 
 ---
 
@@ -394,7 +394,7 @@ git config --global alias.undo "reset HEAD~1 --mixed"
 
 ### Excluding files locally without touching `.gitignore`
 
-Edit `.git/info/exclude` — same syntax as `.gitignore`, not versioned, not shared.
+Edit `.git/info/exclude`, same syntax as `.gitignore`, not versioned, not shared.
 
 ---
 
@@ -569,7 +569,7 @@ docs(api): update OTFClient usage examples
 chore(deps): bump torch from 2.1 to 2.3
 ```
 
-**Core rules** (Tim Pope, 2008 — still the reference):
+**Core rules** (Tim Pope, 2008 is still the reference):
 
 - Subject line: **50 characters max**, no trailing period
 - If body: **blank line** between subject and body
@@ -677,6 +677,6 @@ git ls-tree HEAD            # Tree of the current commit
 ## References
 
 - Official Git documentation: [git-scm.com/doc](https://git-scm.com/doc)
-- **Pro Git** (Chacon & Straub, 2nd ed.) — free online: [git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)
+- **Pro Git** (Chacon & Straub, 2nd ed.): free online: [git-scm.com/book/en/v2](https://git-scm.com/book/en/v2)
 - **Version Control with Git**: Powerful Tools and Techniques for Collaborative Software Development, Prem Kumar Ponuthorai, O'Reilly, 2022
-- `man git-<command>` — built-in manual pages
+- `man git-<command>`: built-in manual pages

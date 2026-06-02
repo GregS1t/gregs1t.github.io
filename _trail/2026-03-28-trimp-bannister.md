@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TRIMP & Co — quantifier la charge d'entraînement"
+title: "TRIMP & Co : quantifier la charge d'entraînement"
 date: 2026-03-28
 description: >
   Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al.,
@@ -13,7 +13,7 @@ toc:
 math: true
 ---
 
-Après une sortie, ta montre te donne un score de « charge ». Sur Garmin c'est l'*acute load*, sur Suunto le *Training Load*... Derrière ces étiquettes "marketing" se cache — souvent — le même modèle, vieux de cinquante ans : le modèle **TRIMP** de Banister. 
+Après une sortie, ta montre te donne un score de « charge ». Sur Garmin c'est l'*acute load*, sur Suunto le *Training Load*... Derrière ces étiquettes "marketing" se cache  souvent le même modèle, vieux de cinquante ans : le modèle **TRIMP** de Banister. 
 Toujours avec cette envie de comprendre mes données, je me suis dit que j'allais explorer de ce côté.
 
 Je ne saurai que trop te conseiller de lire/écouter le travail de Cyril Forester du Podcast Courir Mieux sur la charge d'entrainement : [Comprendre et utiliser la charge d’entraînement en trail](https://courir-mieux.fr/charge-dentrainement-trail)
@@ -27,12 +27,12 @@ Bon, quand tu mets tes baskets (mais c'est vrai pour n'importe quel sport), ton 
 - Trop : surmenage, blessure, ... 
 - La *zone productive* se situe entre les deux. Elle est étroite et variable. 
 
-Il nous faut donc un indicateur de la **dose totale** absorbée — pas seulement la durée, pas seulement l'intensité, mais la combinaison des deux pour savoir où se situer.
+Il nous faut donc un indicateur de la **dose totale** absorbé,  pas seulement la durée, pas seulement l'intensité, mais la combinaison des deux pour savoir où se situer.
 
 On distingue deux types de charge :
 
-- **Charge externe** : ce que tu fais — distance, dénivelé, vitesse. $\rightarrow$ Indépendante de ton état physiologique du jour.
-- **Charge interne** : ce que ton organisme ressent — réponse cardiaque, lactatémie, perturbation hormonale. $\rightarrow$ C'est elle qui génère l'adaptation.
+- **Charge externe** : ce que tu fais : distance, dénivelé, vitesse. $\rightarrow$ Indépendante de ton état physiologique du jour.
+- **Charge interne** : ce que ton organisme ressent : réponse cardiaque, lactatémie, perturbation hormonale. $\rightarrow$ C'est elle qui génère l'adaptation.
 
 Et bien le TRIMP vise justement la charge interne en s'appuyant sur la fréquence cardiaque. C'est un proxy accessible de l'effort physiologique.
 
@@ -52,13 +52,13 @@ $$\mathrm{TRIMP} = D \times \Delta\mathrm{HR} \times y$$
 
 Les trois termes :
 
-- **$D$** — durée de la séance en minutes.
+- **$D$** : durée de la séance en minutes.
 
-- **$\Delta\mathrm{HR}$** — fraction de la réserve cardiaque utilisée (*Heart Rate Reserve*) :
+- **$\Delta\mathrm{HR}$** : fraction de la réserve cardiaque utilisée (*Heart Rate Reserve*) :
 
 $$\Delta\mathrm{HR} = \frac{\overline{\mathrm{HR}} - \mathrm{HR_{rest}}}{\mathrm{HR_{max}} - \mathrm{HR_{rest}}}$$
 
-- **$y$** — facteur de pondération exponentiel, calé sur la relation HR–lactatémie
+- **$y$** : facteur de pondération exponentiel, calé sur la relation HR–lactatémie
 observée lors d'un test incrémental :
 
 $$y = a \cdot e^{\,b \cdot \Delta\mathrm{HR}}$$

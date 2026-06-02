@@ -13,7 +13,7 @@ toc:
 
 *"T'as entendu parler du tremblement de Mars ?"*
 
-Non, ce n'est pas le titre d'un film de SF des années 80. Dans la nuit du 4 au 5 mai 2022, Mars a vraiment tremblé — magnitude 5 sur l'échelle de Richter. Et c'est l'instrument français SEIS, posé sur le sol martien par l'atterrisseur InSight de la NASA, qui l'a capté en direct.
+Non, ce n'est pas le titre d'un film de SF des années 80. Dans la nuit du 4 au 5 mai 2022, Mars a vraiment tremblé : magnitude 5 sur l'échelle de Richter. Et c'est l'instrument français SEIS, posé sur le sol martien par l'atterrisseur InSight de la NASA, qui l'a capté en direct.
 
 ## Pourquoi c'est un événement
 
@@ -21,7 +21,7 @@ Depuis le début des opérations fin 2018, les équipes attendaient ça. Pas jus
 
 À titre de comparaison, sur Terre un magnitude 5, ça reste un séisme modéré. Sur Mars, on frôle la limite haute de ce que les scientifiques espéraient pouvoir observer avec InSight.
 
-Les conditions d'observation étaient également idéales : l'événement s'est produit tôt le matin martien, avant les perturbations atmosphériques de l'aube, et à une distance épicentrale relativement courte — 2 250 km à l'échelle martienne. 
+Les conditions d'observation étaient également idéales : l'événement s'est produit tôt le matin martien, avant les perturbations atmosphériques de l'aube, et à une distance épicentrale relativement courte, 2 250 km à l'échelle martienne. 
 
 ## Mon rôle là-dedans : le déglitch
 
