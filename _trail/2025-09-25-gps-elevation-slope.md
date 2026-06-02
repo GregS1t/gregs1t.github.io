@@ -15,7 +15,7 @@ math: true
 
 *"You know your elevation profile. We built it in the [previous article]({% post_url 2025-08-28-anatomy-trail-race-fit-file %}). But do you know at which slope you start walking, and whether that threshold shifted in the second half of your race?"*
 
-This is the second article in the series. We assume you have loaded and cleaned your FIT file using the pipeline from [Anatomy of a Trail Race FIT File]({% post_url 2025-08-28-anatomy-trail-race-fit-file %}): the DataFrame `df` already contains `dist_m`, `alt_m`, `speed_kmh`, `pace_s_per_km`, and the usual columns.
+This is the second article in the series. We assume you have loaded and cleaned your FIT file using the pipeline from the article **Anatomy of a Trail Race FIT File**: the DataFrame `df` already contains `dist_m`, `alt_m`, `speed_kmh`, `pace_s_per_km`, and the usual columns.
 
 ---
 
@@ -292,6 +292,7 @@ if "is_walk" in df.columns and df["is_walk"].notna().any():
 
 
 If you see the orange bars (second half) creeping higher than the blue bars (first half) across all slope bins, that is fatigue showing up. Your body switched to walking earlier and more often as the race went on. If the shift only appears in the steepest bins (+20% and above), the degradation is mostly on the hard stuff, which is normal.
+
 ---
 
 ## What's next
@@ -300,7 +301,6 @@ We now have a DataFrame enriched with slope, segment type, and walk/run classifi
 
 That correction is called **Grade Adjusted Pace** (GAP), and it relies on a biomechanical model of the energy cost of running on slopes. Before we implement it, we will take a proper look at the science behind it: the Minetti cost-of-transport model.
 
-That is the subject of the [next article]({% post_url 2025-10-23-central-governor %}).
 
 ---
 
