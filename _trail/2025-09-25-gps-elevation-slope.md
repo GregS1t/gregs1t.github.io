@@ -13,7 +13,7 @@ toc:
 math: true
 ---
 
-*"You know your elevation profile. We built it in the [previous article]({% post_url 2025-08-28-anatomy-trail-race-fit-file %}). But do you know at which slope you start walking, and whether that threshold shifted in the second half of your race?"*
+*"You know your elevation profile. We built it in the previous article. But do you know at which slope you start walking, and whether that threshold shifted in the second half of your race?"*
 
 This is the second article in the series. We assume you have loaded and cleaned your FIT file using the pipeline from the article **Anatomy of a Trail Race FIT File**: the DataFrame `df` already contains `dist_m`, `alt_m`, `speed_kmh`, `pace_s_per_km`, and the usual columns.
 
