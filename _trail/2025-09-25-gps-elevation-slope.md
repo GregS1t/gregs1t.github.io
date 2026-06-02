@@ -201,7 +201,7 @@ fig.show()
 
 <div class="plotly-container">
   <iframe src="{{ site.baseurl }}/assets/img/blog/2025-09-gps-elevation/slope_elevation.html"
-          width="100%" height="350" frameborder="0" scrolling="no">
+          width="100%" height="650" frameborder="0" scrolling="no">
   </iframe>
 </div>
 
