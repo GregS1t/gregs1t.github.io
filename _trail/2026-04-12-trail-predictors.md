@@ -6,6 +6,7 @@ description: >
   Du polynôme de Minetti aux réseaux LSTM, en passant par l'ITRA et Strava GAP : tour d'horizon honnête des modèles de prédiction de performance en trail, de leurs apports, et surtout de leurs limites communes.
 tags: [trail, performance, prédiction, modélisation, Minetti, ITRA, Strava, machine-learning, fatigue, Riegel]
 categories: [trail, data, science]
+published: false
 related_posts: false
 toc:
   sidebar: left

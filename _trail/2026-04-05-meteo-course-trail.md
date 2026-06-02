@@ -7,6 +7,7 @@ description: >
 tags: [trail, météo, python, open-meteo, ERA5, température, humidité, analyse, running]
 thumbnail: assets/img/blog/2026_04_Trail_meteo/Meteo_Trail Running.png
 categories: trail
+published: false
 related_posts: false
 toc:
   sidebar: left

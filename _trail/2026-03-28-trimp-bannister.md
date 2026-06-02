@@ -7,6 +7,7 @@ description: >
   et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?
 tags: trail entraînement charge modélisation fréquence-cardiaque FFM 
 categories: [trail, data, science]
+published: false
 related_posts: false
 toc:
   sidebar: left

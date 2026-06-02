@@ -6,6 +6,7 @@ description: >
   Tu regardes le paysage ou tu surveilles tes jambes ? T'écoutes de la musique où tu écoutes ton cardio ? Comment on pense sur un effort long ? 
 tags: [trail, mental, psychologie, attention, effort, RPE, imagerie]
 categories: trail
+published: false
 related_posts: false
 toc:
   sidebar: left
