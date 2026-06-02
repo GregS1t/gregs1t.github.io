@@ -75,7 +75,7 @@ ninja.data = [{
         },
       },{id: "post-convolutions-et-gradient-vanishing-ddpm-2",
         
-          title: "Convolutions et gradient vanishing — DDPM 2",
+          title: "Convolutions et gradient vanishing. (DDPM 2)",
         
         description: "Les briques fondamentales d&#39;un réseau convolutif : pourquoi les convolutions, le problème du gradient vanishing, et la solution des connexions résiduelles.",
         section: "Posts",
@@ -86,7 +86,7 @@ ninja.data = [{
         },
       },{id: "post-pourquoi-des-modèles-génératifs-pour-les-galaxies-ddpm-1",
         
-          title: "Pourquoi des modèles génératifs pour les galaxies ? — DDPM 1",
+          title: "Pourquoi des modèles génératifs pour les galaxies ? (DDPM 1)",
         
         description: "Motivation, état de l&#39;art, spécificités des images astronomiques et choix d&#39;implémentation pour Galaxy Zoo 2.",
         section: "Posts",
