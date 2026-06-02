@@ -242,18 +242,13 @@ ninja.data = [{
           description: "Quand la tête dit stop, est-ce que le corps est vraiment à sec ? On va parler du gouverneur central de Noakes, de ce qu&#39;il explique, de ses limites, et de ce que la perception de l&#39;effort nous apprend vraiment sur la fatigue en endurance.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-28-gouverneur-central/";
-            },},{id: "trail-data-analyser-ses-données-trail-cartographier-sa-trace-gps",
-          title: '[data] Analyser ses données trail — Cartographier sa trace GPS',
-          description: "Ton fichier .fit contient des coordonnées GPS. Comment représenter la trace sur une carte ?",
-          section: "Trail",handler: () => {
-              window.location.href = "/trail/2026-01-15-carte-interactive-fit/";
             },},{id: "trail-le-modèle-de-minetti-quel-coût-énergétique-en-trail",
           title: 'Le modèle de Minetti — Quel coût énergétique en trail ?',
           description: "Toi aussi tu voudrais savoir combien de temps tu vas mettre pour faire ton trail ? On va parler du modèle de Minetti, de ces succès, de ses biais, de ses extensions...",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-02-25-minetti-2002/";
             },},{id: "trail-trimp-amp-co-quantifier-la-charge-d-39-entraînement",
-          title: 'TRIMP &amp;amp; Co — quantifier la charge d&amp;#39;entraînement',
+          title: 'TRIMP &amp;amp; Co : quantifier la charge d&amp;#39;entraînement',
           description: "Petite revue du TRIMP de Banister, du modèle fitness-fatigue de Morton et al., et de la déclinaison CTL/ATL/TSB de Coggan. Quelles limites de ces approches ?",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-28-trimp-bannister/";
