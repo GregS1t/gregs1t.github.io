@@ -121,7 +121,7 @@ If the slope scatter shows values beyond ±50%, something is off with the altitu
 
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/segmentation.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-09_gps_elevation/segmentation.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
@@ -200,7 +200,7 @@ fig.show()
 
 
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/slope_elevation.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-09_gps_elevation/slope_elevation.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
@@ -285,7 +285,7 @@ if "is_walk" in df.columns and df["is_walk"].notna().any():
     fig.show()
 ```
 <div class="plotly-container">
-  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-08_fit_file/walk_probability.html"
+  <iframe src="{{ site.baseurl }}/assets/img/blog/2025-09_gps_elevation/walk_probability.html"
           width="100%" height="350" frameborder="0" scrolling="no">
   </iframe>
 </div>
