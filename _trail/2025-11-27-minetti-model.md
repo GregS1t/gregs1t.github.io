@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "[science] The Minetti Model: Energy Cost of Running on Slopes"
+title: "[science] The Minetti Model: energy cost of running on slopes"
 date: 2025-11-27
 description: >
-  The 2002 polynomial that powers every GAP calculator on the market. Where it comes
-  from, what it captures, where it breaks, and what has happened since.
+  The 2002 polynomial that powers every GAP calculator on the market. Where it comes from, what it captures, where it breaks, and what has happened since.
 tags: [trail, physiology, biomechanics, energy, slope, modelling, Minetti, science]
 categories: [trail, data, science]
 related_posts: false

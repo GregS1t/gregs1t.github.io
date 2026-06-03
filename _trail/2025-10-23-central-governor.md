@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[mental] The Central Governor: Does Your Brain Referee Fatigue?"
+title: "[mental] The Central Governor: does your brain referee your fatigue?"
 date: 2025-10-23
 description: >
   When your head says stop, is your body truly spent? A look at Noakes' central

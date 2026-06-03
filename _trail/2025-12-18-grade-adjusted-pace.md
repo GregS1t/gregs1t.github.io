@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[data] Grade Adjusted Pace: Flattening the Mountain"
+title: "[data] Grade Adjusted Pace: flattening the Mountain"
 date: 2025-12-18
 description: >
   Your raw pace is not comparable across gradients. GAP corrects for slope
