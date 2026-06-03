@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[science] TRIMP & the fitness-fatigue model: Quantifying Training Load"
+title: "[science] TRIMP & the fitness-fatigue model: quantifying training load"
 date: 2026-01-22
 description: >
   The Banister TRIMP, the fitness-fatigue model, and the Coggan CTL/ATL/TSB.
