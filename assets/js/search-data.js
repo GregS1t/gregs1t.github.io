@@ -257,6 +257,26 @@ ninja.data = [{
           description: "The Banister TRIMP, the fitness-fatigue model, and the Coggan CTL/ATL/TSB.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-01-22-trimp-fitness-fatigue/";
+            },},{id: "trail-data-reading-your-race-physiology",
+          title: '[data] Reading your race physiology',
+          description: "Cardiac drift, TRIMP, cross-analysis of slope and HR, GAP degradation, and the speed-slope-HR heatmap. What Garmin Connect does not compute.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-02-26-race-physiology/";
+            },},{id: "trail-mental-exploration-association-vs-dissociation-where-should-your-attention-go-during-effort",
+          title: '[mental · exploration] Association vs. Dissociation: where should your attention go during effort?...',
+          description: "When you run, do you focus on your body or let your mind drift? Forty years of research on attentional strategies in endurance, from Morgan &amp; Pollock to the 4-quadrant model.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-03-26-association-dissociation/";
+            },},{id: "trail-data-weather-as-training-data-retrieving-real-conditions-with-era5-land",
+          title: '[data] weather as training data: Retrieving real conditions with ERA5-Land',
+          description: "Your watch temperature is biased by body heat. How to retrieve actual weather conditions during your race using the ERA5-Land reanalysis via Open-Meteo.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-04-23-weather-training-data/";
+            },},{id: "trail-mental-exploration-self-talk-in-endurance-does-talking-to-yourself-actually-work",
+          title: '[mental · exploration] Self-Talk in Endurance: Does Talking to Yourself Actually Work?',
+          description: "You talk to yourself during hard efforts. Everyone does. But does it actually help? From Blanchfield&#39;s RCT to ultramarathon field studies.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-05-28-self-talk/";
             },},{
         id: 'social-cv',
         title: 'CV',
