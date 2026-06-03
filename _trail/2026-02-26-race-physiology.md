@@ -18,7 +18,7 @@ math: true
 
 This article concludes the hands-on data series (for now). It assumes you have run notebooks 01 through 05: the DataFrame `df` already contains `slope_pct`, `gap_s_per_km`, `is_walk`, and the standard columns.
 
-For the theory behind the models used here, see [The Minetti Model]({% post_url 2025-11-27-minetti-model %}) and [TRIMP & the Fitness-Fatigue Model]({% post_url 2026-01-22-trimp-fitness-fatigue %}).
+For the theory behind the models used here, see [The Minetti Model](https://gregs1t.github.io/trail/2025-11-27-minetti-model/) and [TRIMP & the Fitness-Fatigue Model](https://gregs1t.github.io/trail/2026-01-22-trimp-fitness-fatigue/).
 
 ---
 
@@ -152,7 +152,7 @@ The comparison between your actual curve (orange) and the Minetti prediction (bl
 
 ## 4. TRIMP by section
 
-We compute the TRIMP between each pair of aid stations. For the full explanation of the formula and its limits, see [TRIMP & the Fitness-Fatigue Model]({% post_url 2026-01-22-trimp-fitness-fatigue %}).
+We compute the TRIMP between each pair of aid stations. For the full explanation of the formula and its limits, see [TRIMP & the Fitness-Fatigue Model](https://gregs1t.github.io/trail/2026-01-22-trimp-fitness-fatigue/).
 
 ```python
 def compute_trimp(df, fc_min, fc_max, hr_col="heart_rate", sex="M"):
