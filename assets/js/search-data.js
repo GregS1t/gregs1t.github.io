@@ -252,6 +252,11 @@ ninja.data = [{
           description: "Your raw pace is not comparable across gradients. GAP corrects for slope using the Minetti model, and VAM tells you how fast you actually climb.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-18-grade-adjusted-pace/";
+            },},{id: "trail-science-trimp-amp-the-fitness-fatigue-model-quantifying-training-load",
+          title: '[science] TRIMP &amp;amp; the fitness-fatigue model: Quantifying Training Load',
+          description: "The Banister TRIMP, the fitness-fatigue model, and the Coggan CTL/ATL/TSB.",
+          section: "Trail",handler: () => {
+              window.location.href = "/trail/2026-01-22-trimp-fitness-fatigue/";
             },},{
         id: 'social-cv',
         title: 'CV',
