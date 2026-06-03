@@ -262,8 +262,8 @@ ninja.data = [{
           description: "Cardiac drift, TRIMP, cross-analysis of slope and HR, GAP degradation, and the speed-slope-HR heatmap. What Garmin Connect does not compute.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-02-26-race-physiology/";
-            },},{id: "trail-mental-exploration-association-vs-dissociation-where-should-your-attention-go-during-effort",
-          title: '[mental · exploration] Association vs. Dissociation: where should your attention go during effort?...',
+            },},{id: "trail-mental-association-vs-dissociation-where-should-your-attention-go-during-effort",
+          title: '[mental] Association vs. Dissociation: where should your attention go during effort?',
           description: "When you run, do you focus on your body or let your mind drift? Forty years of research on attentional strategies in endurance, from Morgan &amp; Pollock to the 4-quadrant model.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-03-26-association-dissociation/";
@@ -272,8 +272,8 @@ ninja.data = [{
           description: "Your watch temperature is biased by body heat. How to retrieve actual weather conditions during your race using the ERA5-Land reanalysis via Open-Meteo.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-04-23-weather-training-data/";
-            },},{id: "trail-mental-exploration-self-talk-in-endurance-does-talking-to-yourself-actually-work",
-          title: '[mental · exploration] Self-Talk in Endurance: Does Talking to Yourself Actually Work?',
+            },},{id: "trail-mental-self-talk-in-endurance-does-talking-to-yourself-actually-work",
+          title: '[mental] Self-Talk in endurance: does talking to yourself actually work?',
           description: "You talk to yourself during hard efforts. Everyone does. But does it actually help? From Blanchfield&#39;s RCT to ultramarathon field studies.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2026-05-28-self-talk/";
