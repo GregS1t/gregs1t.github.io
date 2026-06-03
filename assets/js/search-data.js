@@ -237,18 +237,18 @@ ninja.data = [{
           description: "Robust slope estimation, uphill/downhill segmentation, and walk-vs-run classification. What the elevation profile alone cannot tell you.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-09-25-gps-elevation-slope/";
-            },},{id: "trail-mental-the-central-governor-does-your-brain-referee-fatigue",
-          title: '[mental] The Central Governor: Does Your Brain Referee Fatigue?',
+            },},{id: "trail-mental-the-central-governor-does-your-brain-referee-your-fatigue",
+          title: '[mental] The Central Governor: does your brain referee your fatigue?',
           description: "When your head says stop, is your body truly spent? A look at Noakes&#39; central governor theory, at what it explains, where it falls short, and at what perceived exertion really tells us about fatigue in endurance.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-10-23-central-governor/";
             },},{id: "trail-science-the-minetti-model-energy-cost-of-running-on-slopes",
-          title: '[science] The Minetti Model: Energy Cost of Running on Slopes',
+          title: '[science] The Minetti Model: energy cost of running on slopes',
           description: "The 2002 polynomial that powers every GAP calculator on the market. Where it comes from, what it captures, where it breaks, and what has happened since.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-11-27-minetti-model/";
             },},{id: "trail-data-grade-adjusted-pace-flattening-the-mountain",
-          title: '[data] Grade Adjusted Pace: Flattening the Mountain',
+          title: '[data] Grade Adjusted Pace: flattening the Mountain',
           description: "Your raw pace is not comparable across gradients. GAP corrects for slope using the Minetti model, and VAM tells you how fast you actually climb.",
           section: "Trail",handler: () => {
               window.location.href = "/trail/2025-12-18-grade-adjusted-pace/";
