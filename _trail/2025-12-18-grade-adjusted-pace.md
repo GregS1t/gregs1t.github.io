@@ -16,9 +16,9 @@ math: true
 
 *"Running 8:00/km on a +15% climb and 8:00/km on flat ground are not the same effort. Not even close. GAP tells you the difference."*
 
-This article picks up where [Why GPS Lies About Elevation](_trail/2025-09-25-gps-elevation-slope.md) left off. The DataFrame `df` already contains `slope_pct`, `ud_clean`, `is_walk`, and the columns from notebook 01.
+This article picks up where [Why GPS Lies About Elevation](https://gregs1t.github.io/trail/2025-09-25-gps-elevation-slope/) left off. The DataFrame `df` already contains `slope_pct`, `ud_clean`, `is_walk`, and the columns from notebook 01.
 
-For the science behind the formula we use here, see [The Minetti Model](_trail/2025-11-27-minetti-model.md). 
+For the science behind the formula we use here, see [The Minetti Model](https://gregs1t.github.io/trail/2025-11-27-minetti-model/). 
 
 ---
 
