@@ -7,7 +7,7 @@ description: >
   using the Minetti model, and VAM tells you how fast you actually climb.
 tags: [trail, data, python, fit-file, gap, vam, pace, minetti, slope, explained]
 categories: [explained, trail, data, running]
-thumbnail: assets/img/blog/2025-12_grade_adjusted_pace/gap_vs_raw.png
+
 related_posts: false
 toc:
   sidebar: left
