@@ -121,6 +121,10 @@ cv:
           - "Advisor: Pr. Hélène Courtois"
 
     Certificates:
+      - name: "Modern Scientific C++ (18h)"
+        date: 2026-06
+        issuer: CNRS Formation
+        icon: fa-solid fa-cubes
       - name: "Docker"
         date: 2025-01
         issuer: CNRS Formation
