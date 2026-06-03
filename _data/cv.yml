@@ -124,7 +124,7 @@ cv:
       - name: "Modern Scientific C++ (18h)"
         date: 2026-06
         issuer: CNRS Formation
-        icon: fa-solid fa-cubes
+        icon: fa-solid fa-code
       - name: "Docker"
         date: 2025-01
         issuer: CNRS Formation
