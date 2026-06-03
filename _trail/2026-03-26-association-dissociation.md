@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[mental · exploration] Association vs. Dissociation: where should your attention go during effort?"
+title: "[mental] Association vs. Dissociation: where should your attention go during effort?"
 date: 2026-03-26
 description: >
   When you run, do you focus on your body or let your mind drift?
