@@ -51,7 +51,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/trail/index.html";
           },
-        },{id: "post-clustering-multi-échelle-et-séparation-de-sources-sur-les-données-insight",
+        },{id: "post-conda-un-aide-mémoire-en-questions",
+        
+          title: "Conda : un aide-mémoire en questions",
+        
+        description: "J&#39;ai encore oublié cette commande Conda...Un aide-mémoire pratique.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/conda-aide-memoire/";
+          
+        },
+      },{id: "post-clustering-multi-échelle-et-séparation-de-sources-sur-les-données-insight",
         
           title: "Clustering multi-échelle et séparation de sources sur les données InSight",
         
