@@ -150,6 +150,17 @@ ninja.data = [{
             window.location.href = "/blog/2022/seisme-mars-insight/";
           
         },
+      },{id: "post-l-39-autoencodeur-compresser-sans-perdre-l-39-essentiel",
+        
+          title: "L&#39;autoencodeur : compresser sans perdre l&#39;essentiel",
+        
+        description: "Comment un réseau de neurones apprend à compresser une donnée sans perte d&#39;information utile, le lien exact avec la PCA, et pourquoi ce n&#39;est pas encore un modèle génératif.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/autoencodeur_intro/";
+          
+        },
       },{id: "post-git-a-cheat-sheet-in-questions",
         
           title: "Git: a cheat sheet in questions",
