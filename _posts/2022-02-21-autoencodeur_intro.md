@@ -48,9 +48,6 @@ C'est exactement ce qui se passe, en beaucoup plus subtil, sur une image réelle
 
 La question devient alors : combien de nombres faut-il vraiment, et comment le réseau peut-il apprendre lui-même lesquels garder, sans qu'on le lui dise à l'avance ?
 
-Une façon de chiffrer cette redondance sur une vraie image : prends une image en niveaux de gris de $512\times512$ pixels, soit $262\,144$ nombres, et décompose-la par SVD. Cette décomposition l'exprime comme une somme pondérée de $512$ motifs élémentaires, du plus important au moins important. En ne gardant que les $20$ premiers motifs sur les $512$ disponibles, moins de $4\,\%$ de l'information brute, on reconstruit déjà $98{,}98\,\%$ de l'énergie du signal, pour un facteur de compression d'environ $12{,}8$. Autrement dit, la quasi-totalité du contenu visuel tient dans une petite fraction des nombres d'origine.
-
-C'est exactement cette redondance qu'un autoencodeur apprend à exploiter, avec deux différences : sa décomposition n'est pas imposée à l'avance comme celle de la SVD, elle est apprise directement sur les données, et elle peut être non linéaire (section 6).
 
 ---
 
@@ -263,7 +260,7 @@ $\Omega$ pénalise ici l'activation du latent, pour qu'un exemple donné n'activ
 - pénalité par divergence de Kullback-Leibler entre l'activation moyenne observée $\hat{\rho}_j$ d'un neurone sur le jeu de données et une parcimonie cible $\rho$ fixée à l'avance (proche de 0) :
 
 $$
-\Omega(\mathbf{h}) = \beta \sum_j \mathrm{KL}(\rho \,\|\, \hat{\rho}_j).
+\Omega(\mathbf{z}) = \beta \sum_j \mathrm{KL}(\rho \,\|\, \hat{\rho}_j).
 $$
 
 Dans les deux cas, le réseau est forcé à ne conserver, pour chaque exemple, qu'un sous-ensemble restreint de neurones actifs.
