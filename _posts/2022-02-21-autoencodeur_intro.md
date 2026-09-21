@@ -256,8 +256,8 @@ C'est ce cadre, et le choix de $\Omega$, qui distingue les variantes suivantes.
 
 $\Omega$ pénalise ici l'activation du latent, pour qu'un exemple donné n'active qu'un petit nombre de neurones. Deux réalisations courantes :
 
-- pénalité $L_1$ directe sur les activations : $\Omega(\mathbf{z}) = \lambda \sum_j |z_j|$
-- pénalité par divergence de Kullback-Leibler entre l'activation moyenne observée $\hat{\rho}_j$ d'un neurone sur le jeu de données et une parcimonie cible $\rho$ fixée à l'avance (proche de 0) :
+Pénalité $L_1$ directe sur les activations : $\Omega(\mathbf{z}) = \lambda \sum_j |z_j|$    
+Pénalité par divergence de Kullback-Leibler entre l'activation moyenne observée $\hat{\rho}_j$ d'un neurone sur le jeu de données et une parcimonie cible $\rho$ fixée à l'avance (proche de 0) :
 
 $$
 \Omega(\mathbf{z}) = \beta \sum_j \mathrm{KL}(\rho \,\|\, \hat{\rho}_j).
