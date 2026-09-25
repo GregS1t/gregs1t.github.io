@@ -336,7 +336,7 @@ La silhouette et la catégorie de chaque vêtement sont fidèlement reconstruite
 ### Comparaison des espaces latents
 
 <figure style="text-align: center;">
-  <img src="{{ site.baseurl }}/assets/img/blog/2022_11_VAE/reconstruction_ae_vae.png"
+  <img src="{{ site.baseurl }}/assets/img/blog/2022_11_VAE/latent_space_ae_vae.png"
        width="90%"
        alt="Projection PCA de l'espace latent en dimension 32, AE contre VAE.">
   <figcaption>
