@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Les autoencodeurs variationnels (VAE)"
-date: 2026-09-24
+date: 2022-11-24
 description: >
   Quelques explications sur les Variational Autoencoders de Kingma & Welling 2013
-tags: [deep-learning, vae, machine-learning, mathematiques, pedagogie, inference-variationnelle]
+tags: [deep-learning, vae, machine-learning, mathematiques, inference-variationnelle]
 categories: deep-learning
 series: "Le deep learning depuis ses fondations"
-published: false
+published: true
 series_order: 2
 related_posts: true
 toc:
