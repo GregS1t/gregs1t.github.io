@@ -139,6 +139,17 @@ ninja.data = [{
             window.location.href = "/blog/2023/zoologie-activation-functions/";
           
         },
+      },{id: "post-les-autoencodeurs-variationnels-vae",
+        
+          title: "Les autoencodeurs variationnels (VAE)",
+        
+        description: "Quelques explications sur les Variational Autoencoders de Kingma &amp; Welling 2013",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/variational-autoencoder/";
+          
+        },
       },{id: "post-entendre-un-séisme-de-magnitude-5-sur-mars",
         
           title: "Entendre un séisme de magnitude 5 sur Mars",
